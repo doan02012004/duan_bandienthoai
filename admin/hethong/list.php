@@ -9,9 +9,9 @@
                   <thead>
                   <tr>
                     <th>Stt</th>
-                    <th>Id danh mục</th>
-                    <th>Tên danh mục</th>
-                    <th>Mô tả</th>
+                    <th>Id </th>
+                    <th>Tên</th>
+                    <th>Hình</th>
                     <th>Trạng thái</th>
                     <th>Thao tác</th>
                   </tr>
@@ -20,18 +20,18 @@
                   <tr>
                     <td>1</td>
                     <td>01</td>
-                    <td>SamSung</td>
-                    <td style="Text-Overflow:ellipsis">Hãng sam sung hàn quốc</td>
+                    <td>Banner sale điện thoại</td>
+                    <td>Hình</td>
                     <td>Hoạt động</td>
-                    <td><a href="index.php?act=suadm"><button class="btn btn-info">Sửa</button></a>|<a href=""><button class="btn btn-info">Xóa</button></a></td>
+                    <td><a href="index.php?act=suaht"><button class="btn btn-info">Sửa</button></a>|<a href=""><button class="btn btn-info">Xóa</button></a></td>
                   </tr>
                   </tbody>
                   <tfoot>
                   <tr>
                   <th>Stt</th>
-                    <th>Id danh mục</th>
-                    <th>Tên danh mục</th>
-                    <th>Mô tả</th>
+                    <th>Id </th>
+                    <th>Tên</th>
+                    <th>Hình</th>
                     <th>Trạng thái</th>
                     <th>Thao tác</th>
                   </tr>

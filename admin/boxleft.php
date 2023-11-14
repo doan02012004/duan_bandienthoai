@@ -130,19 +130,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/tables/simple.html" class="nav-link">
+                <a href="index.php?act=adddmht" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Thêm logo</p>
+                  <p>Thêm danh mục</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/tables/data.html" class="nav-link">
+                <a href="index.php?act=addht" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Thêm banner</p>
+                  <p>Thêm logo_banner</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/tables/data.html" class="nav-link">
+                <a href="index.php?act=listht" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh sách</p>
                 </a>
@@ -209,6 +209,7 @@
               </li>
             </ul>
           </li>
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

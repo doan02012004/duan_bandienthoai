@@ -28,11 +28,23 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                 include "khuyenmai/add.php";
                 break;
         case 'listkm':
-                    include "khuyenmai/list.php";
-                    break;
-                    case 'suakm':
-                        include "khuyenmai/update.php";
-                        break;
+            include "khuyenmai/list.php";
+            break;
+        case 'suakm':
+            include "khuyenmai/update.php";
+            break;
+        case 'adddmht':
+            include "hethong/danhmuc.php";
+            break;
+        case 'addht':
+            include "hethong/add.php";
+            break;
+        case 'listht':
+            include "hethong/list.php";
+            break;
+        case 'suaht':
+                include "hethong/update.php";
+                break;
         default:
             include "home.php";
 

@@ -1,18 +1,18 @@
 <div class="content-wrapper">
-<div class="card card-primary">
+    <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Thêm sản phẩm</h3>
+                <h3 class="card-title">Thêm Banner/Logo</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form>
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Tên sản phẩm</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <label for="exampleInputEmail1">Tên</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên danh mục">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">Hình sản phẩm</label>
+                    <label for="exampleInputFile">Logo/Banner</label>
                     <div class="input-group">
                       <div class="custom-file">
                         <input type="file" class="custom-file-input" id="exampleInputFile">
@@ -24,26 +24,13 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Dung lượng</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Dung lượng">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Số lượng</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Số lượng">
-                  </div>
-                  <div class="form-group">
                     <label for="exampleInputPassword1">Trạng thái</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Trạng thái">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Ngày nhập</label>
-                    <input type="date" class="form-control" id="exampleInputPassword1" placeholder="ngày nhập">
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder=" Nhập trạng thái danh mục">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Mô tả</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="ngày nhập">
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nhập mô tả">
                   </div>
-                  <div class="form-group">
                   <div class="row">
                     <div class="col-sm-6">
                       <!-- select -->
