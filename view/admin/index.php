@@ -43,7 +43,7 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             include "hethong/list.php";
             break;
         case 'suaht':
-                include "hethong/update.php";
+            include "hethong/update.php";
                 break;
         case 'listuser':
                     include "nguoidung/list.php";
