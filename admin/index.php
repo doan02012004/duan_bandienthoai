@@ -45,12 +45,6 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
         case 'suaht':
                 include "hethong/update.php";
                 break;
-        case 'addbv':
-            include 'baiviet/add.php';
-            break;
-        case 'listbv':
-            include 'baiviet/list.php';
-            break;
         default:
             include "home.php";
 
