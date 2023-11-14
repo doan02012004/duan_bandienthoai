@@ -30,6 +30,9 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
         case 'listkm':
                     include "khuyenmai/list.php";
                     break;
+                    case 'suakm':
+                        include "khuyenmai/update.php";
+                        break;
         default:
             include "home.php";
 
