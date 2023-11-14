@@ -37,7 +37,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Ngày nhập</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="ngày nhập">
+                    <input type="date" class="form-control" id="exampleInputPassword1" placeholder="ngày nhập">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Mô tả</label>
