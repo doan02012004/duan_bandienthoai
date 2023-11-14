@@ -47,7 +47,6 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                 break;
         default:
             include "home.php";
-
             break;
     }
 }
