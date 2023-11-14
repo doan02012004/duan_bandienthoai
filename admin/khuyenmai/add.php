@@ -1,7 +1,7 @@
 <div class="content-wrapper">
 <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Thêm sản phẩm</h3>
+                <h3 class="card-title">Thêm khuyến mãi</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
