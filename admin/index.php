@@ -8,7 +8,13 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
         case 'adddm':
             include "danhmuc/add.php";
             break;
-        
+        case 'listdm':
+                include "danhmuc/list.php";
+                break;
+
+        case 'suadm':
+                    include "danhmuc/update.php";
+                    break;
         default:
             include "home.php";
 

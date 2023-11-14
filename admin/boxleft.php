@@ -40,7 +40,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="pages/tables/data.html" class="nav-link">
+                    <a href="index.php?act=listdm" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Danh sách danh mục</p>
                     </a>
