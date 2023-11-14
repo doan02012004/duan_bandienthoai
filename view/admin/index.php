@@ -48,6 +48,12 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
         case 'listuser':
                     include "nguoidung/list.php";
                     break;
+        case 'listbv':
+                include "baiviet/list.php";
+            break;
+        case 'addbv':
+                include "baiviet/add.php";
+            break;
         default:
             include "home.php";
             break;

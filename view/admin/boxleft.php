@@ -111,12 +111,6 @@
                   <p>Danh sách người dùng</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="pages/tables/data.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Phân quyền</p>
-                </a>
-              </li>
             </ul>
           </li>
           <!-- menu5 -->
@@ -209,7 +203,30 @@
               </li>
             </ul>
           </li>
-
+        <!-- menu9 -->
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Quản lý phân quyền
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="index.php?act=listht" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Thêm vai trò</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="index.php?act=listht" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Danh sách vai trò</p>
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
