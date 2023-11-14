@@ -24,6 +24,15 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
         case 'suasp':
             include "sanpham/update.php";
             break;
+        case 'addkm':
+                include "khuyenmai/add.php";
+                break;
+        case 'listkm':
+                    include "khuyenmai/list.php";
+                    break;
+                    case 'suakm':
+                        include "khuyenmai/update.php";
+                        break;
         default:
             include "home.php";
 
