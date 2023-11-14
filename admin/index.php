@@ -1,6 +1,6 @@
 <?php
  include "header.php";
- 
+
  include "boxleft.php";
 if(isset($_GET['act']) && ($_GET['act']!="")){
     $act = $_GET['act'];
