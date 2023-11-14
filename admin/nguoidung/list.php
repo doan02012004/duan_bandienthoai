@@ -16,6 +16,7 @@
                     <th>Email người dùng</th>
                     <th>Địa chỉ người dùng</th>
                     <th>Id phân quyền</th>
+                    <th>Trạng thái</th>
                     <th>Thao tác</th>
                   </tr>
                   </thead>
@@ -29,6 +30,7 @@
                     <td>abc@gmail.com</td>
                     <td>Hà Nội - Việt Nam</td>
                     <td>0|1</td>
+                    <td>1|0</td>
                     <td><a href="index.php?act=suauser"><button class="btn btn-info">Sửa</button></a>|<a href="index.php?act=xoauser"><button class="btn btn-info">Xóa</button></a></td>
                   </tr>
                   </tbody>

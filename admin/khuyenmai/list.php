@@ -15,6 +15,7 @@
                     <th>Ngày bắt đầu</th>
                     <th>Ngày kết thúc</th>
                     <th>Mô tả</th>
+                    <th>Trạng thái</th>
                     <th>Thao tác</th>
                   </tr>
                   </thead>
@@ -27,6 +28,7 @@
                     <td>11/11/2023</td>
                     <td>15/11/2023</td>
                     <td>Mã khuyến mãi đầu tiên của trang web</td>
+                    <th>0|1</th>
                     <td><a href="index.php?act=suakm"><button class="btn btn-info">Sửa</button></a>|<a href="index.php?act=xoakm"><button class="btn btn-info">Xóa</button></a></td>
                   </tr>
                   </tbody>
