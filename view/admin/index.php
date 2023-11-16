@@ -33,9 +33,6 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
         case 'suakm':
             include "khuyenmai/update.php";
             break;
-        case 'adddmht':
-            include "hethong/danhmuc.php";
-            break;
         case 'addht':
             include "hethong/add.php";
             break;

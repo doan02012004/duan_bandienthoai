@@ -124,15 +124,9 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="index.php?act=adddmht" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Thêm danh mục</p>
-                </a>
-              </li>
-              <li class="nav-item">
                 <a href="index.php?act=addht" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Thêm logo_banner</p>
+                  <p>Thêm</p>
                 </a>
               </li>
               <li class="nav-item">

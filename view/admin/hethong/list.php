@@ -10,9 +10,11 @@
                   <tr>
                     <th>Stt</th>
                     <th>Id </th>
-                    <th>Tên</th>
-                    <th>Hình</th>
-                    <th>Trạng thái</th>
+                    <th>Tên cửa hàng</th>
+                    <th>Logo</th>
+                    <th>Sđt</th>
+                    <th>Email</th>
+                    <th>Địa chỉ</th>
                     <th>Thao tác</th>
                   </tr>
                   </thead>
@@ -20,9 +22,11 @@
                   <tr>
                     <td>1</td>
                     <td>01</td>
-                    <td>Banner sale điện thoại</td>
-                    <td>Hình</td>
-                    <td>Hoạt động</td>
+                    <td>Group 12 mobile</td>
+                    <td>hình logo</td>
+                    <td>0999999999</td>
+                    <th>hhhh@gmail.com</th>
+                    <th>TVB</th>
                     <td><a href="index.php?act=suaht"><button class="btn btn-info">Sửa</button></a>|<a href=""><button class="btn btn-info">Xóa</button></a></td>
                   </tr>
                   </tbody>
@@ -30,9 +34,11 @@
                   <tr>
                   <th>Stt</th>
                     <th>Id </th>
-                    <th>Tên</th>
-                    <th>Hình</th>
-                    <th>Trạng thái</th>
+                    <th>Tên cửa hàng</th>
+                    <th>Logo</th>
+                    <th>Sđt</th>
+                    <th>Email</th>
+                    <th>Địa chỉ</th>
                     <th>Thao tác</th>
                   </tr>
                   </tfoot>
