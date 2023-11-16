@@ -9,7 +9,7 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Tên cửa hàng</label>
-                    <input type="text" class="form-control" idt="exampleInputEmail1" placeholder="Nhập tên danh mục">
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên danh mục">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputFile">Logo</label>
