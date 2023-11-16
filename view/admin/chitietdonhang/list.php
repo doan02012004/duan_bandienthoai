@@ -9,9 +9,10 @@
                   <thead>
                   <tr>
                     <th>Stt</th>
-                    <th>Id user</th>
-                    <th>Id khuyến mãi</th>
-                    <th>Trạng thái đơn hàng</th>
+                    <th>Id</th>
+                    <th>Id đơn hàng</th>
+                    <th>Số lượng đơn hàng</th>
+                    <th>Thành tiền</th>
                     <th>Thao tác</th>
                   </tr>
                   </thead>
@@ -20,17 +21,18 @@
                     <td>1</td>
                     <td>01</td>
                     <td>01</td>
-                    <td>Hoạt động</td>
-                    <td><a href="index.php?act=suadh"><button class="btn btn-info">Sửa</button></a>|<a href=""><button class="btn btn-info">Xóa</button></a></td>
+                    <td>15</td>
+                    <td>999999</td>
+                    <td><a href=""><button class="btn btn-info">Gửi hàng</button></a></td>
                   </tr>
                   </tbody>
                   <tfoot>
                   <tr>
                   <th>Stt</th>
-                  <th>Stt</th>
-                    <th>Id user</th>
-                    <th>Id khuyến mãi</th>
-                    <th>Trạng thái đơn hàng</th>
+                    <th>Id</th>
+                    <th>Id đơn hàng</th>
+                    <th>Số lượng đơn hàng</th>
+                    <th>Thành tiền</th>
                     <th>Thao tác</th>
                   </tr>
                   </tfoot>

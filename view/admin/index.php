@@ -66,6 +66,9 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
         case 'suapq':
                 include "phanquyen/update.php";
             break;
+        case 'listctdh':
+            include "chitietdonhang/list.php";
+            break;
         default:
             include "home.php";
             break;

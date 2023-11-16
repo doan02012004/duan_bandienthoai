@@ -184,6 +184,24 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
               <p>
+                Quản lý chi tiết đơn hàng
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="index.php?act=listctdh" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Danh sách chi tiết đơn hàng</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- menu8 -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
                 Quản lý bình luận
                 <i class="fas fa-angle-left right"></i>
               </p>
