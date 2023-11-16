@@ -172,7 +172,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/tables/data.html" class="nav-link">
+                <a href="index.php?act=listdh" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh sách đơn hàng</p>
                 </a>
@@ -208,15 +208,15 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="index.php?act=listht" class="nav-link">
+                <a href="index.php?act=addpq" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Thêm vai trò</p>
+                  <p>Thêm chức vụ</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="index.php?act=listht" class="nav-link">
+                <a href="index.php?act=listpq" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Danh sách vai trò</p>
+                  <p>Danh sách chức vụ</p>
                 </a>
               </li>
             </ul>
