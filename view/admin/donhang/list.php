@@ -33,7 +33,7 @@
                     <td>Còn hàng</td>
                     <td>02/01/2022</td>
                     <td>Sam Sung</td>
-                    <td><a href="index.php?act=suaht"><button class="btn btn-info">Sửa</button></a>|<a href=""><button class="btn btn-info">Xóa</button></a></td>
+                    <td><a href="index.php?act=suadh"><button class="btn btn-info">Sửa</button></a>|<a href=""><button class="btn btn-info">Xóa</button></a></td>
                   </tr>
                   </tbody>
                   <tfoot>
