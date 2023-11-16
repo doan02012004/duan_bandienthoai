@@ -33,9 +33,6 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
         case 'suakm':
             include "khuyenmai/update.php";
             break;
-        case 'adddmht':
-            include "hethong/danhmuc.php";
-            break;
         case 'addht':
             include "hethong/add.php";
             break;
@@ -53,6 +50,24 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             break;
         case 'addbv':
                 include "baiviet/add.php";
+            break;
+        case 'listbl':
+                include "binhluan/list.php";
+            break;
+        case 'listdh':
+                include "donhang/list.php";
+            break;
+        case 'addpq':
+                include "phanquyen/add.php";
+            break;
+        case 'listpq':
+                include "phanquyen/list.php";
+            break;
+        case 'suapq':
+                include "phanquyen/update.php";
+            break;
+        case 'listctdh':
+            include "chitietdonhang/list.php";
             break;
         default:
             include "home.php";

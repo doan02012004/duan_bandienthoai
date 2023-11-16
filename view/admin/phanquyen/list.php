@@ -9,12 +9,10 @@
                   <thead>
                   <tr>
                     <th>Stt</th>
-                    <th>Id </th>
-                    <th>Tên cửa hàng</th>
-                    <th>Logo</th>
-                    <th>Sđt</th>
-                    <th>Email</th>
-                    <th>Địa chỉ</th>
+                    <th>Id</th>
+                    <th>Tên chức vụ</th>
+                    <th>Mô tả</th>
+                    <th>Trạng thái</th>
                     <th>Thao tác</th>
                   </tr>
                   </thead>
@@ -22,23 +20,19 @@
                   <tr>
                     <td>1</td>
                     <td>01</td>
-                    <td>Group 12 mobile</td>
-                    <td>hình logo</td>
-                    <td>0999999999</td>
-                    <th>hhhh@gmail.com</th>
-                    <th>TVB</th>
-                    <td><a href="index.php?act=suaht"><button class="btn btn-info">Sửa</button></a>|<a href=""><button class="btn btn-info">Xóa</button></a></td>
+                    <td>Khách hàng</td>
+                    <td>Người mua hàng</td>
+                    <td>Hoạt động</td>
+                    <td><a href="index.php?act=suapq"><button class="btn btn-info">Sửa</button></a>|<a href=""><button class="btn btn-info">Xóa</button></a></td>
                   </tr>
                   </tbody>
                   <tfoot>
                   <tr>
                   <th>Stt</th>
-                    <th>Id </th>
-                    <th>Tên cửa hàng</th>
-                    <th>Logo</th>
-                    <th>Sđt</th>
-                    <th>Email</th>
-                    <th>Địa chỉ</th>
+                    <th>Id</th>
+                    <th>Tên chức vụ</th>
+                    <th>Mô tả</th>
+                    <th>Trạng thái</th>
                     <th>Thao tác</th>
                   </tr>
                   </tfoot>
