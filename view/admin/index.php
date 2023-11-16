@@ -1,20 +1,58 @@
 <?php
+    include "../model/pdo.php";
+    include "../model/danhmuc.php";
  include "header.php";
-
  include "boxleft.php";
 if(isset($_GET['act']) && ($_GET['act']!="")){
     $act = $_GET['act'];
     switch ($act) {
         case 'adddm':
+            if(isset($_POST['btn-add'])){
+                $ten_dm = $_POST['ten_dm'];
+                $mota_dm = $_POST['mota_dm'];
+                $trangthai_dm = $_POST['trangthai_dm'];
+                if($ten_dm==""|| $mota_dm=="" ||$trangthai_dm==""){
+                    $thongbao ="Vui lòng nhập đủ dữ liệu !";
+                }
+                else{
+                    insert_danhmuc($ten_dm,$mota_dm,$trangthai_dm);
+                    $thongbao ="Thêm thành công";
+                }
+            }
             include "danhmuc/add.php";
             break;
         case 'listdm':
+                $listdm = loadall_danhmuc();
                 include "danhmuc/list.php";
                 break;
-
+        case 'xoadm':
+                $id = $_GET['id'];
+                delete_danhmuc($id);
+                $listdm = loadall_danhmuc();
+                include "danhmuc/list.php";
+            break;
         case 'suadm':
-                    include "danhmuc/update.php";
-                    break;
+                $id = $_GET['id'];
+                $listdm = loadone_danhmuc($id);
+                include "danhmuc/update.php";
+                break;
+        case 'updatedm':
+                if(isset($_POST['btn-add'])){
+                    $id = $_POST['id'];
+                    $ten_dm = $_POST['ten_dm'];
+                    $mota_dm = $_POST['mota_dm'];
+                    $trangthai_dm = $_POST['trangthai_dm'];
+                    if($ten_dm==""|| $mota_dm=="" ||$trangthai_dm==""){
+                        $thongbao ="Vui lòng nhập đủ dữ liệu !";
+                    }
+                    else{
+                        update_danhmuc($id,$ten_dm,$mota_dm,$trangthai_dm);
+                        $thongbao ="Thêm thành công";
+                    }
+                }
+                $listdm = loadall_danhmuc();
+                include "danhmuc/list.php";
+                break;
         case 'listsp':
             include "sanpham/list.php";
         break;

@@ -17,14 +17,30 @@
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
+                    <?php
+                    $stt= 0;
+                    foreach ($listdm as $dm) {
+                      extract($dm);
+                      $stt++;
+                      $suadm = "index.php?act=suadm&id=".$id;
+                      $xoadm = "index.php?act=xoadm&id=".$id;
+                      echo ' <tr>
+                      <td>'.$stt.'</td>
+                      <td>'.$id.'</td>
+                      <td>'.$ten_dm.'</td>
+                      <td>'.$mota_dm.'</td>
+                      <td>'.$trangthai_dm.'</td>
+                      <td><a href="'.$suadm.'"><button class="btn btn-info">Sửa</button></a>|<a href="'.$xoadm.'"><button class="btn btn-info">Xóa</button></a></td>';
+                    }
+                    ?>
+                  <!-- <tr>
                     <td>1</td>
                     <td>01</td>
                     <td>SamSung</td>
                     <td style="Text-Overflow:ellipsis">Hãng sam sung hàn quốc</td>
                     <td>Hoạt động</td>
                     <td><a href="index.php?act=suadm"><button class="btn btn-info">Sửa</button></a>|<a href=""><button class="btn btn-info">Xóa</button></a></td>
-                  </tr>
+                  </tr> -->
                   </tbody>
                   <tfoot>
                   <tr>
