@@ -38,7 +38,8 @@
                         <td>'.$role.'</td>
                         <td>
                         
-                        <td><a href="'.$suauser.'"><button class="btn btn-info">Sửa</button></a>|<a href="'.$xoauser.'"><button class="btn btn-info">Xóa</button></a></td>';
+                        <td><a href="'.$xoauser.'"><button class="btn btn-info">Xóa</button></a></td>
+                        <td><a href="'.$suauser.'"><button class="btn btn-info">sua</button></a></td>
 
                          </tr>';
                     }
