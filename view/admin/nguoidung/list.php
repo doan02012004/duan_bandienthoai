@@ -37,7 +37,9 @@
                         <td>'.$trangthai_user.'</td>
                         <td>'.$role.'</td>
                         <td>
+                        <td><a href="'.$suauser.'"><button class="btn btn-info">sua</button></a></td>
                         <td><a href="'.$xoauser.'"><button class="btn btn-info">Xóa</button></a></td>
+
                          </tr>';
                     }
                     ?>

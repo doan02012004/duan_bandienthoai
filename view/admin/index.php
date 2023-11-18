@@ -135,9 +135,8 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                     include "nguoidung/list.php";
                     break;
             case 'suauser':
-                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                    $tk = loadone_user($_GET['id']);
-                }
+                $id = $_GET['id'];
+                $listuser = loadone_user($id);
                                 include "nguoidung/update.php";
                                 break;
             case 'updateuser':
