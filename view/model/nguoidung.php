@@ -4,8 +4,13 @@ function loadall_user(){
     $listuser = pdo_query($sql);
     return $listuser;
 }
-// function delete_nguoidung($id) {
-//     $sql="delete from nguoidung where id=".$id;
-//     pdo_execute($sql);
-// }
+ function delete_user($id) {
+     $sql="delete from tbl_user where id=".$id;
+     pdo_execute($sql);
+ }
+ function   update_taikhoan($id, $role)
+{
+    $sql = "update taikhoan set role='" . $role . "' where id=" . $id;
+    pdo_execute($sql);
+}
  ?>

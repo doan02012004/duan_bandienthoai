@@ -129,11 +129,27 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                     break;
         case 'xoauser':
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                delete_nguoidung($_GET['id']);
+                delete_user($_GET['id']);
             }
-            $listnguoidung = loatAll_nguoidung();
+            $listuser = loatAll_user();
                     include "nguoidung/list.php";
                     break;
+            case 'suauser':
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    $tk = loadone_user($_GET['id']);
+                }
+                                include "nguoidung/update.php";
+                                break;
+            case 'updateuser':
+                if (isset($_POST['capnhattk']) && ($_POST['capnhattk'])) {
+                  $role = $_POST['role'];
+                                        $id = $_POST['id'];
+                                        update_user($id, $role);
+                                        $thongbao = "Cập nhật thành công";
+                                    }
+                                    $listuser = loadall_user();
+                                    include "nguoidung/list.php";
+                                    break;
         case 'listbv':
             $listbv = loadall_baiviet();
                 include "baiviet/list.php";
