@@ -89,6 +89,12 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             }
             include "sanpham/add.php";
         break;
+        case 'xoasp':
+                $id = $_GET['id'];
+                delete_sanpham($id);
+                $listsp = loadall_sanpham();
+                include "sanpham/list.php";
+            break;
         case 'suasp':
             include "sanpham/update.php";
             break;
