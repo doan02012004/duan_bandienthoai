@@ -23,7 +23,7 @@
                   <?php
                     foreach ($listuser as $user) {
                         extract($user);
-                        $suakh = "index.php?act=suauser&id=" . $id;
+                        $suauser = "index.php?act=suauser&id=" . $id;
                         $xoauser = "index.php?act=xoauser&id=".$id;
                         echo '<tr>
                         <td><input type="checkbox" name="" id=""></td>
@@ -37,8 +37,8 @@
                         <td>'.$trangthai_user.'</td>
                         <td>'.$role.'</td>
                         <td>
-                        <td><a href="'.$suauser.'"><button class="btn btn-info">sua</button></a></td>
-                        <td><a href="'.$xoauser.'"><button class="btn btn-info">Xóa</button></a></td>
+                        
+                        <td><a href="'.$suauser.'"><button class="btn btn-info">Sửa</button></a>|<a href="'.$xoauser.'"><button class="btn btn-info">Xóa</button></a></td>';
 
                          </tr>';
                     }
