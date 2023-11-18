@@ -5,17 +5,17 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form action="index.php?act=addsp" method="post" enctype="multipart/form-data">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Tên sản phẩm</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <input type="text" class="form-control" name="ten_sp" id="exampleInputEmail1" placeholder="Enter email">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputFile">Hình sản phẩm</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                        <input type="file" name="avatar" class="custom-file-input" id="exampleInputFile">
                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                       </div>
                       <div class="input-group-append">
@@ -25,23 +25,27 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Dung lượng</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Dung lượng">
+                    <input type="text" class="form-control" name="dungluong_sp" id="exampleInputPassword1" placeholder="Dung lượng">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Giá sản phẩm</label>
+                    <input type="text" class="form-control" name="gia_sp" id="exampleInputPassword1" placeholder="Dung lượng">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Số lượng</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Số lượng">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Trạng thái</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Trạng thái">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Ngày nhập</label>
-                    <input type="date" class="form-control" id="exampleInputPassword1" placeholder="ngày nhập">
+                    <input type="text" class="form-control" name="soluong_sp"  id="exampleInputPassword1" placeholder="Số lượng">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Mô tả</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="ngày nhập">
+                    <input type="text" class="form-control" name="mota_sp" id="exampleInputPassword1" placeholder="Trạng thái">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Ngày nhập</label>
+                    <input type="date" class="form-control" name="ngaynhap_sp" id="exampleInputPassword1" placeholder="ngày nhập">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Trạng thái</label>
+                    <input type="text" class="form-control" name="trangthai_sp" id="exampleInputPassword1" placeholder="ngày nhập">
                   </div>
                   <div class="form-group">
                   <div class="row">
@@ -49,22 +53,31 @@
                       <!-- select -->
                       <div class="form-group">
                         <label>Hãng sản phẩm</label>
-                        <select class="form-control">
-                          <option>option 1</option>
+                        <select name="id_dm" class="form-control">
+                        <option value="0">Chọn hãng sản phẩm</option>
+                          <?php
+                            foreach ($listdm as $dm) {
+                              echo ' <option value="'.$dm['id'].'">'.$dm['ten_dm'].'</option>';
+                            }
+                          ?>
+                          <!-- <option>option 1</option>
                           <option>option 2</option>
                           <option>option 3</option>
                           <option>option 4</option>
-                          <option>option 5</option>
+                          <option>option 5</option> -->
                         </select>
                       </div>
                     </div>
                   </div>
                 </div>
                 <!-- /.card-body -->
-
+                
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Thêm</button>
+                  <button type="submit" name="btn-add" class="btn btn-primary">Thêm</button>
                 </div>
               </form>
+              <?php
+                echo isset($thongbao)? $thongbao : "";   
+              ?>
             </div>
 </div>
