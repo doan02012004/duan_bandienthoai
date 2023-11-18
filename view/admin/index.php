@@ -1,15 +1,14 @@
 <?php
     include "../model/pdo.php";
     include "../model/danhmuc.php";
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     include "''/model/nguoidung.php";
-=======
-=======
+
+
     include "../model/sanpham.php";
->>>>>>> cefecc7797159f9da0b8648f6f22a27fdf31e9b6
+
     include "../model/baiviet.php";
->>>>>>> 3f759d2557e79225b87fc5e8270b9880d236a944
+
  include "header.php";
  include "boxleft.php";
 if(isset($_GET['act']) && ($_GET['act']!="")){
