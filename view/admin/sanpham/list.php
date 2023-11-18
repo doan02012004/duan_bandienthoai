@@ -17,7 +17,7 @@
                     <th>Số lượng</th>
                     <th>Ngày nhập </th>
                     <th>Trạng thái</th>
-                    <th>Hãng sản phẩm</th>
+                    <th>id_dm</th>
                     <th>Thao tác</th>
                   </tr>
                   </thead>
@@ -25,7 +25,7 @@
                     <?php
                       $stt=0;
                       foreach ($listsp as $sp) {
-                        extract($sp);
+                      extract($sp);
                         $stt++;
                         $suasp = "index.php?act=suasp&id=".$id;
                         $xoasp = "index.php?act=xoasp&id=".$id;
@@ -41,24 +41,12 @@
                         <td>'.$soluong_sp.'</td>
                         <td>'.$ngaynhap_sp.'</td>
                         <td>'.$trangthai_sp.'</td>
-                        <td>'.$ten_dm.'</td>
+                        <td>'.$id_dm.'</td>
                         <td><a href="'.$suasp.'"><button class="btn btn-info">Sửa</button></a>|<a href="'.$xoasp.'"><button class="btn btn-info">Xóa</button></a></td>
                         </tr>';
                       }
                     ?>
-                  <tr>
-                    <td>1</td>
-                    <td>01</td>
-                    <td>SamSung galaxy</td>
-                    <td>hình</td>
-                    <td>4/64</td>
-                    <td>2900000</td>
-                    <td>999</td>
-                    <td>Còn hàng</td>
-                    <td>02/01/2022</td>
-                    <td>Sam Sung</td>
-                    <td><a href="index.php?act=suaht"><button class="btn btn-info">Sửa</button></a>|<a href=""><button class="btn btn-info">Xóa</button></a></td>
-                  </tr>
+               
                   </tbody>
                   <tfoot>
                   <tr>
@@ -69,9 +57,9 @@
                     <th>Dung lượng</th>
                     <th>Gía</th>
                     <th>Số lượng</th>
+                    <th>Ngày nhập </th>
                     <th>Trạng thái</th>
-                    <th>Ngày nhập</th>
-                    <th>Hãng sản phẩm</th>
+                    <th>id_dm</th>
                     <th>Thao tác</th>
                   </tr>
                   </tfoot>
