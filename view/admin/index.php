@@ -1,11 +1,8 @@
 <?php
     include "../model/pdo.php";
     include "../model/danhmuc.php";
-<<<<<<< HEAD
     include "../model/sanpham.php";
-=======
     include "../model/baiviet.php";
->>>>>>> 3f759d2557e79225b87fc5e8270b9880d236a944
  include "header.php";
  include "boxleft.php";
 if(isset($_GET['act']) && ($_GET['act']!="")){
