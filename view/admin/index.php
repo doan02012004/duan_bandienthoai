@@ -2,7 +2,7 @@
     include "../model/pdo.php";
     include "../model/danhmuc.php";
 
-    include "''/model/nguoidung.php";
+    include "../model/nguoidung.php";
 
 
     include "../model/sanpham.php";
