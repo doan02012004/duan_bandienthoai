@@ -1,8 +1,14 @@
 <?php
     include "../model/pdo.php";
     include "../model/danhmuc.php";
+
+    include "''/model/nguoidung.php";
+
+
     include "../model/sanpham.php";
+
     include "../model/baiviet.php";
+
  include "header.php";
  include "boxleft.php";
 if(isset($_GET['act']) && ($_GET['act']!="")){
@@ -96,6 +102,7 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                 include "sanpham/list.php";
             break;
         case 'suasp':
+          
             include "sanpham/update.php";
             break;
         case 'addkm':
@@ -117,7 +124,15 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             include "hethong/update.php";
                 break;
         case 'listuser':
-                    include "nguoidung/list.php";
+            $listnguoidung = loatAll_nguoidung();
+                    include "nguoidung.php/list.php";
+                    break;
+        case 'xoauser':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                delete_nguoidung($_GET['id']);
+            }
+            $listnguoidung = loatAll_nguoidung();
+                    include "nguoidung.php/list.php";
                     break;
         case 'listbv':
             $listbv = loadall_baiviet();
