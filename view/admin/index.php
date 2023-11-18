@@ -124,15 +124,15 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             include "hethong/update.php";
                 break;
         case 'listuser':
-            $listnguoidung = loatAll_nguoidung();
-                    include "nguoidung.php/list.php";
+            $listuser = loadall_user();
+                    include "nguoidung/list.php";
                     break;
         case 'xoauser':
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 delete_nguoidung($_GET['id']);
             }
             $listnguoidung = loatAll_nguoidung();
-                    include "nguoidung.php/list.php";
+                    include "nguoidung/list.php";
                     break;
         case 'listbv':
             $listbv = loadall_baiviet();
