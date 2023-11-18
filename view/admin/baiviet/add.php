@@ -5,34 +5,29 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form action="index.php?act=addbv" method="post">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Tiêu đề bài viết</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên danh mục">
+                    <input type="text" class="form-control" name="tieude" id="exampleInputEmail1" placeholder="Nhập tiêu đề">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Nội dung</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder=" Nhập trạng thái danh mục">
+                    <label for="exampleInputPassword1">Nội dung bài viết</label>
+                    <input type="text" class="form-control" name="noidung_bv" id="exampleInputPassword1" placeholder=" Nhập nội dung">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Ngày đăng</label>
-                    <input type="date" class="form-control" id="exampleInputPassword1" placeholder="Nhập mô tả">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Người đăng bài</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder=" Nhập trạng thái danh mục">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Trạng thái</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder=" Nhập trạng thái danh mục">
+                    <label for="exampleInputPassword1">Trạng thái bài viết</label>
+                    <input type="text" class="form-control" name="trangthai_bv" id="exampleInputPassword1" placeholder="Nhập trạng thái">
                   </div>
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Thêm</button>
+                  <button type="submit" class="btn btn-primary" name="btn-add">Thêm</button>
                 </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1"><?php echo isset($thongbao)? $thongbao :"";  ?></label>
+                  </div>
               </form>
             </div>
 </div>

@@ -1,7 +1,11 @@
 <?php
     include "../model/pdo.php";
     include "../model/danhmuc.php";
+<<<<<<< HEAD
     include "''/model/nguoidung.php";
+=======
+    include "../model/baiviet.php";
+>>>>>>> 3f759d2557e79225b87fc5e8270b9880d236a944
  include "header.php";
  include "boxleft.php";
 if(isset($_GET['act']) && ($_GET['act']!="")){
@@ -94,10 +98,51 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                     include "nguoidung.php/list.php";
                     break;
         case 'listbv':
+            $listbv = loadall_baiviet();
                 include "baiviet/list.php";
             break;
         case 'addbv':
-                include "baiviet/add.php";
+            if(isset($_POST['btn-add'])){
+                $tieude = $_POST['tieude'];
+                $noidung_bv = $_POST['noidung_bv'];
+                $trangthai_bv = $_POST['trangthai_bv'];
+                if($tieude==""|| $noidung_bv=="" ||$trangthai_bv==""){
+                    $thongbao ="Vui lòng nhập đủ dữ liệu !";
+                }
+                else{
+                    insert_baiviet($tieude,$noidung_bv,$trangthai_bv);
+                    $thongbao ="Thêm thành công";
+                }
+            }
+            include "baiviet/add.php";
+            break;
+        case 'xoabv':
+                $id = $_GET['id'];
+                delete_baiviet($id);
+                $listbv = loadall_baiviet();
+                include "baiviet/list.php";
+            break;
+        case 'suabv':
+                $id = $_GET['id'];
+                $listbv = loadone_baiviet($id);
+                include "baiviet/update.php";
+                break;
+        case 'updatebv':
+            if(isset($_POST['btn-update'])){
+                $id = $_POST['id'];
+                $tieude = $_POST['tieude'];
+                $noidung_bv = $_POST['noidung_bv'];
+                $trangthai_bv = $_POST['trangthai_bv'];
+                if($tieude==""|| $noidung_bv=="" ||$trangthai_bv==""){
+                    $thongbao ="Vui lòng nhập đủ dữ liệu !";
+                }
+                else{
+                    update_baiviet($id,$tieude,$noidung_bv,$trangthai_bv);
+                    $thongbao ="Thêm thành công";
+                }
+            }
+            $listbv = loadall_baiviet();
+            include "baiviet/list.php";
             break;
         case 'listbl':
                 include "binhluan/list.php";
