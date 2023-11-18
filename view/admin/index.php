@@ -1,6 +1,7 @@
 <?php
     include "../model/pdo.php";
     include "../model/danhmuc.php";
+    include "../model/sanpham.php";
  include "header.php";
  include "boxleft.php";
 if(isset($_GET['act']) && ($_GET['act']!="")){
@@ -54,9 +55,37 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                 include "danhmuc/list.php";
                 break;
         case 'listsp':
+            $listsp = loadall_sanpham();
             include "sanpham/list.php";
         break;
         case 'addsp':
+            $listdm = loadall_danhmuc();
+            if(isset($_POST['btn-add'])){
+                $ten_sp = $_POST['ten_sp'];
+                $gia_sp = $_POST['gia_sp'];
+                $soluong_sp = $_POST['soluong_sp'];
+                $dungluong_sp = $_POST['dungluong_sp'];
+                $ngaynhap_sp = $_POST['ngaynhap_sp'];
+                $avatar = $_FILES['avatar']['name'];
+                $target_dir="../uploads/";
+                $target_file = $target_dir . basename($_FILES['avatar']['name']);
+                if (move_uploaded_file($_FILES["avatar"]["tmp_name"], $target_file)) {
+                    //echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                  } else {
+                   // echo "Sorry, there was an error uploading your file.";
+                  }
+                  $mota_sp = $_POST['mota_sp'];
+                  $trangthai_sp = $_POST['trangthai_sp'];
+                $id_dm = $_POST['id_dm'];
+                if($ten_sp==""|| $mota_sp=="" ||$trangthai_sp=="" || $gia_sp==""|| $dungluong_sp==""|| $soluong_sp==""||$id_dm==0){
+                    $thongbao ="Vui lòng nhập đủ dữ liệu !";
+                }
+                else{
+                    insert_sanpham($ten_sp,$avatar,$gia_sp,$soluong_sp,$dungluong_sp,$mota_sp,$trangthai_sp,$ngaynhap_sp,$id_dm);
+                    $thongbao ="Thêm thành công";
+                }
+                
+            }
             include "sanpham/add.php";
         break;
         case 'suasp':
