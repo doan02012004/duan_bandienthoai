@@ -3,8 +3,9 @@
     include "../model/danhmuc.php";
     include "../model/nguoidung.php";
     include "../model/sanpham.php";
-
+    include "../model/chucvu.php";
     include "../model/baiviet.php";
+    include "../model/hethong.php";
  include "header.php";
  include "boxleft.php";
 if(isset($_GET['act']) && ($_GET['act']!="")){
@@ -145,14 +146,55 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             include "khuyenmai/update.php";
             break;
         case 'addht':
+            if(isset($_POST['btn-add'])){
+                $ten_ch = $_POST['ten_ch'];
+                $sdt_ch = $_POST['sdt_ch'];
+                $email_ch = $_POST['email_ch'];
+                $diachi_ch = $_POST['diachi_ch'];
+                if($ten_ch==""||$sdt_ch=="" ||$email_ch==""||$diachi_ch==""){
+                    $thongbao ="Vui lòng nhập đủ dữ liệu !";
+                }
+                else{
+                    insert_hethong($ten_ch,$sdt_ch,$email_ch,$diachi_ch);
+                    $thongbao ="Thêm thành công";
+                }
+            }
             include "hethong/add.php";
             break;
         case 'listht':
+            $listht = loadall_hethong();
             include "hethong/list.php";
             break;
         case 'suaht':
+            $id = $_GET['id'];
+            $listht = loadone_hethong($id);
             include "hethong/update.php";
                 break;
+        case 'updateht':
+            if(isset($_POST['btn-add'])){
+                $id = $_POST['id'];
+                $ten_ch = $_POST['ten_ch'];
+                $sdt_ch = $_POST['sdt_ch'];
+                $email_ch = $_POST['email_ch'];
+                $diachi_ch = $_POST['diachi_ch'];
+                if($ten_ch==""|| $sdt_ch=="" ||$email_ch==""||$diachi_ch==""){
+                    $thongbao ="Vui lòng nhập đủ dữ liệu !";
+                    include "hethong/update.php";
+                }
+                else{
+                    update_hethong($id,$ten_ch,$sdt_ch,$email_ch,$diachi_ch);
+                    $thongbao ="Thêm thành công";
+                    $listht = loadall_hethong();
+                    include "hethong/list.php";
+                }
+            }
+            break;
+        case 'xoaht':
+            $id = $_GET['id'];
+            delete_hethong($id);
+            $listht = loadall_hethong();
+            include "hethong/list.php";
+            break;
         case 'listuser':
             $listuser = loadall_user();
                     include "nguoidung/list.php";
@@ -237,6 +279,7 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             }
                 include "donhang/list.php";
             break;
+<<<<<<< HEAD
             case 'xoadh':
                 if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                     delete_bill($_GET['id']);
@@ -264,8 +307,56 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
         case 'suapq':
                 include "phanquyen/update.php";
             break;
+=======
+>>>>>>> 5a54d25ddf08bc17b0eeb0e16137a1a5186ddc90
         case 'listctdh':
             include "chitietdonhang/list.php";
+            break;
+        case 'addcv':
+            if(isset($_POST['btn-add'])){
+                $ten_cv = $_POST['ten_cv'];
+                $mota_cv = $_POST['mota_cv'];
+                $trangthai_cv = $_POST['trangthai_cv'];
+                if($ten_cv==""|| $mota_cv=="" ||$trangthai_cv==""){
+                    $thongbao ="Vui lòng nhập đủ dữ liệu !";
+                }
+                else{
+                    insert_chucvu($ten_cv,$mota_cv,$trangthai_cv);
+                    $thongbao ="Thêm thành công";
+                }
+            }
+            include "phanquyen/add.php";
+            break;
+        case 'listcv':
+                $listcv= loadall_chucvu();
+                include "phanquyen/list.php";
+            break;
+        case 'xoacv':
+                  $id = $_GET['id'];
+                delete_chucvu($id);
+                $listcv = loadall_chucvu();
+                include "phanquyen/list.php";
+            break;
+        case 'suacv':
+            $id = $_GET['id'];
+            $listcv = loadone_chucvu($id);
+            include "phanquyen/update.php";
+            break;
+        case 'updatecv':
+            if(isset($_POST['btn-add'])){
+                $id= $_POST['id'];
+                $ten_cv = $_POST['ten_cv'];
+                $mota_cv = $_POST['mota_cv'];
+                $trangthai_cv = $_POST['trangthai_cv'];
+                if($ten_cv==""|| $mota_cv=="" ||$trangthai_cv==""){
+                    $thongbao ="Vui lòng nhập đủ dữ liệu !";
+                }
+                else{
+                    update_chucvu($id,$ten_cv,$mota_cv,$trangthai_cv);
+                    $listcv= loadall_chucvu();
+                    include "phanquyen/list.php";
+                }
+            }
             break;
         default:
             include "home.php";
