@@ -7,6 +7,8 @@
     include "../model/baiviet.php";
     include "../model/hethong.php";
     include "../model/khuyenmai.php";
+    include "../model/binhluan.php";
+
  include "header.php";
  include "boxleft.php";
 if(isset($_GET['act']) && ($_GET['act']!="")){
@@ -247,7 +249,7 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 delete_user($_GET['id']);
             }
-            $listuser = loatAll_user();
+            $listuser = loadall_user();
                     include "nguoidung/list.php";
                     break;
             case 'suauser':
@@ -313,6 +315,13 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             include "baiviet/list.php";
             break;
         case 'listbl':
+            $listbl = loadall_binhluan();
+                include "binhluan/list.php";
+            break;
+            case 'xoabl':
+                $id = $_GET['id'];
+                delete_binhluan($id);
+                $listbl = loadall_binhluan();
                 include "binhluan/list.php";
             break;
         case 'listdh':
@@ -321,7 +330,7 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             break;
                        case 'xoadh':
                 if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                    delete_bill($_GET['id']);
+                    delete_dh($_GET['id']);
                 }
     
                 if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
