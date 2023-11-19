@@ -6,6 +6,7 @@
     include "../model/chucvu.php";
     include "../model/baiviet.php";
     include "../model/hethong.php";
+    include "../model/khuyenmai.php";
  include "header.php";
  include "boxleft.php";
 if(isset($_GET['act']) && ($_GET['act']!="")){
@@ -136,15 +137,58 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             }
     
             break;
-        case 'addkm':
+            case 'listkm':
+                $listkm = loadall_khuyenmai();
+                    include "khuyenmai/list.php";
+                break;
+
+            case 'addkm':
+                if(isset($_POST['btn-add'])){
+                    $ten_km = $_POST['ten_km'];
+                    $gia_km = $_POST['gia_km'];
+                    $ngaybatdau = $_POST['ngaybatdau'];
+                    $ngayketthuc = $_POST['ngayketthuc'];
+                    $trangthai_km = $_POST['trangthai_km'];
+                    if($ten_km==""||$gia_km==""||$ngaybatdau==""|| $ngayketthuc=="" ||$trangthai_km==""){
+                        $thongbao ="Vui lòng nhập đủ dữ liệu !";
+                    }
+                    else{
+                        insert_khuyenmai($ten_km,$gia_km,$ngaybatdau,$ngayketthuc,$trangthai_km);
+                        $thongbao ="Thêm thành công";
+                    }
+                }
                 include "khuyenmai/add.php";
                 break;
-        case 'listkm':
-            include "khuyenmai/list.php";
-            break;
+            case 'xoakm':
+                    $id = $_GET['id'];
+                    delete_khuyenmai($id);
+                    $listkm = loadall_khuyenmai();
+                    include "khuyenmai/list.php";
+                break;
         case 'suakm':
-            include "khuyenmai/update.php";
-            break;
+            $id = $_GET['id'];
+                $listkm = loadone_khuyenmai($id);
+                include "khuyenmai/update.php";
+                break;
+        case 'updatekm':
+                    if(isset($_POST['btn-update'])){
+                        $id = $_POST['id'];
+                        $ten_km = $_POST['ten_km'];
+                        $gia_km = $_POST['gia_km'];
+                        $ngaybatdau = $_POST['ngaybatdau'];
+                        $ngayketthuc = $_POST['ngayketthuc'];
+                        $trangthai_km = $_POST['trangthai_km'];
+                        if($ten_km==""||$gia_km==""||$ngaybatdau==""|| $ngayketthuc=="" ||$trangthai_km==""){
+                            $thongbao ="Vui lòng nhập đủ dữ liệu !";
+                        }
+                        else{
+                            update_khuyenmai($id,$ten_km,$gia_km,$ngaybatdau,$ngayketthuc,$trangthai_km);
+                            $thongbao ="Thêm thành công";
+                        }
+                    }
+                    $listkm = loadall_khuyenmai();
+                    include "khuyenmai/list.php";
+                    break;
         case 'addht':
             if(isset($_POST['btn-add'])){
                 $ten_ch = $_POST['ten_ch'];

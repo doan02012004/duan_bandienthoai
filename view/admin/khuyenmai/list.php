@@ -14,23 +14,29 @@
                     <th>Giá khuyến mãi</th>
                     <th>Ngày bắt đầu</th>
                     <th>Ngày kết thúc</th>
-                    <th>Mô tả</th>
                     <th>Trạng thái</th>
                     <th>Thao tác</th>
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>01</td>
-                    <td>Mã khuyến mãi 1</td>
-                    <td>100$</td>
-                    <td>11/11/2023</td>
-                    <td>15/11/2023</td>
-                    <td>Mã khuyến mãi đầu tiên của trang web</td>
-                    <th>0|1</th>
-                    <td><a href="index.php?act=suakm"><button class="btn btn-info">Sửa</button></a>|<a href="index.php?act=xoakm"><button class="btn btn-info">Xóa</button></a></td>
-                  </tr>
+                  <?php
+                    $stt= 0;
+                    foreach ($listkm as $km) {
+                      extract($km);
+                      $stt++;
+                      $suakm = "index.php?act=suakm&id=".$id;
+                      $xoakm = "index.php?act=xoakm&id=".$id;
+                      echo ' <tr>
+                      <td>'.$stt.'</td>
+                      <td>'.$id.'</td>
+                      <td>'.$ten_km.'</td>
+                      <td>'.$gia_km.'</td>
+                      <td>'.$ngaybatdau.'</td>
+                      <td>'.$ngayketthuc.'</td>
+                      <td>'.$trangthai_km.'</td>
+                      <td><a href="'.$suakm.'"><button class="btn btn-info">Sửa</button></a>|<a href="'.$xoakm.'"><button class="btn btn-info">Xóa</button></a></td>';
+                    }
+                    ?>
                   </tbody>
                 </table>
               </div>
