@@ -15,15 +15,11 @@ function delete_dh($id)
     $sql = "delete from tbl_donhang where id=" . $id;
     pdo_execute($sql);
 }
-function loadall_dh($kyw = "", $iduser = 0)
-{
-    $sql = "select * from tbl_donhang where 1";
-    if ($iduser > 0) $sql .= " AND iduser=" . $iduser;
-    if ($kyw != "") $sql .= " AND id like '%" . $kyw . "%'";
-    $sql .= " order by id desc";
-    $listdh = pdo_query($sql);
-    return $listdh;
-}
+    function loadall_dh(){
+        $sql ="SELECT * FROM `tbl_donhang` order by id desc";
+        $listdh = pdo_query($sql);
+        return $listdh;
+    }
 function get_ttdh($n)
 {
     switch ($n) {
