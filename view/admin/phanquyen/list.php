@@ -17,14 +17,23 @@
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>01</td>
-                    <td>Khách hàng</td>
-                    <td>Người mua hàng</td>
-                    <td>Hoạt động</td>
-                    <td><a href="index.php?act=suapq"><button class="btn btn-info">Sửa</button></a>|<a href=""><button class="btn btn-info">Xóa</button></a></td>
-                  </tr>
+                  <?php
+                    $stt= 0;
+                    foreach ($listcv as $cv) {
+                      extract($cv);
+                      $stt++;
+                      $suacv = "index.php?act=suacv&id=".$id;
+                      $xoacv = "index.php?act=xoacv&id=".$id;
+                      echo ' <tr>
+                      <td>'.$stt.'</td>
+                      <td>'.$id.'</td>
+                      <td>'.$ten_cv.'</td>
+                      <td>'.$mota_cv.'</td>
+                      <td>'.$trangthai_cv.'</td>
+                      <td><a href="'.$suacv.'"><button class="btn btn-info">Sửa</button></a>|<a href="'.$xoacv.'"><button class="btn btn-info">Xóa</button></a></td>
+                      <tr>';
+                    }
+                    ?>
                   </tbody>
                   <tfoot>
                   <tr>

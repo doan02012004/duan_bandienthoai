@@ -3,7 +3,7 @@
     include "../model/danhmuc.php";
     include "../model/nguoidung.php";
     include "../model/sanpham.php";
-
+    include "../model/chucvu.php";
     include "../model/baiviet.php";
  include "header.php";
  include "boxleft.php";
@@ -243,6 +243,52 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             break;
         case 'listctdh':
             include "chitietdonhang/list.php";
+            break;
+        case 'addcv':
+            if(isset($_POST['btn-add'])){
+                $ten_cv = $_POST['ten_cv'];
+                $mota_cv = $_POST['mota_cv'];
+                $trangthai_cv = $_POST['trangthai_cv'];
+                if($ten_cv==""|| $mota_cv=="" ||$trangthai_cv==""){
+                    $thongbao ="Vui lòng nhập đủ dữ liệu !";
+                }
+                else{
+                    insert_chucvu($ten_cv,$mota_cv,$trangthai_cv);
+                    $thongbao ="Thêm thành công";
+                }
+            }
+            include "phanquyen/add.php";
+            break;
+        case 'listcv':
+                $listcv= loadall_chucvu();
+                include "phanquyen/list.php";
+            break;
+        case 'xoacv':
+                  $id = $_GET['id'];
+                delete_chucvu($id);
+                $listcv = loadall_chucvu();
+                include "phanquyen/list.php";
+            break;
+        case 'suacv':
+            $id = $_GET['id'];
+            $listcv = loadone_chucvu($id);
+            include "phanquyen/update.php";
+            break;
+        case 'updatecv':
+            if(isset($_POST['btn-add'])){
+                $id= $_POST['id'];
+                $ten_cv = $_POST['ten_cv'];
+                $mota_cv = $_POST['mota_cv'];
+                $trangthai_cv = $_POST['trangthai_cv'];
+                if($ten_cv==""|| $mota_cv=="" ||$trangthai_cv==""){
+                    $thongbao ="Vui lòng nhập đủ dữ liệu !";
+                }
+                else{
+                    update_chucvu($id,$ten_cv,$mota_cv,$trangthai_cv);
+                    $listcv= loadall_chucvu();
+                    include "phanquyen/list.php";
+                }
+            }
             break;
         default:
             include "home.php";

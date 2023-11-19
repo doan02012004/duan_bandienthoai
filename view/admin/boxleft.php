@@ -226,13 +226,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="index.php?act=addpq" class="nav-link">
+                <a href="index.php?act=addcv" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Thêm chức vụ</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="index.php?act=listpq" class="nav-link">
+                <a href="index.php?act=listcv" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh sách chức vụ</p>
                 </a>
