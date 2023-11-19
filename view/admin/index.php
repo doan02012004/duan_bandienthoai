@@ -5,6 +5,7 @@
     include "../model/sanpham.php";
     include "../model/chucvu.php";
     include "../model/baiviet.php";
+    include "../model/hethong.php";
  include "header.php";
  include "boxleft.php";
 if(isset($_GET['act']) && ($_GET['act']!="")){
@@ -145,14 +146,55 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             include "khuyenmai/update.php";
             break;
         case 'addht':
+            if(isset($_POST['btn-add'])){
+                $ten_ch = $_POST['ten_ch'];
+                $sdt_ch = $_POST['sdt_ch'];
+                $email_ch = $_POST['email_ch'];
+                $diachi_ch = $_POST['diachi_ch'];
+                if($ten_ch==""||$sdt_ch=="" ||$email_ch==""||$diachi_ch==""){
+                    $thongbao ="Vui lòng nhập đủ dữ liệu !";
+                }
+                else{
+                    insert_hethong($ten_ch,$sdt_ch,$email_ch,$diachi_ch);
+                    $thongbao ="Thêm thành công";
+                }
+            }
             include "hethong/add.php";
             break;
         case 'listht':
+            $listht = loadall_hethong();
             include "hethong/list.php";
             break;
         case 'suaht':
+            $id = $_GET['id'];
+            $listht = loadone_hethong($id);
             include "hethong/update.php";
                 break;
+        case 'updateht':
+            if(isset($_POST['btn-add'])){
+                $id = $_POST['id'];
+                $ten_ch = $_POST['ten_ch'];
+                $sdt_ch = $_POST['sdt_ch'];
+                $email_ch = $_POST['email_ch'];
+                $diachi_ch = $_POST['diachi_ch'];
+                if($ten_ch==""|| $sdt_ch=="" ||$email_ch==""||$diachi_ch==""){
+                    $thongbao ="Vui lòng nhập đủ dữ liệu !";
+                    include "hethong/update.php";
+                }
+                else{
+                    update_hethong($id,$ten_ch,$sdt_ch,$email_ch,$diachi_ch);
+                    $thongbao ="Thêm thành công";
+                    $listht = loadall_hethong();
+                    include "hethong/list.php";
+                }
+            }
+            break;
+        case 'xoaht':
+            $id = $_GET['id'];
+            delete_hethong($id);
+            $listht = loadall_hethong();
+            include "hethong/list.php";
+            break;
         case 'listuser':
             $listuser = loadall_user();
                     include "nguoidung/list.php";
@@ -231,15 +273,6 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             break;
         case 'listdh':
                 include "donhang/list.php";
-            break;
-        case 'addpq':
-                include "phanquyen/add.php";
-            break;
-        case 'listpq':
-                include "phanquyen/list.php";
-            break;
-        case 'suapq':
-                include "phanquyen/update.php";
             break;
         case 'listctdh':
             include "chitietdonhang/list.php";
