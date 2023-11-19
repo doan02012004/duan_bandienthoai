@@ -16,6 +16,7 @@
                     <th>Gía</th>
                     <th>Số lượng</th>
                     <th>Ngày nhập </th>
+                    <th>Mô tả</th>
                     <th>Trạng thái</th>
                     <th>id_dm</th>
                     <th>Thao tác</th>
@@ -40,6 +41,7 @@
                         <td>'.$gia_sp.'</td>
                         <td>'.$soluong_sp.'</td>
                         <td>'.$ngaynhap_sp.'</td>
+                        <td>'.$mota_sp.'</td>
                         <td>'.$trangthai_sp.'</td>
                         <td>'.$id_dm.'</td>
                         <td><a href="'.$suasp.'"><button class="btn btn-info">Sửa</button></a>|<a href="'.$xoasp.'"><button class="btn btn-info">Xóa</button></a></td>
@@ -58,6 +60,7 @@
                     <th>Gía</th>
                     <th>Số lượng</th>
                     <th>Ngày nhập </th>
+                    <th>Mô tả</th>
                     <th>Trạng thái</th>
                     <th>id_dm</th>
                     <th>Thao tác</th>

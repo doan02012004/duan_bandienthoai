@@ -49,16 +49,15 @@
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>Id</th>
-                    <th>Tên sản phẩm</th>
-                    <th>Avatar</th>
-                    <th>Dung lượng</th>
-                    <th>Gía</th>
-                    <th>Số lượng</th>
-                    <th>Ngày nhập </th>
+                  <th>Id</th>
+                    <th>Tên </th>
+                    <th>pass</th>
+                    <th>dia chi</th>
+                    <th>email</th>
+                    <th>Số dt</th>
                     <th>Trạng thái</th>
-                    <th>id_dm</th>
-                    <th>Thao tác</th>
+                    <th>role</th>
+                   
                   </tr>
                   </tfoot>
                 </table>
@@ -69,25 +68,4 @@
 
 
 
-                    <?php
-                    foreach ($listuser as $user) {
-                        extract($user);
-                       // $suakh = "index.php?act=suakh&id=" . $id;
-                        $xoauser = "index.php?act=xoauser&id=".$id;
-                        echo '<tr>
-                        <td><input type="checkbox" name="" id=""></td>
-                        <td>'.$id.'</td>
-                        <td>'.$ten_user.'</td>
-                        <td>'.$username.'</td>
-                        <td>'.$pass.'</td>
-                        <td>'.$diachi.'</td>
-                        <td>'.$email.'</td>
-                        <td>'.$sdt.'</td>
-                        <td>'.$trangthai_user.'</td>
-                        <td>'.$role.'</td>
-                        <td>
-                        <a href='.$xoauser.'><input type="button" value="Xóa"></a></td>
-                         </tr>';
-                    }
-                    ?>
-              
+                
