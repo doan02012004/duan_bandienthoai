@@ -279,8 +279,7 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             }
                 include "donhang/list.php";
             break;
-<<<<<<< HEAD
-            case 'xoadh':
+                       case 'xoadh':
                 if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                     delete_bill($_GET['id']);
                 }
@@ -307,8 +306,8 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
         case 'suapq':
                 include "phanquyen/update.php";
             break;
-=======
->>>>>>> 5a54d25ddf08bc17b0eeb0e16137a1a5186ddc90
+
+
         case 'listctdh':
             include "chitietdonhang/list.php";
             break;
