@@ -4,18 +4,16 @@ function loadall_user(){
     $listuser = pdo_query($sql);
     return $listuser;
 }
-function insert_user($email, $username, $pass)
-{
+function insert_user($email, $username, $pass){
     $sql = "insert into tbl_user(email,user,pass) values('$email','$username','$pass')";
     pdo_execute($sql);
 }
- function delete_user($id) {
+ function delete_user($id){
      $sql="delete from tbl_user where id=".$id;
      pdo_execute($sql);
  }
- function  update_user($id, $role)
-{
-    $sql = "update tbl_user set role='" . $role . "' where id=" . $id;
+ function update_user($id, $role){
+    $sql = "UPDATE `tbl_user` SET `role` = '$role' WHERE `id` =".$id;
     pdo_execute($sql);
 }
 function loadone_user($id){

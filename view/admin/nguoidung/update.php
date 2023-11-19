@@ -1,6 +1,6 @@
 <?php
-  if(is_array($tk)){
-    extract($tk);
+  if(is_array($listuser)){
+    extract($listuser);
   }
 ?>
 
@@ -13,20 +13,27 @@
               <!-- form start -->
              <form action="index.php?act=updateuser" method="post">
              <div class="card-body">
-             <div class="form-group">
-                Mã tài khoản <br>
-                <input type="text" name="maloai" disabled>
-            </div>
             <div class="form-group">
                 Vai trò<br>
-                <input type="text" name="tenloai" value="<?php  echo $role; ?>">
+               <select name="role" id="">
+                <?php
+                var_dump($cv);
+                  foreach ($listcv as $cv) {
+                    if($cv['id']==$id){
+                      $s="selected";
+                    }
+                    else{
+                      $s="";
+                    }
+                    echo '<option value="'.$cv['id'].'" '.$s.'>'.$cv['ten_cv'].'</option>';
+                  }
+                ?>
+               </select>
             </div>
             <div class="form-group">
-                <input type="hidden" name="id" value="<?php  echo $id; ?>">
+                <input type="hidden" name="id" value="<?=$id?>">
                 <!-- //lưu lại id -->
                 <input type="submit" name="capnhattk" value="CẬP NHẬT">
-                <input type="submit" value="NHẬP LẠI">
-                <a href="index.php?act=listuser"><input type="button" value="danhsach"></a>
             </div>
 </div>
             <?php

@@ -250,24 +250,25 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 delete_user($_GET['id']);
             }
-            $listuser = loatAll_user();
+            $listuser = loatall_user();
                     include "nguoidung/list.php";
                     break;
             case 'suauser':
                 $id = $_GET['id'];
                 $listuser = loadone_user($id);
-                                include "nguoidung/update.php";
-                                break;
+                $listcv = loadall_chucvu();
+                include "nguoidung/update.php";
+                break;
             case 'updateuser':
-                if (isset($_POST['capnhattk']) && ($_POST['capnhattk'])) {
-                  $role = $_POST['role'];
-                                        $id = $_POST['id'];
-                                        update_user($id, $role);
-                                        $thongbao = "Cập nhật thành công";
-                                    }
-                                    $listuser = loadall_user();
-                                    include "nguoidung/list.php";
-                                    break;
+                if(isset($_POST['capnhattk']) && ($_POST['capnhattk'])) {
+                    $id = $_POST['id'];
+                     $role = $_POST['role'];
+                    update_user($id,$role);
+                    $thongbao = "Cập nhật thành công";
+                    }
+                    $listuser = loadall_user();
+                    include "nguoidung/list.php";
+                    break;
         case 'listbv':
             $listbv = loadall_baiviet();
                 include "baiviet/list.php";
