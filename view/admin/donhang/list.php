@@ -15,25 +15,26 @@
                     <th>Thao tác</th>
                   </tr>
                   </thead>
-                  <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>01</td>
-                    <td>01</td>
-                    <td>Hoạt động</td>
-                    <td><a href="index.php?act=suadh"><button class="btn btn-info">Sửa</button></a>|<a href="index.php?act=xoadh"><button class="btn btn-info">Xóa</button></a></td>
-                  </tr>
-                  </tbody>
-                  <tfoot>
-                  <tr>
-                  <th>Stt</th>
-                  <th>Stt</th>
-                    <th>Id user</th>
-                    <th>Id khuyến mãi</th>
-                    <th>Trạng thái đơn hàng</th>
-                    <th>Thao tác</th>
-                  </tr>
-                  </tfoot>
+                  <?php
+                      $stt=0;
+                      foreach ($listdh as $dh) {
+                      extract($sp);
+                        $stt++;
+                        //$suadh = "index.php?act=suasp&id=".$id;
+                        $xoadh = "index.php?act=xoadh&id=".$id;
+                        echo '  <tr>
+                         <td>'.$id.'</td>
+                        <td>'.$iduser.'</td>
+                        <td>'.$idkm.'</td>
+                        <td>'.$trangthaidh.'</td>
+                       
+                        <td><a href="'.$suadh.'"><button class="btn btn-info">Sửa</button></a>|<a href="'.$xoadh.'"><button class="btn btn-info">Xóa</button></a></td>
+                        </tr>';
+                      }
+                    ?>
+                  
+                   
+                
                 </table>
               </div>
               <!-- /.card-body -->
