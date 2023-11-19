@@ -316,8 +316,8 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                 include "binhluan/list.php";
             break;
         case 'listdh':
-            $listdh = loadall_dh();
-                include "donhang/list.php";
+            // $listdh = loadall_dh();
+            //     include "donhang/list.php";
             break;
                        case 'xoadh':
                 if (isset($_GET['id']) && ($_GET['id'] > 0)) {
