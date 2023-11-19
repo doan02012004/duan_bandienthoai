@@ -7,7 +7,7 @@
     include "../model/baiviet.php";
     include "../model/hethong.php";
     include "../model/khuyenmai.php";
-    include "../model/lienhe.php";
+    include "../model/binhluan.php";
  include "header.php";
  include "boxleft.php";
 if(isset($_GET['act']) && ($_GET['act']!="")){
