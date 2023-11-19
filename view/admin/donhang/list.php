@@ -24,17 +24,13 @@
                         $xoadh = "index.php?act=xoadh&id=".$id;
                         echo '  <tr>
                          <td>'.$id.'</td>
-                        <td>'.$iduser.'</td>
-                        <td>'.$idkm.'</td>
-                        <td>'.$trangthaidh.'</td>
-                       
-                        <td><a href="'.$suadh.'"><button class="btn btn-info">Sửa</button></a>|<a href="'.$xoadh.'"><button class="btn btn-info">Xóa</button></a></td>
+                        <td>'.$id_user.'</td>
+                        <td>'.$id_km.'</td>
+                        <td>'.$trangthai_dh.'</td>
+                        <td><a href="'.$xoadh.'"><button class="btn btn-info">Xóa</button></a></td>
                         </tr>';
                       }
                     ?>
-                  
-                   
-                
                 </table>
               </div>
               <!-- /.card-body -->

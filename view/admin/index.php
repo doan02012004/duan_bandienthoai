@@ -7,6 +7,8 @@
     include "../model/baiviet.php";
     include "../model/hethong.php";
     include "../model/khuyenmai.php";
+    include "../model/donhang.php";
+    include "../model/donhangchitiet.php";
  include "header.php";
  include "boxleft.php";
 if(isset($_GET['act']) && ($_GET['act']!="")){
@@ -317,9 +319,9 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             break;
         case 'listdh':
             $listdh = loadall_dh();
-                include "donhang/list.php";
+            include "donhang/list.php";
             break;
-                       case 'xoadh':
+        case 'xoadh':
                 if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                     delete_bill($_GET['id']);
                 }
@@ -349,6 +351,7 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
 
 
         case 'listctdh':
+            $listdhct = loadall_donhangchitiet();
             include "chitietdonhang/list.php";
             break;
         case 'addcv':
