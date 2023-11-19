@@ -230,8 +230,31 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                 include "binhluan/list.php";
             break;
         case 'listdh':
+            if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
+                $kyw = $_POST['kyw'];
+            } else {
+                $kyw = "";
+            }
                 include "donhang/list.php";
             break;
+            case 'xoadh':
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    delete_bill($_GET['id']);
+                }
+    
+                if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
+                    $kyw = $_POST['kyw'];
+                } else {
+                    $kyw = "";
+                }
+                $listdh = loadall_dh($kyw, 0);
+                include "donhang/list.php";
+                break;
+                     
+        case 'addpq':
+            include "phanquyen/add.php";
+        break;
+            
         case 'addpq':
                 include "phanquyen/add.php";
             break;
