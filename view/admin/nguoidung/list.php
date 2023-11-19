@@ -10,6 +10,7 @@
                   <tr>
                     <th>Id</th>
                     <th>Tên </th>
+                    <th>username</th>
                     <th>pass</th>
                     <th>dia chi</th>
                     <th>email</th>
@@ -26,7 +27,7 @@
                         $suauser = "index.php?act=suauser&id=" . $id;
                         $xoauser = "index.php?act=xoauser&id=".$id;
                         echo '<tr>
-                        <td><input type="checkbox" name="" id=""></td>
+                        
                         <td>'.$id.'</td>
                         <td>'.$ten_user.'</td>
                         <td>'.$username.'</td>
@@ -51,6 +52,7 @@
                   <tr>
                   <th>Id</th>
                     <th>Tên </th>
+                    <th>username</th>
                     <th>pass</th>
                     <th>dia chi</th>
                     <th>email</th>
