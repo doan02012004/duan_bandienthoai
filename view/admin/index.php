@@ -316,11 +316,7 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                 include "binhluan/list.php";
             break;
         case 'listdh':
-            if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
-                $kyw = $_POST['kyw'];
-            } else {
-                $kyw = "";
-            }
+            $listdh = loadall_dh();
                 include "donhang/list.php";
             break;
                        case 'xoadh':
