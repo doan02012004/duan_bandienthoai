@@ -17,9 +17,8 @@
                 Vai trò<br>
                <select name="role" id="">
                 <?php
-                var_dump($cv);
                   foreach ($listcv as $cv) {
-                    if($cv['id']==$id){
+                    if($cv['id']==$role){
                       $s="selected";
                     }
                     else{

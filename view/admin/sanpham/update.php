@@ -66,7 +66,7 @@
                         <select name="id_dm" class="form-control">
                           <?php
                             foreach ($listdm as $dm) {
-                              if($id==$dm['id']){
+                              if($id_dm==$dm['id']){
                                 $s="selected";
                               }
                               else{
