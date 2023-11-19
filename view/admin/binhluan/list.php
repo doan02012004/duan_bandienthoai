@@ -18,26 +18,23 @@
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>01</td>
-                    <td>01</td>
-                    <td>01</td>
-                    <td>Sản phẩm chất lượng</td>
-                    <td>Hoạt động</td>
-                    <td><a href=""><button class="btn btn-info">Xóa</button></a></td>
-                  </tr>
+                  <?php
+                    $stt= 0;
+                    foreach ($listbl as $bl) {
+                      extract($bl);
+                      $stt++;
+                      $xoabl = "index.php?act=xoabl&id=".$id;
+                      echo ' <tr>
+                      <td>'.$stt.'</td>
+                      <td>'.$id.'</td>
+                      <td>'.$id_user.'</td>
+                      <td>'.$id_sp.'</td>
+                      <td>'.$noidung_bl.'</td>
+                      <td>'.$trangthai_bl.'</td>
+                      <td><a href="'.$xoabl.'"><button class="btn btn-info">Xóa</button></a></td>';
+                    }
+                    ?>
                   </tbody>
-                  <tfoot>
-                  <tr>
-                  <th>Stt</th>
-                    <th>Id danh mục</th>
-                    <th>Tên danh mục</th>
-                    <th>Mô tả</th>
-                    <th>Trạng thái</th>
-                    <th>Thao tác</th>
-                  </tr>
-                  </tfoot>
                 </table>
               </div>
               <!-- /.card-body -->
