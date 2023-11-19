@@ -18,7 +18,7 @@
                   <?php
                       $stt=0;
                       foreach ($listdh as $dh) {
-                      extract($sp);
+                      extract($dh);
                         $stt++;
                         //$suadh = "index.php?act=suasp&id=".$id;
                         $xoadh = "index.php?act=xoadh&id=".$id;
