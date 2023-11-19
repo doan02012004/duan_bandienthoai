@@ -22,7 +22,6 @@
                     foreach ($listlh as $lh) {
                       extract($lh);
                       $stt++;
-                      $sualh = "index.php?act=sualh&id=".$id;
                       $xoalh = "index.php?act=xoalh&id=".$id;
                       echo ' <tr>
                       <td>'.$stt.'</td>
@@ -30,7 +29,7 @@
                       <td>'.$id_user.'</td>
                       <td>'.$noidung_lh.'</td>
                       <td>'.$trangthai_lh.'</td>
-                      <td><a href="'.$sualh.'"><button class="btn btn-info">Sửa</button></a>|<a href="'.$xoalh.'"><button class="btn btn-info">Xóa</button></a></td>
+                      <td><a href="'.$xoalh.'"><button class="btn btn-info">Xóa</button></a></td>
                       <tr>';
                     }
                     ?>

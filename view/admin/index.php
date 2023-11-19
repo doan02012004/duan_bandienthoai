@@ -9,6 +9,7 @@
     include "../model/khuyenmai.php";
     include "../model/donhang.php";
     include "../model/donhangchitiet.php";
+    include "../model/lienhe.php";
  include "header.php";
  include "boxleft.php";
 if(isset($_GET['act']) && ($_GET['act']!="")){
@@ -334,22 +335,6 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                 $listdh = loadall_dh($kyw, 0);
                 include "donhang/list.php";
                 break;
-                     
-        case 'addpq':
-            include "phanquyen/add.php";
-        break;
-            
-        case 'addpq':
-                include "phanquyen/add.php";
-            break;
-        case 'listpq':
-                include "phanquyen/list.php";
-            break;
-        case 'suapq':
-                include "phanquyen/update.php";
-            break;
-
-
         case 'listctdh':
             $listdhct = loadall_donhangchitiet();
             include "chitietdonhang/list.php";
@@ -399,6 +384,17 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                     include "phanquyen/list.php";
                 }
             }
+            break;
+        case 'listlh':
+            $listlh = loadall_lienhe();
+            include "lienhe/list.php";
+            break;
+        case 'xoalh':
+            $id =$_GET['id'];
+            delete_lienhe($id);
+            $listlh = loadall_lienhe();
+            include "lienhe/list.php";
+            break;
             break;
         default:
             include "home.php";
