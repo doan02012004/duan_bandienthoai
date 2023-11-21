@@ -1,6 +1,6 @@
 <?php
 function loadall_user(){
-    $sql="SELECT * FROM `tbl_user` order by id desc ";
+    $sql="SELECT * FROM `tbl_user` as a INNER JOIN as b ON a.id = b.id_user order by id desc ";
     $listuser = pdo_query($sql);
     return $listuser;
 }

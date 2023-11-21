@@ -170,7 +170,7 @@
 								<div class="col-12">
 									<!-- PAYMENT-METHOD START -->
 									<div class="payment-method">
-										<img class="img-responsive pull-right" src="assets/images/payment.webp"
+										<img class="img-responsive pull-right" src="view/user/assets/images/payment.webp"
 											alt="payment-method" />
 									</div>
 									<!-- PAYMENT-METHOD END -->
@@ -205,24 +205,24 @@
     ============================================ -->
 
     <!-- Modernizer & jQuery JS -->
-    <script src="assets/js/vendor/modernizr-3.11.2.min.js"></script>
-    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="view/user/assets/js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="view/user/assets/js/vendor/jquery-3.6.0.min.js"></script>
 
     <!-- Bootstrap JS -->
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="view/user/assets/js/popper.min.js"></script>
+    <script src="view/user/assets/js/bootstrap.min.js"></script>
 
     <!-- Plugins JS -->
-    <script src="assets/js/jquery.fancybox.js"></script>
-    <script src="assets/js/jquery.bxslider.min.js"></script>
-    <script src="assets/js/jquery.meanmenu.js"></script>
-    <script src="assets/js/jquery.nivo.slider.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/jqueryui.js"></script>
-    <script src="assets/js/wow.js"></script>
+    <script src="view/user/assets/js/jquery.fancybox.js"></script>
+    <script src="view/user/assets/js/jquery.bxslider.min.js"></script>
+    <script src="view/user/assets/js/jquery.meanmenu.js"></script>
+    <script src="view/user/assets/js/jquery.nivo.slider.js"></script>
+    <script src="view/user/assets/js/owl.carousel.min.js"></script>
+    <script src="view/user/assets/js/jqueryui.js"></script>
+    <script src="view/user/assets/js/wow.js"></script>
 
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="view/user/assets/js/main.js"></script>
 	
 </body>
 
