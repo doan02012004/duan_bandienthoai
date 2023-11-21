@@ -9,7 +9,6 @@
                   <thead>
                   <tr>
                     <th>Stt</th>
-                    <th>Id bài viết</th>
                     <th>Tiêu đề</th>
                     <th>Nội dung</th>
                     <th>Trạng thái</th>
@@ -26,7 +25,6 @@
                       $xoabv = "index.php?act=xoabv&id=".$id;
                       echo ' <tr>
                       <td>'.$stt.'</td>
-                      <td>'.$id.'</td>
                       <td>'.$tieude.'</td>
                       <td>'.$noidung_bv.'</td>
                       <td>'.$trangthai_bv.'</td>

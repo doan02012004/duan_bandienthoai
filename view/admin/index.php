@@ -9,6 +9,7 @@
     include "../model/khuyenmai.php";
     include "../model/binhluan.php";
     include "../model/donhang.php";
+    include "../model/lienhe.php";
  include "header.php";
  include "boxleft.php";
 if(isset($_GET['act']) && ($_GET['act']!="")){
@@ -194,14 +195,14 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
         case 'addht':
             if(isset($_POST['btn-add'])){
                 $ten_ch = $_POST['ten_ch'];
-                $sdt_ch = $_POST['sdt_ch'];
+                $sdt = $_POST['sdt'];
                 $email_ch = $_POST['email_ch'];
                 $diachi_ch = $_POST['diachi_ch'];
-                if($ten_ch==""||$sdt_ch=="" ||$email_ch==""||$diachi_ch==""){
+                if($ten_ch==""||$sdt=="" ||$email_ch==""||$diachi_ch==""){
                     $thongbao ="Vui lòng nhập đủ dữ liệu !";
                 }
                 else{
-                    insert_hethong($ten_ch,$sdt_ch,$email_ch,$diachi_ch);
+                    insert_hethong($ten_ch,$sdt,$email_ch,$diachi_ch);
                     $thongbao ="Thêm thành công";
                 }
             }
@@ -220,15 +221,15 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             if(isset($_POST['btn-add'])){
                 $id = $_POST['id'];
                 $ten_ch = $_POST['ten_ch'];
-                $sdt_ch = $_POST['sdt_ch'];
+                $sdt = $_POST['sdt'];
                 $email_ch = $_POST['email_ch'];
                 $diachi_ch = $_POST['diachi_ch'];
-                if($ten_ch==""|| $sdt_ch=="" ||$email_ch==""||$diachi_ch==""){
+                if($ten_ch==""|| $sdt=="" ||$email_ch==""||$diachi_ch==""){
                     $thongbao ="Vui lòng nhập đủ dữ liệu !";
                     include "hethong/update.php";
                 }
                 else{
-                    update_hethong($id,$ten_ch,$sdt_ch,$email_ch,$diachi_ch);
+                    update_hethong($id,$ten_ch,$sdt,$email_ch,$diachi_ch);
                     $thongbao ="Thêm thành công";
                     $listht = loadall_hethong();
                     include "hethong/list.php";
@@ -395,14 +396,14 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             }
             break;
         case 'listlh':
-            $listlh = loadall_lienhe();
-            include "lienhe/list.php";
-            break;
+                $listlh = loadall_lienhe();
+                include "lienhe/list.php";
+                break;
         case 'xoalh':
-            $id =$_GET['id'];
-            delete_lienhe($id);
-            $listlh = loadall_lienhe();
-            include "lienhe/list.php";
+            $id = $_GET['id'];
+                delete_lienhe($id);
+                $listlh = loadall_lienhe();
+                include "lienhe/list.php";
             break;
         default:
             include "home.php";

@@ -1,7 +1,7 @@
 <div class="content-wrapper">
 <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                <h3 class="card-title">Danh sách của hệ thống </h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -29,7 +29,7 @@
                       <td>'.$stt.'</td>
                       <td>'.$id.'</td>
                       <td>'.$ten_ch.'</td>
-                      <td>'.$sdt_ch.'</td>
+                      <td>'.$sdt.'</td>
                       <td>'.$email_ch.'</td>
                       <td>'.$diachi_ch.'</td>
                       <td><a href="'.$suaht.'"><button class="btn btn-info">Sửa</button></a>|<a href="'.$xoaht.'"><button class="btn btn-info">Xóa</button></a></td>

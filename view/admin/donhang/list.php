@@ -1,7 +1,7 @@
 <div class="content-wrapper">
 <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                <h3 class="card-title">Danh sách đơn hàng</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -9,9 +9,13 @@
                   <thead>
                   <tr>
                     <th>Stt</th>
-                    <th>Id user</th>
-                    <th>Id khuyến mãi</th>
+                    <th>Tài khoản</th>
+                    <th>Tên người dùng</th>
+                    <th>Email</th>
+                    <th>Số điện thoại</th>
+                    <th>Địa chỉ giao hàng</th>
                     <th>Trạng thái đơn hàng</th>
+                    <th>Đơn hàng chi tiết</th>
                     <th>Thao tác</th>
                   </tr>
                   </thead>
@@ -22,11 +26,17 @@
                         $stt++;
                         //$suadh = "index.php?act=suasp&id=".$id;
                         $xoadh = "index.php?act=xoadh&id=".$id;
+                        $ctdh = "index.php?act=ctdh&id=".$id;
                         echo '  <tr>
+                        
                          <td>'.$id.'</td>
-                        <td>'.$id_user.'</td>
-                        <td>'.$id_km.'</td>
+                        <td>'.$ten_user.'</td>
+                        <td>'.$username.'</td>
+                        <td>'.$email.'</td>
+                        <td>'.$sdt.'</td>
+                        <td>'.$diachi.'</td>
                         <td>'.$trangthai_dh.'</td>
+                        <td><a href="'.$ctdh.'"><button class="btn btn-info">Chi tiết</button></a></td>
                         <td><a href="'.$xoadh.'"><button class="btn btn-info">Xóa</button></a></td>
                         </tr>';
                       }

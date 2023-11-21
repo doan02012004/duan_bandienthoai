@@ -13,7 +13,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Số điện thoại</label>
-                    <input type="text" name="sdt_ch" class="form-control" id="exampleInputPassword1" placeholder=" Nhập trạng thái danh mục">
+                    <input type="text" name="sdt" class="form-control" id="exampleInputPassword1" placeholder=" Nhập trạng thái danh mục">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Email</label>

@@ -1,22 +1,22 @@
 <?php 
-function insert_dh($id, $iduser, $idkm, $trangthaidh)
-{
-    $sql = "insert into tbl_donhang(id,iduser,idkm,trangthaidh) values('$id','$iduser','$idkm','$trangthaidh')";
-    return pdo_execute_return_lastInsertID($sql);
-}
-function loadone_dh($id)
-{
-    $sql = "select * from tbl_donhang where id=" . $id;
-    $dh = pdo_query_one($sql);
-    return $dh;
-}
+// function insert_dh($id, $iduser, $idkm, $trangthaidh)
+// {
+//     $sql = "insert into tbl_donhang(id,iduser,idkm,trangthaidh) values('$id','$iduser','$idkm','$trangthaidh')";
+//     return pdo_execute_return_lastInsertID($sql);
+// }
+// function loadone_dh($id)
+// {
+//     $sql = "select * from tbl_donhang where id=" . $id;
+//     $dh = pdo_query_one($sql);
+//     return $dh;
+// }
 function delete_dh($id)
 {
     $sql = "delete from tbl_donhang where id=" . $id;
     pdo_execute($sql);
 }
-    function loadall_dh(){
-        $sql ="SELECT * FROM `tbl_donhang` order by id desc";
+function loadall_dh(){
+        $sql ="SELECT * FROM `tbl_donhang` as a join `tbl_user` as b on a.id=b.id  order by id desc";
         $listdh = pdo_query($sql);
         return $listdh;
     }

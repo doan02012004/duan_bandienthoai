@@ -1,7 +1,7 @@
 <div class="content-wrapper">
 <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                <h3 class="card-title">Danh sách sản phẩm</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -18,7 +18,7 @@
                     <th>Ngày nhập </th>
                     <th>Mô tả</th>
                     <th>Trạng thái</th>
-                    <th>id_dm</th>
+                    <th>Tên danh mục</th>
                     <th>Thao tác</th>
                   </tr>
                   </thead>

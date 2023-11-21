@@ -9,9 +9,8 @@
                   <thead>
                   <tr>
                     <th>Stt</th>
-                    <th>Id khuyến mãi</th>
                     <th>Tên khuyến mãi</th>
-                    <th>Giá khuyến mãi</th>
+                    <th>Phần trăm khuyến mãi</th>
                     <th>Ngày bắt đầu</th>
                     <th>Ngày kết thúc</th>
                     <th>Trạng thái</th>
