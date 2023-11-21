@@ -1,4 +1,11 @@
-
+<?php
+if(is_array($listctdh)){
+      extract($listctdh);
+      $src ="view/upload/";
+      $hinhpath = $src.$avatar;
+      $hinh = '<img witdth=50px src="'.$hinh.'" alt="" srcset="">';
+}
+?>
  <div class="content-wrapper">
     <div class="card">
               <div class="card-header">
@@ -18,23 +25,14 @@
                   </tr>
                   </thead>
                   <tbody>
-                  <?php
-                      $stt=0;
-                      foreach ($listdhct as $dh) {
-                      extract($dh);
-                        $stt++;
-                        //$suadh = "index.php?act=suasp&id=".$id;
-                        $xoadhct = "index.php?act=xoadh&id=".$id;
-                        echo '  <tr>
-                        <td>'.$stt.'</td>
-                         <td>'.$id.'</td>
-                        <td>'.$id_dh.'</td>
-                        <td>'.$soluong_dh.'</td>
-                        <td>'.$thanhtien.'</td>
-                        <td><a href="'.$xoadhct.'"><button class="btn btn-info">Xóa</button></a></td>
-                        </tr>';
-                      }
-                    ?>
+                        <tr>
+                          <td><?=$ten_sp ?></td>
+                          <td><?= $hinh ?></td>
+                          <td><?= $dungluong_sp ?></td>
+                          <td><?= $gia_dh ?></td>
+                          <td><?= $soluong ?></td>
+                          <td><?= $thanhtien ?></td>
+                        </tr>
                      </tbody>
                      <tfoot>
                   <tr>

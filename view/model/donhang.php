@@ -16,41 +16,24 @@ function delete_dh($id)
     pdo_execute($sql);
 }
 function loadall_dh(){
-        $sql ="SELECT * FROM `tbl_donhang` as a join `tbl_user` as b on a.id=b.id  order by id desc";
+        $sql ="SELECT b.id,c.ten_user,c.username,c.sdt,c.email,c.diachi,a.ten_sp,b.gia_dh,a.dungluong_sp,b.trangthai_dh FROM `tbl_sanpham` as a INNER JOIN `tbl_donhang` as b on a.id =b.id_sp INNER JOIN
+         `tbl_user`as c on b.id_user=c.id order by id desc";
         $listdh = pdo_query($sql);
         return $listdh;
     }
-function get_ttdh($n)
-{
-    switch ($n) {
-        case '0':
-            $tt = "Chờ xác nhận";
-            break;
-        case '1':
-            $tt = "Đang lấy hàng";
-            break;
-
-        case '2':
-            $tt = "Đang giao hàng";
-            break;
-
-        case '3':
-            $tt = "Đã giao hàng";
-            break;
-
-        case '4':
-            $tt = "Hoàn tất";
-            break;
-
-        case '5':
-            $tt = "Hủy";
-            break;
-
-        default:
-            $tt = "Đơn hàng mới";
-            break;
-    }
-    return $tt;
+function loadone_dh($id){
+    $sql ="SELECT * FROM `tbl_donhang` WHERE id=".$id;
+    $listdh =  pdo_query_one($sql);
+    return $listdh;
 }
-
+function update_dh($id,$trangthai_dh){
+    $sql="UPDATE `tbl_donhang` SET `trangthai_dh` = '".$trangthai_dh."' WHERE id =".$id;
+    pdo_execute($sql);
+}
+function loadone_ctdh($id){
+    $Sql ="SELECT c.ten_sp,c.avatar,c.dungluong_sp,b.gia_dh,a.soluong,a.thanhtien FROM `tbl_donhangchitiet` as a INNER JOIN `tbl_donhang` as b on a.id_dh=b.id
+    INNER JOIN `tbl_sanpham` as c on b.id_sp =c.id WHERE b.id=".$id;
+    $listdh =  pdo_query_one($sql);
+    return $listdh;
+}
 ?>

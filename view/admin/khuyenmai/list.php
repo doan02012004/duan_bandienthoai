@@ -8,7 +8,6 @@
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>Stt</th>
                     <th>Tên khuyến mãi</th>
                     <th>Phần trăm khuyến mãi</th>
                     <th>Ngày bắt đầu</th>
@@ -19,17 +18,13 @@
                   </thead>
                   <tbody>
                   <?php
-                    $stt= 0;
                     foreach ($listkm as $km) {
                       extract($km);
-                      $stt++;
                       $suakm = "index.php?act=suakm&id=".$id;
                       $xoakm = "index.php?act=xoakm&id=".$id;
                       echo ' <tr>
-                      <td>'.$stt.'</td>
-                      <td>'.$id.'</td>
                       <td>'.$ten_km.'</td>
-                      <td>'.$gia_km.'</td>
+                      <td>'.$phantram_km.'</td>
                       <td>'.$ngaybatdau.'</td>
                       <td>'.$ngayketthuc.'</td>
                       <td>'.$trangthai_km.'</td>
