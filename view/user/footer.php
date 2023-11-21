@@ -196,8 +196,6 @@
 		</div>
 	</footer>
 	<!-- COPYRIGHT-AREA END -->
-
-
 	
 
 
@@ -229,5 +227,5 @@
 </body>
 
 
-<!-- Mirrored from htmldemo.net/bstore/bstore/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Nov 2023 18:19:59 GMT -->
+<!-- Mirrored from htmldemo.net/bstore/bstore/shop-gird.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Nov 2023 18:19:59 GMT -->
 </html>

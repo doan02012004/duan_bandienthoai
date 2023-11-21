@@ -9,16 +9,16 @@
 <!--<![endif]-->
 
 
-<!-- Mirrored from htmldemo.net/bstore/bstore/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Nov 2023 18:19:52 GMT -->
+<!-- Mirrored from htmldemo.net/bstore/bstore/shop-gird.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Nov 2023 18:19:59 GMT -->
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Home Variation 2</title>
+	<title>Women</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.webp">
+    <link rel="shortcut icon" type="image/x-icon" href="view/user/assets/images/favicon.webp">
 
 
 	<!-- Fonts -->
@@ -29,28 +29,28 @@
     <!-- CSS
 	============================================ -->
 
-    <!-- Icon Font CSS -->
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="view/user/assets/css/font-awesome.min.css">
 
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/jquery.fancybox.css">
-    <link rel="stylesheet" href="assets/css/jquery.bxslider.css">
-    <link rel="stylesheet" href="assets/css/jquery-ui-slider.css">
-    <link rel="stylesheet" href="assets/css/meanmenu.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/nivo-slider.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/ie.css">
+    <link rel="stylesheet" href="view/user/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="view/user/assets/css/animate.css">
+    <link rel="stylesheet" href="view/user/assets/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="view/user/assets/css/jquery.bxslider.css">
+    <link rel="stylesheet" href="view/user/assets/css/jquery-ui-slider.css">
+    <link rel="stylesheet" href="view/user/assets/css/meanmenu.min.css">
+    <link rel="stylesheet" href="view/user/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="view/user/assets/css/nivo-slider.css">
+    <link rel="stylesheet" href="view/user/assets/css/main.css">
+    <link rel="stylesheet" href="view/user/assets/css/ie.css">
 
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="view/user/assets/css/style.css">
+    <link rel="stylesheet" href="view/user/assets/css/responsive.css">
+
 
 </head>
 
-<body class="index-2">
+<body>
 	<!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -66,7 +66,7 @@
 				<div class="row">
 					<!-- HEADER-LEFT-MENU START -->
 					<div class="col-md-6">
-						<!-- <div class="header-left-menu">
+						<div class="header-left-menu">
 							<div class="welcome-info">
 								Welcome <span>Bstore</span>
 							</div>
@@ -102,7 +102,7 @@
 									</li>
 								</ul>
 							</div>
-						</div> -->
+						</div>
 					</div>
 					<!-- HEADER-LEFT-MENU END -->
 	
@@ -133,7 +133,7 @@
 	
 					<!-- LOGO START -->
 					<div class="logo">
-						<a href="index.html"><img src="assets/images/logo2.webp" alt="bstore logo" /></a>
+						<a href="index.html"><img src="assets/images/logo.webp" alt="bstore logo" /></a>
 					</div>
 					<!-- LOGO END -->
 	
@@ -206,8 +206,8 @@
 								<ul>
 									<li class="active"><a href="index.html">Home</a>
 										<ul class="home-menu">
-											<li><a href="giaodien1.html">Home variation 1</a></li>
-											<li><a href="giaodien2.html">Home variation 2</a></li>
+											<li><a href="index.html">Home variation 1</a></li>
+											<li><a href="view/user/giaodien2.html">Home variation 2</a></li>
 										</ul>									
 									</li>
 									<li>
@@ -460,7 +460,7 @@
 					</div>
 					<div class="col-4">
 						<div class="logo">
-							<a href="index.html"><img src="assets/images/logo2.webp" alt="bstore logo" /></a>
+							<a href="index.html"><img src="assets/images/logo.webp" alt="bstore logo" /></a>
 						</div>
 					</div>
 					<div class="col-4">
@@ -477,5 +477,3 @@
 		<!-- Mobile Header END -->
 
 	</header>
-	<!-- HEADER AREA End -->
-
