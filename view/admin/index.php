@@ -251,6 +251,7 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                 $diachi = $_POST['diachi'];
                 $sdt = $_POST['sdt'];
                 $role = $_POST['role'];
+                $trangthai_user = $_POST['trangthai_user'];
                 $trangthai_user = "Hoạt động";
                 if($ten_user==""||$sdt=="" ||$email==""||$diachi=="" || $username ==""||$pass==""){
                     $thongbao ="Vui lòng nhập đủ dữ liệu !";
@@ -299,8 +300,10 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                     else{
                         update_user($id,$ten_user,$username,$pass,$email,$diachi,$sdt,$role,$trangthai_user);
                         $thongbao ="Thêm thành công";
+                        $listuser = loadall_user();
                     }
                 }
+
                     include "nguoidung/list.php";
                     break;
         case 'listbv':

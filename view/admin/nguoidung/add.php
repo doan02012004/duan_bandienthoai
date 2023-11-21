@@ -31,6 +31,13 @@
                     <label for="exampleInputPassword1">Địa chỉ</label>
                     <input type="text" class="form-control" id="exampleInputPassword1" name="diachi" placeholder="Trạng thái khuyến mãi">
                   </div>
+                  </div>
+                  <div class="form-group">
+                Trạng thái<br>
+               <select name="trangthai_user" id="">
+                    <option value="Hoạt động">Hoạt động</option>
+                    <option value="Không hoạt động">Không hoạt động</option>
+               </select>
                   <div class="form-group">
                 Phân quyền<br>
                <select name="role" id="">

@@ -1,6 +1,6 @@
 <?php
 function loadall_user(){
-    $sql="SELECT * FROM `tbl_user` as a INNER JOIN `tbl_phanquyen` as b ON a.role = b.id";
+    $sql="SELECT a.id,a.ten_user, a.username,a.pass,a.email,a.sdt,a.diachi,a.trangthai_user,b.ten_cv FROM `tbl_user` as a INNER JOIN `tbl_phanquyen` as b ON a.role = b.id";
     $listuser = pdo_query($sql);
     return $listuser;
 }
