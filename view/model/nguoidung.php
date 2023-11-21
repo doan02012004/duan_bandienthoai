@@ -1,11 +1,13 @@
 <?php
 function loadall_user(){
-    $sql="SELECT * FROM `tbl_user` as a INNER JOIN as b ON a.id = b.id_user order by id desc ";
+    $sql="SELECT * FROM `tbl_user` as a INNER JOIN `tbl_phanquyen` as b ON a.role = b.id";
     $listuser = pdo_query($sql);
     return $listuser;
 }
-function insert_user($email, $username, $pass){
-    $sql = "insert into tbl_user(email,user,pass) values('$email','$username','$pass')";
+function insert_user($ten_user,$username,$pass,$email,$diachi,$sdt,$role,$trangthai_user){
+   $sql = "INSERT INTO `tbl_user` ( `ten_user`, `username`, `pass`, `diachi`,
+    `email`, `sdt`, `trangthai_user`, `role`)
+    VALUES ('".$ten_user."', '".$username."', '".$pass."', '".$diachi."', '".$email."', '".$sdt."', '".$trangthai_user."', '".$role."')";
     pdo_execute($sql);
 }
  function delete_user($id){

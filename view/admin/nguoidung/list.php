@@ -24,7 +24,7 @@
                   <?php
                     foreach ($listuser as $user) {
                         extract($user);
-                        $suauser = "index.php?act=suauser&id=" . $id;
+                        $suauser = "index.php?act=suauser&id=" .$id;
                         $xoauser = "index.php?act=xoauser&id=".$id;
                         echo '<tr>
                         
@@ -36,7 +36,7 @@
                         <td>'.$email.'</td>
                         <td>'.$sdt.'</td>
                         <td>'.$trangthai_user.'</td>
-                        <td>'.$role.'</td>
+                        <td>'.$ten_cv.'</td>
                         <td>
                         
                         <td><a href="'.$xoauser.'"><button class="btn btn-info">Xóa</button></a></td>
