@@ -204,33 +204,10 @@
 						<div class="mainmenu">
 							<nav>
 								<ul>
-									<li class="active"><a href="index.html">Home</a>
-										<ul class="home-menu">
-											<li><a href="index.html">Home variation 1</a></li>
-											<li><a href="view/user/giaodien2.html">Home variation 2</a></li>
-										</ul>									
+									<li class="active"><a href="index.php?act=trangchu">Trang Chủ</a>									
 									</li>
 									<li>
-										<a href="shop-gird.html">Women</a>
-										<ul class="mega-menu row">
-											<li class="col-6">
-												<a class="mega-menu-title" href="shop-gird.html">TOPS</a>
-												<ul>
-													<li><a href="shop-gird.html">T-shirts</a></li>
-													<li><a href="shop-gird.html">clothing</a></li>
-													<li><a href="shop-gird.html">Delivery</a></li>
-												</ul>
-											</li>
-											<li class="col-6">
-												<a class="mega-menu-title" href="shop-gird.html">Prodect</a>
-												<ul>
-													<li><a href="shop-gird.html">T-shirts</a></li>
-													<li><a href="shop-gird.html">clothing</a></li>
-													<li><a href="shop-gird.html">Watch</a></li>
-													<li><a href="shop-gird.html">Delivery</a></li>
-												</ul>
-											</li>
-										</ul>
+										<a href="index.php?act=sanpham">Sản Phẩm</a>
 									</li>
 									<li>
 										<a href="shop-gird.html">Men</a>

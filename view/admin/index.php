@@ -242,7 +242,30 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             $listht = loadall_hethong();
             include "hethong/list.php";
             break;
+        case 'adduser':
+            $listcv = loadall_chucvu();
+            if(isset($_POST['btn-add'])){
+                $ten_user = $_POST['ten_user'];
+                $username = $_POST['username'];
+                $pass = $_POST['pass'];
+                $email = $_POST['email'];
+                $diachi = $_POST['diachi'];
+                $sdt = $_POST['sdt'];
+                $role = $_POST['role'];
+                $trangthai_user = $_POST['trangthai_user'];
+                $trangthai_user = "Hoạt động";
+                if($ten_user==""||$sdt=="" ||$email==""||$diachi=="" || $username ==""||$pass==""){
+                    $thongbao ="Vui lòng nhập đủ dữ liệu !";
+                }
+                else{
+                    insert_user($ten_user,$username,$pass,$email,$diachi,$sdt,$role,$trangthai_user);
+                    $thongbao ="Thêm thành công";
+                }
+            }
+            include "nguoidung/add.php";
+            break;
         case 'listuser':
+            $listcv = loadall_chucvu();
             $listuser = loadall_user();
                     include "nguoidung/list.php";
                     break;
@@ -262,13 +285,26 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                 include "nguoidung/update.php";
                 break;
             case 'updateuser':
-                if(isset($_POST['capnhattk']) && ($_POST['capnhattk'])) {
+                if(isset($_POST['btn-add'])){
                     $id = $_POST['id'];
-                     $role = $_POST['role'];
-                    update_user($id,$role);
-                    $thongbao = "Cập nhật thành công";
+                    $ten_user = $_POST['ten_user'];
+                    $username = $_POST['username'];
+                    $pass = $_POST['pass'];
+                    $email = $_POST['email'];
+                    $diachi = $_POST['diachi'];
+                    $sdt = $_POST['sdt'];
+                    $role = $_POST['role'];
+                    $trangthai_user = "Hoạt động";
+                    if($ten_user==""||$sdt=="" ||$email==""||$diachi=="" || $username ==""||$pass==""){
+                        $thongbao ="Vui lòng nhập đủ dữ liệu !";
                     }
-                    $listuser = loadall_user();
+                    else{
+                        update_user($id,$ten_user,$username,$pass,$email,$diachi,$sdt,$role,$trangthai_user);
+                        $thongbao ="Thêm thành công";
+                        $listuser = loadall_user();
+                    }
+                }
+
                     include "nguoidung/list.php";
                     break;
         case 'listbv':

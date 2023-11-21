@@ -105,12 +105,19 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a href="index.php?act=adduser" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Thêm người dùng</p>
+                </a>
+              </li>
               <li class="nav-item">
                 <a href="index.php?act=listuser" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh sách người dùng</p>
                 </a>
               </li>
+
             </ul>
           </li>
           <!-- menu5 -->
