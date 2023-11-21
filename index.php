@@ -1,7 +1,7 @@
 <?php
     include "view/model/pdo.php";
  include "view/user/header.php";
-  if(isset($act)){
+  if(isset($_GET['act'])){
     $act = $_GET['act'];
         switch ($act){
             case 'sanpham':
