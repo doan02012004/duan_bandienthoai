@@ -14,12 +14,14 @@ function insert_user($ten_user,$username,$pass,$email,$diachi,$sdt,$role,$trangt
      $sql="delete from tbl_user where id=".$id;
      pdo_execute($sql);
  }
- function update_user($id, $role){
-    $sql = "UPDATE `tbl_user` SET `role` = '$role' WHERE `id` =".$id;
+ function update_user($id,$ten_user,$username,$pass,$email,$diachi,$sdt,$role,$trangthai_user){
+    $sql = "UPDATE `tbl_user` SET `ten_user` = '".$ten_user."', `username` = '".$username."', `pass` = '".$pass."',
+     `diachi` = '".$diachi."', `email` = '".$email."', `sdt` = '".$sdt."',
+      `trangthai_user` = '".$trangthai_user."', `role` = '".$role."' WHERE id =".$id;
     pdo_execute($sql);
 }
 function loadone_user($id){
-    $sql="SELECT * FROM `tbl_user` Where id =".$id;
+    $sql="SELECT * FROM `tbl_user` WHERE id=".$id;
     $listuser = pdo_query_one($sql);
     return $listuser;
 }
