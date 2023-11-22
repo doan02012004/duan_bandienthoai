@@ -33,11 +33,16 @@
                   </div>
                   </div>
                   <div class="form-group">
-                Trạng thái<br>
-               <select name="trangthai_user">
-                    <option value="Hoạt động">Hoạt động</option>
+                  <div class="row">
+                  <div class="col-sm-6">
+                  <label>Trạng thái</label>
+                           <select name="trangthai_user" id="" class="form-control">
+                           <option value="Hoạt động">Hoạt động</option>
                     <option value="Không hoạt động">Không hoạt động</option>
-               </select>
+                        </select>
+                        </div>
+                    </div>
+                  </div>
                   <div class="form-group">
                 Phân quyền<br>
                <select name="role" id="">

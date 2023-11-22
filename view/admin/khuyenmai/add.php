@@ -29,7 +29,7 @@
                   <label>Trạng thái</label>
                            <select name="trangthai_km" id="" class="form-control">
                             <option value="Hoạt động">Hoạt động</option>
-                            <option value="Không hoạt động">Ngừng hoạt động</option>
+                            <option value="Ngừng hoạt động">Ngừng hoạt động</option>
                         </select>
                         </div>
                     </div>
