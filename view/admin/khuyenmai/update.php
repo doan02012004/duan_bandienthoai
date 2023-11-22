@@ -17,8 +17,8 @@
                     <input type="text" class="form-control" name="ten_km" placeholder="Tên khuyến mãi" value="<?=$ten_km?>">
                   </div>
                   <div class="form-group">
-                    <label >Giá khuyến mãi</label>
-                    <input type="number" min="1" class="form-control" name="gia_km" placeholder="Giá khuyến mãi" value="<?=$gia_km?>">
+                    <label >Phần trăm khuyến mãi</label>
+                    <input type="number" min="1" class="form-control" name="phantram_km" placeholder="Giá khuyến mãi" value="<?=$phantram_km?>">
                   </div>
                   <div class="form-group">
                     <label >Ngày bắt đầu</label>

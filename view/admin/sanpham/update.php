@@ -55,8 +55,18 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Trạng thái</label>
-                    <input type="text" name="trangthai_sp" class="form-control" id="exampleInputPassword1" placeholder="Mô tả"  value="<?= $trangthai_sp ?>">
-                  </div>
+                 <select name="trangthai_sp" id="">
+                  <?php
+                      if($trangthai_sp =="Hết hàng"){
+                        $s="selected";
+                      }
+                      else{
+                        $s ="";
+                      }
+                  ?>
+                  <option value="Còn hàng">Còn Hàng</option>
+                  <option value="Hết hàng" <?php echo $s ?> >Hết hàng</option>
+                 </select>
                   <div class="form-group">
                   <div class="row">
                     <div class="col-sm-6">

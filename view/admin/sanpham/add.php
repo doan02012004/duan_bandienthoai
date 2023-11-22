@@ -45,7 +45,10 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Trạng thái</label>
-                    <input type="text" class="form-control" name="trangthai_sp" id="exampleInputPassword1" placeholder="ngày nhập">
+                 <select name="trangthai_sp" id="">
+                  <option value="Còn hàng">Còn Hàng</option>
+                  <option value="Hết hàng">Hết hàng</option>
+                 </select>
                   </div>
                   <div class="form-group">
                   <div class="row">
@@ -75,6 +78,7 @@
                 <div class="card-footer">
                   <button type="submit" name="btn-add" class="btn btn-primary">Thêm</button>
                 </div>
+               
               </form>
               <?php
                 echo isset($thongbao)? $thongbao : "";   

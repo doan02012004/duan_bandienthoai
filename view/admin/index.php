@@ -149,15 +149,15 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             case 'addkm':
                 if(isset($_POST['btn-add'])){
                     $ten_km = $_POST['ten_km'];
-                    $gia_km = $_POST['gia_km'];
+                    $phantram_km = $_POST['phantram_km'];
                     $ngaybatdau = $_POST['ngaybatdau'];
                     $ngayketthuc = $_POST['ngayketthuc'];
                     $trangthai_km = $_POST['trangthai_km'];
-                    if($ten_km==""||$gia_km==""||$ngaybatdau==""|| $ngayketthuc=="" ||$trangthai_km==""){
+                    if($ten_km==""||$phantram_km==""||$ngaybatdau==""|| $ngayketthuc=="" ||$trangthai_km==""){
                         $thongbao ="Vui lòng nhập đủ dữ liệu !";
                     }
                     else{
-                        insert_khuyenmai($ten_km,$gia_km,$ngaybatdau,$ngayketthuc,$trangthai_km);
+                        insert_khuyenmai($ten_km,$phantram_km,$ngaybatdau,$ngayketthuc,$trangthai_km);
                         $thongbao ="Thêm thành công";
                     }
                 }
@@ -178,15 +178,15 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                     if(isset($_POST['btn-update'])){
                         $id = $_POST['id'];
                         $ten_km = $_POST['ten_km'];
-                        $gia_km = $_POST['gia_km'];
+                        $phantram_km = $_POST['phantram_km'];
                         $ngaybatdau = $_POST['ngaybatdau'];
                         $ngayketthuc = $_POST['ngayketthuc'];
                         $trangthai_km = $_POST['trangthai_km'];
-                        if($ten_km==""||$gia_km==""||$ngaybatdau==""|| $ngayketthuc=="" ||$trangthai_km==""){
+                        if($ten_km==""||$phantram_km==""||$ngaybatdau==""|| $ngayketthuc=="" ||$trangthai_km==""){
                             $thongbao ="Vui lòng nhập đủ dữ liệu !";
                         }
                         else{
-                            update_khuyenmai($id,$ten_km,$gia_km,$ngaybatdau,$ngayketthuc,$trangthai_km);
+                            update_khuyenmai($id,$ten_km,$phantram_km,$ngaybatdau,$ngayketthuc,$trangthai_km);
                             $thongbao ="Thêm thành công";
                         }
                     }
@@ -369,6 +369,20 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             $listdh = loadall_dh();
             include "donhang/list.php";
             break;
+        case 'suadh':
+            $id = $_GET['id'];
+            $listdh = loadone_dh($id);
+            include "donhang/update.php";
+            break;
+        case 'updatett':
+            if(isset($_POST['btn-add'])){
+                $id = $_POST['id'];
+                $trangthai_dh = $_POST['trangthai_dh'];
+              update_dh($id,$trangthai_dh);
+                }
+                $listdh=loadall_dh();
+            include "donhang/list.php";
+            break;
         case 'xoadh':
                 if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                     delete_dh($_GET['id']);
@@ -382,9 +396,17 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                 $listdh = loadall_dh($kyw, 0);
                 include "donhang/list.php";
                 break;
-        case 'listctdh':
-            $listdhct = loadall_donhangchitiet();
-            include "chitietdonhang/list.php";
+        case 'chitietdh':
+            $id=$_GET['id'];
+           $listctdh = chitiet_dh($id);
+            include "donhang/listctdh.php";
+            break;
+        case 'xoactdh':
+            $id=$_GET['id'];
+            $iddh= $_GET['iddh'];
+            xoachitiet_dh($id);
+            $listctdh = chitiet_dh($iddh);
+            include "donhang/listctdh.php";
             break;
         case 'addcv':
             if(isset($_POST['btn-add'])){
