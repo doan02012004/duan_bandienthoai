@@ -9,7 +9,6 @@
                   <thead>
                   <tr>
                     <th>Stt</th>
-                    <th>Id</th>
                     <th>Tên chức vụ</th>
                     <th>Mô tả</th>
                     <th>Trạng thái</th>
@@ -26,7 +25,6 @@
                       $xoacv = "index.php?act=xoacv&id=".$id;
                       echo ' <tr>
                       <td>'.$stt.'</td>
-                      <td>'.$id.'</td>
                       <td>'.$ten_cv.'</td>
                       <td>'.$mota_cv.'</td>
                       <td>'.$trangthai_cv.'</td>
@@ -35,7 +33,7 @@
                     }
                     ?>
                   </tbody>
-                  <tfoot>
+                  <!-- <tfoot>
                   <tr>
                   <th>Stt</th>
                     <th>Id</th>
@@ -44,7 +42,7 @@
                     <th>Trạng thái</th>
                     <th>Thao tác</th>
                   </tr>
-                  </tfoot>
+                  </tfoot> -->
                 </table>
               </div>
               <!-- /.card-body -->

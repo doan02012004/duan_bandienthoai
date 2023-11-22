@@ -27,7 +27,6 @@
                       $xoakm = "index.php?act=xoakm&id=".$id;
                       echo ' <tr>
                       <td>'.$stt.'</td>
-                      <td>'.$id.'</td>
                       <td>'.$ten_km.'</td>
                       <td>'.$gia_km.'</td>
                       <td>'.$ngaybatdau.'</td>

@@ -9,7 +9,6 @@
                   <thead>
                   <tr>
                     <th>Stt</th>
-                    <th>Id</th>
                     <th>Tên sản phẩm</th>
                     <th>Avatar</th>
                     <th>Dung lượng</th>
@@ -34,7 +33,6 @@
                         $hinh = '<img width="45px" src="'.$src.'" alt="">';
                         echo '  <tr>
                          <td>'.$stt.'</td>
-                        <td>'.$id.'</td>
                         <td>'.$ten_sp.'</td>
                         <td>'.$hinh.'</td>
                         <td>'.$dungluong_sp.'</td>
@@ -43,14 +41,14 @@
                         <td>'.$ngaynhap_sp.'</td>
                         <td>'.$mota_sp.'</td>
                         <td>'.$trangthai_sp.'</td>
-                        <td>'.$id_dm.'</td>
+                        <td>'.$ten_dm.'</td>
                         <td><a href="'.$suasp.'"><button class="btn btn-info">Sửa</button></a>|<a href="'.$xoasp.'"><button class="btn btn-info">Xóa</button></a></td>
                         </tr>';
                       }
                     ?>
                
                   </tbody>
-                  <tfoot>
+                  <!-- <tfoot>
                   <tr>
                   <th>Stt</th>
                     <th>Id</th>
@@ -65,7 +63,7 @@
                     <th>id_dm</th>
                     <th>Thao tác</th>
                   </tr>
-                  </tfoot>
+                  </tfoot> -->
                 </table>
               </div>
               <!-- /.card-body -->

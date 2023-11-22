@@ -10,13 +10,14 @@
                   <tr>
                     <th>Id</th>
                     <th>Tên </th>
-                    <th>username</th>
-                    <th>pass</th>
-                    <th>dia chi</th>
-                    <th>email</th>
-                    <th>Số dt</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Địa chỉ</th>
+                    <th>Email</th>
+                    <th>Số điện thoại</th>
                     <th>Trạng thái</th>
-                    <th>role</th>
+                    <th>Chức vụ</th>
+                    <th>Thao tác</th>
                    
                   </tr>
                   </thead>
@@ -37,10 +38,9 @@
                         <td>'.$sdt.'</td>
                         <td>'.$trangthai_user.'</td>
                         <td>'.$ten_cv.'</td>
-                        <td>
                         
-                        <td><a href="'.$xoauser.'"><button class="btn btn-info">Xóa</button></a></td>
-                        <td><a href="'.$suauser.'"><button class="btn btn-info">Sửa</button></a></td>
+                        
+                        <td><a href="'.$xoauser.'"><button class="btn btn-info">Xóa</button></a>|<a href="'.$suauser.'"><button class="btn btn-info">Sửa</button></a></td>
 
                          </tr>';
                     }
