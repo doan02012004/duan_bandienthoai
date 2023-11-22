@@ -254,7 +254,10 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                 $sdt = $_POST['sdt'];
                 $role = $_POST['role'];
                 $trangthai_user = $_POST['trangthai_user'];
+<<<<<<< HEAD
                 // $trangthai_user = "Hoạt động";
+=======
+>>>>>>> e9b9c66ea99e7e0d64dd0330dd9ffc7397e0cd16
                 if($ten_user==""||$sdt=="" ||$email==""||$diachi=="" || $username ==""||$pass==""){
                     $thongbao ="Vui lòng nhập đủ dữ liệu !";
                 }
@@ -295,7 +298,7 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                     $diachi = $_POST['diachi'];
                     $sdt = $_POST['sdt'];
                     $role = $_POST['role'];
-                    $trangthai_user = "Hoạt động";
+                    $trangthai_user = $_POST['trangthai_user'];
                     if($ten_user==""||$sdt=="" ||$email==""||$diachi=="" || $username ==""||$pass==""){
                         $thongbao ="Vui lòng nhập đủ dữ liệu !";
                     }
@@ -316,12 +319,13 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             if(isset($_POST['btn-add'])){
                 $tieude = $_POST['tieude'];
                 $noidung_bv = $_POST['noidung_bv'];
+                $ngaydang_bv = $_POST['ngaydang_bv'];
                 $trangthai_bv = $_POST['trangthai_bv'];
                 if($tieude==""|| $noidung_bv=="" ||$trangthai_bv==""){
                     $thongbao ="Vui lòng nhập đủ dữ liệu !";
                 }
                 else{
-                    insert_baiviet($tieude,$noidung_bv,$trangthai_bv);
+                    insert_baiviet($tieude,$noidung_bv,$ngaydang_bv,$trangthai_bv);
                     $thongbao ="Thêm thành công";
                 }
             }
@@ -343,12 +347,13 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                 $id = $_POST['id'];
                 $tieude = $_POST['tieude'];
                 $noidung_bv = $_POST['noidung_bv'];
+                $ngaydang_bv = $_POST['ngaydang_bv'];
                 $trangthai_bv = $_POST['trangthai_bv'];
                 if($tieude==""|| $noidung_bv=="" ||$trangthai_bv==""){
                     $thongbao ="Vui lòng nhập đủ dữ liệu !";
                 }
                 else{
-                    update_baiviet($id,$tieude,$noidung_bv,$trangthai_bv);
+                    update_baiviet($id,$tieude,$noidung_bv,$ngaydang_bv,$trangthai_bv);
                     $thongbao ="Thêm thành công";
                 }
             }

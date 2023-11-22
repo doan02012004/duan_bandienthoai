@@ -25,7 +25,10 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Trạng thái</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="trangthai_km" placeholder="Trạng thái khuyến mãi">
+                    <select name="trangthai_km">
+                      <option value="Hoạt động">Hoạt động</option>
+                      <option value="Ngừng hoạt động">Ngừng hoạt động</option>
+                    </select>
                   </div>
                 <div class="card-footer">
                   <button type="submit" name="btn-add" class="btn btn-primary">Thêm</button>

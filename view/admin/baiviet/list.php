@@ -11,6 +11,7 @@
                     <th>Stt</th>
                     <th>Tiêu đề</th>
                     <th>Nội dung</th>
+                    <th>Ngày đăng bài</th>
                     <th>Trạng thái</th>
                     <th>Thao tác</th>
                   </tr>
@@ -27,6 +28,7 @@
                       <td>'.$stt.'</td>
                       <td>'.$tieude.'</td>
                       <td>'.$noidung_bv.'</td>
+                      <td>'.$ngaydang_bv.'</td>
                       <td>'.$trangthai_bv.'</td>
                       <td><a href="'.$suabv.'"><button class="btn btn-info">Sửa</button></a>|<a href="'.$xoabv.'"><button class="btn btn-info">Xóa</button></a></td>';
                     }
