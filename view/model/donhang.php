@@ -30,10 +30,15 @@ function update_dh($id,$trangthai_dh){
     $sql="UPDATE `tbl_donhang` SET `trangthai_dh` = '".$trangthai_dh."' WHERE id =".$id;
     pdo_execute($sql);
 }
-function loadone_ctdh($id){
-    $Sql ="SELECT c.ten_sp,c.avatar,c.dungluong_sp,b.gia_dh,a.soluong,a.thanhtien FROM `tbl_donhangchitiet` as a INNER JOIN `tbl_donhang` as b on a.id_dh=b.id
-    INNER JOIN `tbl_sanpham` as c on b.id_sp =c.id WHERE b.id=".$id;
-    $listdh =  pdo_query_one($sql);
-    return $listdh;
+function chitiet_dh($id){
+    $sql ="SELECT b.id as iddh,a.ten_sp, a.dungluong_sp,b.gia_dh,c.soluong_dh,c.thanhtien,c.id FROM `tbl_sanpham` as a INNER JOIN `tbl_donhang` as b on a.id = b.id_sp INNER JOIN `tbl_donhangchitiet`
+    as c on b.id = c.id_dh WHERE b.id=".$id;
+    $listctdh =  pdo_query($sql);
+    return $listctdh;
 }
+function xoachitiet_dh($id){
+    $sql="DELETE FROM `tbl_donhangchitiet` WHERE id =".$id;
+    pdo_execute($sql);
+}
+
 ?>

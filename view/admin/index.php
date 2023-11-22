@@ -395,10 +395,17 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                 $listdh = loadall_dh($kyw, 0);
                 include "donhang/list.php";
                 break;
-        case 'ctdh':
-            $id = $_GET['id'];
-            $listctdh = loadone_ctdh($id);
-            include "chitietdonhang/list.php";
+        case 'chitietdh':
+            $id=$_GET['id'];
+           $listctdh = chitiet_dh($id);
+            include "donhang/listctdh.php";
+            break;
+        case 'xoactdh':
+            $id=$_GET['id'];
+            $iddh= $_GET['iddh'];
+            xoachitiet_dh($id);
+            $listctdh = chitiet_dh($iddh);
+            include "donhang/listctdh.php";
             break;
         case 'addcv':
             if(isset($_POST['btn-add'])){

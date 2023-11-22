@@ -26,7 +26,7 @@
                        
                         //$suadh = "index.php?act=suasp&id=".$id;
                         $xoadh = "index.php?act=xoadh&id=".$id;
-                        $ctdh = "index.php?act=ctdh&id=".$id;
+                        $ctdh = "index.php?act=chitietdh&id=".$id;
                         $suadh = "index.php?act=suadh&id=".$id;
                         echo '  <tr>
                         <td>'.$ten_user.'</td>
