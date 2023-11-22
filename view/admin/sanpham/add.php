@@ -44,11 +44,15 @@
                     <input type="date" class="form-control" name="ngaynhap_sp" id="exampleInputPassword1" placeholder="ngày nhập">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Trạng thái</label>
-                 <select name="trangthai_sp" id="">
-                  <option value="Còn hàng">Còn Hàng</option>
-                  <option value="Hết hàng">Hết hàng</option>
-                 </select>
+                  <div class="row">
+                  <div class="col-sm-6">
+                        <label>Trạng thái</label>
+                        <select name="trangthai_sp" id="" class="form-control">
+                        <option value="Còn hàng">Còn Hàng</option>
+                        <option value="Hết hàng">Hết hàng</option>
+                        </select>
+                        </div>
+                    </div>
                   </div>
                   <div class="form-group">
                   <div class="row">
@@ -72,7 +76,6 @@
                       </div>
                     </div>
                   </div>
-                </div>
                 <!-- /.card-body -->
                 
                 <div class="card-footer">

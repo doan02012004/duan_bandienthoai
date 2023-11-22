@@ -21,11 +21,32 @@
                     <label for="exampleInputPassword1">Mô tả</label>
                     <input type="text" class="form-control" name="mota_dm" id="exampleInputPassword1" placeholder=" Nhập trạng thái danh mục" value="<?=$mota_dm?>">
                   </div>
+                  <!-- <div class="form-group">
+                  <div class="row">
+                  <div class="col-sm-6">
+                  <label>Trạng thái</label>
+                           <select name="trangthai_dm" id="" class="form-control">
+                            <option value="Hoạt động">Hoạt động</option>
+                            <option value="Không hoạt động">Không hoạt động</option>
+                        </select>
+                        </div>
+                    </div>
+                  </div> -->
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Trạng thái</label>
-                    <input type="text" class="form-control" name="trangthai_dm" id="exampleInputPassword1" placeholder="Nhập mô tả" value="<?=$trangthai_dm?>">
+                    <label for="exampleInputPassword1">Trạng thái danh mục</label>
+                    <select name="trangthai_dm">
+                      <?php
+                            if($trangthai_dm=="Không hoạt động"){
+                              $s = "Selected";
+                            }
+                            else{
+                              $s ="";
+                            }
+                      ?>
+                      <option value="Hoạt động">Hoạt động</option>
+                      <option value="Ngừng hoạt động" <?php echo $s ?>>Không hoạt động</option>
+                    </select>
                   </div>
-                </div>
                 <!-- /.card-body -->
                   <input type="hidden" name="id" value="<?=$id?>">
                 <div class="card-footer">
