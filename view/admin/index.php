@@ -195,15 +195,24 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                     break;
         case 'addht':
             if(isset($_POST['btn-add'])){
-                $ten_ch = $_POST['ten_ch'];
-                $sdt = $_POST['sdt'];
-                $email_ch = $_POST['email_ch'];
-                $diachi_ch = $_POST['diachi_ch'];
-                if($ten_ch==""||$sdt=="" ||$email_ch==""||$diachi_ch==""){
+                $loai_ht = $_POST['loai_ht'];
+                $ten_ht = $_POST['ten_ht'];
+                $mota_ht = $_POST['mota_ht'];
+                $link = $_POST['link'];
+                $trangthai_ht = $_POST['trangthai_ht'];
+                $img = $_FILES['img']['name'];
+                $target_dir="../uploads/";
+                $target_file = $target_dir . basename($_FILES['img']['name']);
+                if (move_uploaded_file($_FILES["img"]["tmp_name"], $target_file)) {
+                    //echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                  } else {
+                   // echo "Sorry, there was an error uploading your file.";
+                  }
+                if($ten_ht==""||$mota_ht=="" ||$img==""||$link==""){
                     $thongbao ="Vui lòng nhập đủ dữ liệu !";
                 }
                 else{
-                    insert_hethong($ten_ch,$sdt,$email_ch,$diachi_ch);
+                    insert_hethong($loai_ht,$ten_ht,$img,$mota_ht,$link,$trangthai_ht);
                     $thongbao ="Thêm thành công";
                 }
             }
@@ -220,17 +229,26 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                 break;
         case 'updateht':
             if(isset($_POST['btn-add'])){
+                $loai_ht = $_POST['loai_ht'];
+                $ten_ht = $_POST['ten_ht'];
+                $mota_ht = $_POST['mota_ht'];
+                $link = $_POST['link'];
+                $trangthai_ht = $_POST['trangthai_ht'];
+                $img = $_FILES['img']['name'];
                 $id = $_POST['id'];
-                $ten_ch = $_POST['ten_ch'];
-                $sdt = $_POST['sdt'];
-                $email_ch = $_POST['email_ch'];
-                $diachi_ch = $_POST['diachi_ch'];
-                if($ten_ch==""|| $sdt=="" ||$email_ch==""||$diachi_ch==""){
+                $target_dir="../uploads/";
+                $target_file = $target_dir . basename($_FILES['img']['name']);
+                if (move_uploaded_file($_FILES["img"]["tmp_name"], $target_file)) {
+                    //echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                  } else {
+                   // echo "Sorry, there was an error uploading your file.";
+                  }
+                if($ten_ht==""||$mota_ht==""||$link==""){
                     $thongbao ="Vui lòng nhập đủ dữ liệu !";
                     include "hethong/update.php";
                 }
                 else{
-                    update_hethong($id,$ten_ch,$sdt,$email_ch,$diachi_ch);
+                    update_hethong($id,$loai_ht,$ten_ht,$img,$mota_ht,$link,$trangthai_ht);
                     $thongbao ="Thêm thành công";
                     $listht = loadall_hethong();
                     include "hethong/list.php";

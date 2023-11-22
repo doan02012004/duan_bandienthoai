@@ -8,46 +8,36 @@
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>Stt</th>
-                    <th>Id</th>
-                    <th>Tên cửa hàng</th>
-                    <th>Số điện thoại</th>
-                    <th>Email</th>
-                    <th>Địa chỉ</th>
+                    <th>Loại</th>
+                    <th>Tên</th>
+                    <th>hình</th>
+                    <th>Mô tả</th>
+                    <th>Link</th>
+                    <th>Trạng thái</th>
                     <th>Thao tác</th>
                   </tr>
                   </thead>
                   <tbody>
                   <?php
-                    $stt= 0;
                     foreach ($listht as $ht) {
                       extract($ht);
-                      $stt++;
                       $suaht = "index.php?act=suaht&id=".$id;
                       $xoaht = "index.php?act=xoaht&id=".$id;
+                      $src = "../uploads/".$img;
+                      $hinh = '<img width="45px" src="'.$src.'" alt="">';
                       echo ' <tr>
-                      <td>'.$stt.'</td>
-                      <td>'.$id.'</td>
-                      <td>'.$ten_ch.'</td>
-                      <td>'.$sdt.'</td>
-                      <td>'.$email_ch.'</td>
-                      <td>'.$diachi_ch.'</td>
+                      <td>'.$loai_ht.'</td>
+                      <td>'.$ten_ht.'</td>
+                      <td>'.$hinh.'</td>
+                      <td>'.$mota_ht.'</td>
+                      <td>'.$link.'</td>
+                      <td>'.$trangthai_ht.'</td>
                       <td><a href="'.$suaht.'"><button class="btn btn-info">Sửa</button></a>|<a href="'.$xoaht.'"><button class="btn btn-info">Xóa</button></a></td>
                       <tr>';
                     }
                     ?>
                   </tbody>
-                  <tfoot>
-                  <tr>
-                  <th>Stt</th>
-                    <th>Id</th>
-                    <th>Tên cửa hàng</th>
-                    <th>Số điện thoại</th>
-                    <th>Email</th>
-                    <th>Địa chỉ</th>
-                    <th>Thao tác</th>
-                  </tr>
-                  </tfoot>
+                 
                 </table>
               </div>
               <!-- /.card-body -->

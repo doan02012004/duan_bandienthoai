@@ -1,7 +1,7 @@
 <?php
- function insert_hethong($ten_ch,$sdt,$email_ch,$diachi_ch){
-    $sql ="INSERT INTO `tbl_hethong` (`ten_ch`, `sdt`, `email_ch`, `diachi_ch`)
-     VALUES ( '".$ten_ch."', '".$sdt."', '".$email_ch."', '".$diachi_ch."')";
+ function insert_hethong($loai_ht,$ten_ht,$img,$mota_ht,$link,$trangthai_ht){
+    $sql ="INSERT INTO `tbl_hethong` (`loai_ht`, `ten_ht`, `img`, `mota_ht`, `link`, `trangthai_ht`)
+     VALUES ('".$loai_ht."', '".$ten_ht."', '".$img."', '".$mota_ht."', '".$link."', '".$trangthai_ht."')";
     pdo_execute($sql);
  }
  function loadall_hethong(){
@@ -18,10 +18,15 @@ function loadone_hethong($id){
     $listht = pdo_query_one($sql);
     return $listht;
  }
- function update_hethong($id,$ten_ch,$sdt,$email_ch,$diachi_ch){
-    $sql="UPDATE `tbl_hethong` SET `ten_ch` = '".$ten_ch."', `sdt` = '".$sdt."',
-     `email_ch` = '".$email_ch."', `diachi_ch` = '".$diachi_ch."'
-     WHERE `id` =".$id;
+ function update_hethong($id,$loai_ht,$ten_ht,$img,$mota_ht,$link,$trangthai_ht){
+   if($img==""){
+      $sql="UPDATE `tbl_hethong` SET `loai_ht` = '".$loai_ht."', `ten_ht` = '".$ten_ht."',`mota_ht` = '".$mota_ht."', `link` = '".$link."',`trangthai_ht` = '".$trangthai_ht."'
+      WHERE `id` =".$id;
+   }else{
+      $sql="UPDATE `tbl_hethong` SET `loai_ht` = '".$loai_ht."', `ten_ht` = '".$ten_ht."',
+      `img` = '".$img."', `mota_ht` = '".$mota_ht."', `link` = '".$link."',`trangthai_ht` = '".$trangthai_ht."'
+      WHERE `id` =".$id;
+   }
     pdo_execute($sql);
  }
 ?>
