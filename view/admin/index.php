@@ -315,12 +315,13 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             if(isset($_POST['btn-add'])){
                 $tieude = $_POST['tieude'];
                 $noidung_bv = $_POST['noidung_bv'];
+                $ngaydang_bv = $_POST['ngaydang_bv'];
                 $trangthai_bv = $_POST['trangthai_bv'];
                 if($tieude==""|| $noidung_bv=="" ||$trangthai_bv==""){
                     $thongbao ="Vui lòng nhập đủ dữ liệu !";
                 }
                 else{
-                    insert_baiviet($tieude,$noidung_bv,$trangthai_bv);
+                    insert_baiviet($tieude,$noidung_bv,$ngaydang_bv,$trangthai_bv);
                     $thongbao ="Thêm thành công";
                 }
             }

@@ -22,6 +22,10 @@
                     <input type="text" class="form-control" name="noidung_bv" id="exampleInputPassword1" placeholder=" Nhập nội dung" value="<?=$noidung_bv?>">
                   </div>
                   <div class="form-group">
+                    <label for="exampleInputPassword1">Ngày đăng bài viết</label>
+                    <input type="text" class="form-control" name="ngaydang_bv" id="exampleInputPassword1" placeholder=" Nhập nội dung" value="<?=$ngaydang_bv?>">
+                  </div>
+                  <div class="form-group">
                     <label for="exampleInputPassword1">Trạng thái bài viết</label>
                     <input type="text" class="form-control" name="trangthai_bv" id="exampleInputPassword1" placeholder="Nhập trạng thái" value="<?=$trangthai_bv?>">
                   </div>
