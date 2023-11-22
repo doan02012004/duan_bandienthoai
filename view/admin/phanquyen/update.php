@@ -23,7 +23,17 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Trạng thái</label>
-                    <input type="text" name="trangthai_cv" class="form-control" id="exampleInputPassword1" placeholder="Nhập mô tả" value="<?=$trangthai_cv?>">
+                    <select name="trangthai_cv">
+                      <?php
+                      if($trangthai_cv=="Ngừng hoạt động"){
+                        $s="selected";
+                      }else{
+                        $s="";
+                      }
+                      ?>
+                      <option value="Hoạt động">Hoạt động</option>
+                      <option value="Ngừng hoạt động"<?php echo $s?>>Ngừng hoạt động</option>
+                    </select>
                   </div>
                 </div>
                 <!-- /.card-body -->

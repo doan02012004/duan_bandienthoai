@@ -254,10 +254,6 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                 $sdt = $_POST['sdt'];
                 $role = $_POST['role'];
                 $trangthai_user = $_POST['trangthai_user'];
-<<<<<<< HEAD
-                // $trangthai_user = "Hoạt động";
-=======
->>>>>>> e9b9c66ea99e7e0d64dd0330dd9ffc7397e0cd16
                 if($ten_user==""||$sdt=="" ||$email==""||$diachi=="" || $username ==""||$pass==""){
                     $thongbao ="Vui lòng nhập đủ dữ liệu !";
                 }
