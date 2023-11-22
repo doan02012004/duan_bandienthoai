@@ -8,11 +8,6 @@
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-<<<<<<< HEAD
-                    <th>Stt</th>
-=======
-                    
->>>>>>> fc56f5e649972004015b3789bcf7b4d77c6548bc
                     <th>Tên sản phẩm</th>
                     <th>Avatar</th>
                     <th>Dung lượng</th>
@@ -36,10 +31,6 @@
                         $src = "../uploads/".$avatar;
                         $hinh = '<img width="45px" src="'.$src.'" alt="">';
                         echo '  <tr>
-<<<<<<< HEAD
-                         <td>'.$stt.'</td>
-=======
->>>>>>> fc56f5e649972004015b3789bcf7b4d77c6548bc
                         <td>'.$ten_sp.'</td>
                         <td>'.$hinh.'</td>
                         <td>'.$dungluong_sp.'</td>
