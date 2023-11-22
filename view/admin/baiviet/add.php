@@ -20,13 +20,16 @@
                     <input type="date" class="form-control" name="ngaydang_bv" id="exampleInputPassword1" placeholder=" Nhập nội dung">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Trạng thái bài viết</label>
-                    <select name="trangthai_bv">
-                      <option value="Hoạt động">Hoạt động</option>
-                      <option value="Ngừng hoạt động">Ngừng hoạt động</option>
-                    </select>
+                  <div class="row">
+                  <div class="col-sm-6">
+                  <label>Trạng thái</label>
+                           <select name="trangthai_bv" id="" class="form-control">
+                            <option value="Hoạt động">Hoạt động</option>
+                            <option value="Không hoạt động">Ngừng hoạt động</option>
+                        </select>
+                        </div>
+                    </div>
                   </div>
-                </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
