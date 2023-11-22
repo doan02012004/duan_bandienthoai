@@ -23,6 +23,10 @@
                       $suakm = "index.php?act=suakm&id=".$id;
                       $xoakm = "index.php?act=xoakm&id=".$id;
                       echo ' <tr>
+<<<<<<< HEAD
+                      <td>'.$stt.'</td>
+=======
+>>>>>>> fc56f5e649972004015b3789bcf7b4d77c6548bc
                       <td>'.$ten_km.'</td>
                       <td>'.$phantram_km.'</td>
                       <td>'.$ngaybatdau.'</td>
