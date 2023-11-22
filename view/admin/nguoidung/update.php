@@ -37,6 +37,20 @@
                     <input type="text" class="form-control" id="exampleInputPassword1" name="diachi" placeholder="Trạng thái khuyến mãi" value="<?=$diachi?>">
                   </div>
                   <div class="form-group">
+                    <label for="exampleInputPassword1">Trạng thái</label>
+                 <select name="trangthai_user" id="">
+                  <?php
+                      if($trangthai_user =="Không hoạt động"){
+                        $s="selected";
+                      }
+                      else{
+                        $s ="";
+                      }
+                  ?>
+                  <option value="Hoạt động">Hoạt động</option>
+                  <option value="Không hoạt động" <?php echo $s ?> >Không hoạt động</option>
+                 </select>
+                  <div class="form-group">
                 Phân quyền<br>
                <select name="role" id="">
                 <?php

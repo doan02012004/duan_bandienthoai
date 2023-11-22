@@ -253,7 +253,6 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                 $sdt = $_POST['sdt'];
                 $role = $_POST['role'];
                 $trangthai_user = $_POST['trangthai_user'];
-                $trangthai_user = "Hoạt động";
                 if($ten_user==""||$sdt=="" ||$email==""||$diachi=="" || $username ==""||$pass==""){
                     $thongbao ="Vui lòng nhập đủ dữ liệu !";
                 }
@@ -294,7 +293,7 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                     $diachi = $_POST['diachi'];
                     $sdt = $_POST['sdt'];
                     $role = $_POST['role'];
-                    $trangthai_user = "Hoạt động";
+                    $trangthai_user = $_POST['trangthai_user'];
                     if($ten_user==""||$sdt=="" ||$email==""||$diachi=="" || $username ==""||$pass==""){
                         $thongbao ="Vui lòng nhập đủ dữ liệu !";
                     }
