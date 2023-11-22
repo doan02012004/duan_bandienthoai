@@ -3023,7 +3023,6 @@ span.sidebar-title {
 	border-bottom: 1px solid #eee;
 	padding-bottom: 20px;
 }
-
 ul.filtering-menu {
 	border-bottom: 0 solid #eee;
 	margin-top: 17px;
@@ -3069,7 +3068,6 @@ ul.filtering-menu {
 .product-single-sidebar ul li a i {
 	float: right;
 }
-
 .ui-widget-content {
 	background: #dbdbdb none repeat scroll 0 0;
 	border-radius: 0px !important;
