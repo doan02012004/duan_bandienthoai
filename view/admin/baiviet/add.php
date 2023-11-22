@@ -21,7 +21,10 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Trạng thái bài viết</label>
-                    <input type="text" class="form-control" name="trangthai_bv" id="exampleInputPassword1" placeholder="Nhập trạng thái">
+                    <select name="trangthai_bv">
+                      <option value="Hoạt động">Hoạt động</option>
+                      <option value="Ngừng hoạt động">Ngừng hoạt động</option>
+                    </select>
                   </div>
                 </div>
                 <!-- /.card-body -->

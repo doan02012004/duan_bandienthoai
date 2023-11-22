@@ -30,7 +30,18 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Trạng thái khuyến mãi</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="trangthai_km" placeholder="Mô tả khuyến mãi" value="<?=$trangthai_km?>">
+                    <select name="trangthai_km">
+                      <?php
+                            if($trangthai_km=="Ngừng hoạt động"){
+                              $s = "Selected";
+                            }
+                            else{
+                              $s ="";
+                            }
+                      ?>
+                      <option value="Hoạt động">Hoạt động</option>
+                      <option value="Ngừng hoạt động" <?php echo $s ?>>Ngừng hoạt động</option>
+                    </select>
                   </div>
                   <input type="hidden" name="id" value="<?=$id?>">
                 <div class="card-footer">
