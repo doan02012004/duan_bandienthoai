@@ -1,4 +1,6 @@
-
+<?php
+echo $id;
+?>
 	<!-- MAIN-CONTENT-SECTION START -->
 	<section class="main-content-section">
 		<div class="container">
@@ -6,8 +8,8 @@
 			<div class="bstore-breadcrumb">
 				<a href="index.html">HOMe<span><i class="fa fa-caret-right"></i> </span> </a>
 				<span> <i class="fa fa-caret-right"> </i> </span>
-				<a href="shop-gird.html"> women </a>
-				<span> Faded Short Sleeves T-shirt </span>
+				<a href="shop-gird.html">Sản Phẩm</a>
+				<span>Tên điện thoại</span>
 			</div>
 			<!-- BSTORE-BREADCRUMB END -->
 			
@@ -21,9 +23,9 @@
 								<div class="tab-content">
 									<div class="tab-pane active" id="thumbnail_1">
 										<div class="single-product-image">
-											<img src="assets/images/product/sale/1.webp" alt="single-product-image" />
+											<img src="view/client/assets/images/product/sale/1.webp" alt="single-product-image" />
 											<a class="new-mark-box" href="#">new</a>
-											<a class="fancybox" href="assets/images/product/sale/1.webp"
+											<a class="fancybox" href="view/client/assets/images/product/sale/1.webp"
 												data-fancybox-group="gallery"><span class="btn large-btn">View larger <i
 														class="fa fa-search-plus"></i></span></a>
 										</div>
@@ -77,7 +79,7 @@
 							</div>
 							<div class="select-product">
 								<!-- Nav tabs -->
-								<ul class="nav nav-tabs select-product-tab bxslider">
+								<!-- <ul class="nav nav-tabs select-product-tab bxslider">
 									<li>
 										<a class="active" href="#thumbnail_1" data-bs-toggle="tab"><img
 												src="assets/images/product/sidebar_product/1.webp" alt="pro-thumbnail" /></a>
@@ -102,7 +104,7 @@
 										<a href="#thumbnail_6" data-bs-toggle="tab"><img
 												src="assets/images/product/sidebar_product/6.webp" alt="pro-thumbnail" /></a>
 									</li>
-								</ul>
+								</ul> -->
 							</div>
 						</div>
 						<div class="col-lg-7 col-md-8">
@@ -565,96 +567,6 @@
 	<!-- MAIN-CONTENT-SECTION END -->
 
 	<!-- BRAND-CLIENT-AREA START -->
-	<section class="brand-client-area">
-		<div class="container">
-			<!-- BRAND-CLIENT-ROW START -->
-			<div class="brand-client-row">
-				<div class="center-title-area">
-					<h2 class="center-title">BRAND & CLIENTS</h2>
-				</div>
-				<div class="carousel-wrap">
-					<!-- CLIENT-CAROUSEL START -->
-					<div class="client-carousel owl-carousel">
-
-						<!-- CLIENT-SINGLE START -->
-						<div class="single-client">
-							<a href="#">
-								<img src="assets/images/brand/1.webp" alt="brand-client" />
-							</a>
-						</div>
-						<!-- CLIENT-SINGLE END -->
-
-						<!-- CLIENT-SINGLE START -->
-						<div class="single-client">
-							<a href="#">
-								<img src="assets/images/brand/2.webp" alt="brand-client" />
-							</a>
-						</div>
-						<!-- CLIENT-SINGLE END -->
-
-						<!-- CLIENT-SINGLE START -->
-						<div class="single-client">
-							<a href="#">
-								<img src="assets/images/brand/3.webp" alt="brand-client" />
-							</a>
-						</div>
-						<!-- CLIENT-SINGLE END -->
-
-						<!-- CLIENT-SINGLE START -->
-						<div class="single-client">
-							<a href="#">
-								<img src="assets/images/brand/4.webp" alt="brand-client" />
-							</a>
-						</div>
-						<!-- CLIENT-SINGLE END -->
-
-						<!-- CLIENT-SINGLE START -->
-						<div class="single-client">
-							<a href="#">
-								<img src="assets/images/brand/5.webp" alt="brand-client" />
-							</a>
-						</div>
-						<!-- CLIENT-SINGLE END -->
-
-						<!-- CLIENT-SINGLE START -->
-						<div class="single-client">
-							<a href="#">
-								<img src="assets/images/brand/1.webp" alt="brand-client" />
-							</a>
-						</div>
-						<!-- CLIENT-SINGLE END -->
-
-						<!-- CLIENT-SINGLE START -->
-						<div class="single-client">
-							<a href="#">
-								<img src="assets/images/brand/3.webp" alt="brand-client" />
-							</a>
-						</div>
-						<!-- CLIENT-SINGLE END -->
-
-						<!-- CLIENT-SINGLE START -->
-						<div class="single-client">
-							<a href="#">
-								<img src="assets/images/brand/2.webp" alt="brand-client" />
-							</a>
-						</div>
-						<!-- CLIENT-SINGLE END -->
-
-						<!-- CLIENT-SINGLE START -->
-						<div class="single-client">
-							<a href="#">
-								<img src="assets/images/brand/3.webp" alt="brand-client" />
-							</a>
-						</div>
-						<!-- CLIENT-SINGLE END -->
-						
-					</div>
-					<!-- CLIENT-CAROUSEL END -->
-				</div>
-			</div>
-			<!-- BRAND-CLIENT-ROW END -->
-		</div>
-	</section>
 	<!-- BRAND-CLIENT-AREA END -->
 
 	<!-- COMPANY-FACALITY START -->

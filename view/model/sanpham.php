@@ -44,4 +44,19 @@
         $listsp = pdo_query($sql);
         return $listsp;
     }
+    function loadluotxem_sanpham(){
+        $sql = "SELECT * FROM `tbl_sanpham` ORDER BY id desc limit 12";
+        $listsp = pdo_query($sql);
+        return $listsp;
+    }
+    function loadall_dmsp($s="",$id=0){
+        $sql = "SELECT * FROM `tbl_sanpham` WHERE 1";
+        if($id>0){
+            $sql.=" and `id_dm`=".$id;
+        }else if($s!=""){
+            $sql.=" and ten_sp like '%".$s."%'";
+        }
+        $listsp = pdo_query($sql);
+        return $listsp;
+    }
 ?>
