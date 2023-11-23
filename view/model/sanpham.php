@@ -39,4 +39,9 @@
         }
         pdo_execute($sql);
     }
+    function loadnew_sanpham(){
+        $sql = "SELECT * FROM `tbl_sanpham` ORDER BY id desc limit 0,5";
+        $listsp = pdo_query($sql);
+        return $listsp;
+    }
 ?>

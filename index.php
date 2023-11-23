@@ -2,23 +2,25 @@
 ob_start();
     session_start();
     include "view/model/pdo.php";
+    include "global.php";
     include "view/model/nguoidung.php";
     include "view/model/danhmuc.php";
     include "view/model/sanpham.php";
     include "view/model/khuyenmai.php";
     $listdm = loadall_danhmuc();
-    include "view/user/header.php";
+    $listspnew = loadnew_sanpham();
+    include "view/client/header.php";
   if(isset($_GET['act'])){
     $act = $_GET['act'];
         switch ($act){
             case 'sanpham':
-                include "view/user/sanpham.php";
+                include "view/client/sanpham.php";
                 break;
             case 'sanphamchitiet':
-                include "view/user/sanphamchitiet.php";
+                include "view/client/sanphamchitiet.php";
                 break;
             case 'login':
-                include "view/user/login.php";
+                include "view/client/login.php";
                 break;
             case 'dangky':
                 if(isset($_POST['btn-dangky'])){
@@ -38,7 +40,7 @@ ob_start();
                         $thongbao ="Đăng ký thành công";
                     }
                 }
-                include "view/user/creat.php";
+                include "view/client/creat.php";
                 break;
             case 'dangnhap':
                 $listuser = loadall_user();
@@ -54,11 +56,11 @@ ob_start();
                     }
                     else{
                         $thongbaologin ="Sai tài khoản hoặc mật khẩu";
-                        include "view/user/login.php";
+                        include "view/client/login.php";
                     }
                 }
                 break;
-                include "view/user/login.php";
+                include "view/client/login.php";
                 break;
             case 'logout':
                 session_unset();
@@ -66,14 +68,14 @@ ob_start();
                 break;
             
             default:
-            include "view/user/home.php";
+            include "view/client/home.php";
                 break;
         }
   }
   else{
-    include "view/user/home.php";
+    include "view/client/home.php";
   }
 
- include "view/user/footer.php";
+ include "view/client/footer.php";
 ob_end_flush();
 ?>
