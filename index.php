@@ -4,14 +4,13 @@ ob_start();
     include "view/model/pdo.php";
     include "view/model/nguoidung.php";
     include "view/model/danhmuc.php";
-    include "view/user/header.php";
+    include "view/model/sanpham.php";
+    include "view/model/khuyenmai.php";
     $listdm = loadall_danhmuc();
+    include "view/user/header.php";
   if(isset($_GET['act'])){
     $act = $_GET['act'];
         switch ($act){
-            case 'trangchu':
-                include "view/user/home.php";
-                break;
             case 'sanpham':
                 include "view/user/sanpham.php";
                 break;
