@@ -1,7 +1,4 @@
-<?php 
-var_dump($listkh);
-
-?><!-- MAIN-CONTENT-SECTION START -->
+<!-- MAIN-CONTENT-SECTION START -->
 <section class="main-content-section">
 		<div class="container">
 			<!-- BSTORE-BREADCRUMB START -->

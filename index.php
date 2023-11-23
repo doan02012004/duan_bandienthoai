@@ -1,4 +1,5 @@
 <?php
+ob_start();
     session_start();
     include "view/model/pdo.php";
     include "view/model/nguoidung.php";
@@ -61,6 +62,7 @@
                     }
                     else{
                         $thongbaologin ="Sai tài khoản hoặc mật khẩu";
+                        include "view/user/login.php";
                     }
                 }
                 break;
@@ -74,5 +76,5 @@
   }
 
  include "view/user/footer.php";
-
+ob_end_flush();
 ?>
