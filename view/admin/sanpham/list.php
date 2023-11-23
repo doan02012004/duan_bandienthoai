@@ -24,7 +24,6 @@
                     <?php
                       foreach ($listsp as $sp) {
                       extract($sp);
-                        $stt++;
                         $suasp = "index.php?act=suasp&id=".$id;
                         $xoasp = "index.php?act=xoasp&id=".$id;
                         $src = "../uploads/".$avatar;

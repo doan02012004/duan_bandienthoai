@@ -39,16 +39,9 @@ ob_start();
                         $thongbao ="Đăng ký thành công";
                     }
                 }
-                include "view/user/login.php";
+                include "view/user/creat.php";
                 break;
             case 'dangnhap':
-                include "view/user/login.php";
-                break;
-            case 'logout':
-                session_unset();
-                header("Location:index.php");
-                break;
-            case 'checklogin':
                 $listuser = loadall_user();
                 if(isset($_POST['btn-dangnhap'])){
                     $pass = $_POST['pass'];
@@ -66,6 +59,13 @@ ob_start();
                     }
                 }
                 break;
+                include "view/user/login.php";
+                break;
+            case 'logout':
+                session_unset();
+                header("Location:index.php");
+                break;
+            
             default:
             include "view/user/home.php";
                 break;
