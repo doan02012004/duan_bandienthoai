@@ -26,7 +26,7 @@ function loadone_user($id){
     return $listuser;
 }
 function loadone_khachhang($username){
-    $sql ="SELECT * FROM `tbl_user` WHERE username like'%".$username."%'";
+    $sql ="SELECT * FROM `tbl_user` WHERE username like'".$username."'";
     $listuser = pdo_query_one($sql);
     return $listuser;
 }

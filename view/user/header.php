@@ -1,3 +1,4 @@
+
 <!doctype html>
 <!--[if IE]><![endif]-->
 <!--[if lt IE 7 ]> <html lang="en" class="ie6">    <![endif]-->
@@ -113,7 +114,15 @@
 								<ul class="list-inline">
 									<li class="list-inline-item"><a href="checkout.html">Check Out</a></li>
 									<li class="list-inline-item"><a href="my-account.html">My Account</a></li>
-									<li class="list-inline-item"><a href="index.php?act=login">Sign in</a></li>
+									<?php
+										if(isset($_SESSION['id'])){
+											echo '<li class="list-inline-item">'.$_SESSION['ten_user'].'</li>';
+										}
+										else{
+											echo '<li class="list-inline-item"><a href="index.php?act=login">Sign in</a></li>';
+										}
+									?>
+									
 								</ul>
 							</nav>
 						</div>

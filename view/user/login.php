@@ -71,7 +71,7 @@ var_dump($listkh);
 				<div class="col-lg-6">
 					<!-- REGISTERED-ACCOUNT START -->
 					<div class="primari-box registered-account">
-						<form class="new-account-box" id="accountLogin" method="post" action="index.php?act=dangnhap">
+						<form class="new-account-box" id="accountLogin" method="post" action="index.php?act=checklogin">
 							<h3 class="box-subheading">Đăng nhập</h3>
 							<div class="form-content">
                             <div class="forget-password">

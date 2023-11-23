@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include "view/model/pdo.php";
     include "view/model/nguoidung.php";
     include "view/model/danhmuc.php";
@@ -40,18 +41,28 @@
                 include "view/user/login.php";
                 break;
             case 'dangnhap':
+                include "view/user/login.php";
+                break;
+            case 'logout':
+                session_unset();
+                header("Location:index.php");
+                break;
+            case 'checklogin':
                 $listuser = loadall_user();
                 if(isset($_POST['btn-dangnhap'])){
                     $pass = $_POST['pass'];
                     $username = $_POST['username'];
-                }
-                foreach ($listuser as $user) {
-                    if($username==$user['username']&&$pass==$user['pass']){
+                    $listkh = loadone_khachhang($username);
+                    if($pass==$listkh['pass']){
                         $thongbaologin ="Đăng nhập thành công";
-                        $listkh = loadone_khachhang($username);
+                        $_SESSION['id']=$listkh['id'];
+                        $_SESSION['ten_user']=$listkh['ten_user'];
+                       header("Location:index.php");
+                    }
+                    else{
+                        $thongbaologin ="Sai tài khoản hoặc mật khẩu";
                     }
                 }
-                include "view/user/login.php";
                 break;
             default:
             include "view/user/home.php";
