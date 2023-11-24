@@ -117,7 +117,7 @@
 									<?php
 										if(isset($_SESSION['id'])){
 											echo '<li class="list-inline-item"><a href="index.php?act=logout">Đăng Xuất</a></li>';
-											echo '<li class="list-inline-item"><a href="my-account.html">My Account</a></li>';
+											echo '<li class="list-inline-item"><a href="index.php?act=myaccount">Tài khoản</a></li>';
 											echo '<li class="list-inline-item">'.$_SESSION['ten_user'].'</li>';
 										}
 										else{

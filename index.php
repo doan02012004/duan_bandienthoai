@@ -105,6 +105,10 @@ ob_start();
             case 'thongtindonhang':
                 include "view/client/thongtindonhang.php";
                 break;
+            case 'myaccount':
+
+                    include "view/client/thongtintaikhoan.php";
+                break;
             default:
             include "view/client/home.php";
                 break;
