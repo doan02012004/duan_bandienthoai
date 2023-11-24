@@ -208,7 +208,7 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                   } else {
                    // echo "Sorry, there was an error uploading your file.";
                   }
-                if($ten_ht==""||$mota_ht=="" ||$img==""||$link==""){
+                if($ten_ht==""||$mota_ht=="" ||$img==""){
                     $thongbao ="Vui lòng nhập đủ dữ liệu !";
                 }
                 else{

@@ -9,9 +9,9 @@
 						<div id="wrapper">
 							<div class="slider-wrapper">
 								<div id="mainSlider" class="nivoSlider">
-									<img src="view/client/assets/images/slider/2.webp" alt="main slider" title="#htmlcaption" />
-									<img src="view/client/assets/images/slider/1.webp" alt="main slider" title="#htmlcaption2" />
-									<img src="view/client/assets/images/slider/1.webp" alt="main slider" title="#htmlcaption2" />
+									<img src="view/uploads/redmi-k60_1700795158.jpg" alt="main slider" title="#htmlcaption" />
+									<img src="view/uploads/redmi-k40_1698378105.jpg" alt="main slider" title="#htmlcaption2" />
+									<img src="view/uploads/redmi-note-11-5g_1700803297.jpg" alt="main slider" title="#htmlcaption2" />
 								</div>
 								<div id="htmlcaption" class="nivo-html-caption slider-caption">
 									<div class="slider-progress"></div>
@@ -60,7 +60,7 @@
 				<!-- SLIDER-RIGHT START -->
 				<div class="col-md-3">
 					<div class="slider-right zoom-img m-top">
-						<a href="#"><img class="img-responsive" src="view/client/assets/images/product/cms11.webp" alt="sidebar left" /></a>
+						<a href="#"><img class="img-responsive" src="view/uploads/realme-gt-neo-5_1700445048.jpg" alt="sidebar left" /></a>
 					</div>
 				</div>
 				<!-- SLIDER-RIGHT END -->
