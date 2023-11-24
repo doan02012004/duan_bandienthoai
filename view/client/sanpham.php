@@ -1,9 +1,4 @@
 	<!-- Offcanvas START -->
-	<?php
-		// var_dump($listdmsp);
-		echo isset($locgia)? $locgia:"";
-	?>
-
 	<!-- MAIN-CONTENT-SECTION START -->
 	<section class="main-content-section">
 		<div class="container">
@@ -88,7 +83,7 @@
 							<?php
 								foreach ($listdmsp as $sp) {
 									$hinh = $src.$sp['avatar'];
-									$linkspct = "index.php?act=sanphamchitiet&id=".$sp['id'];
+									$linkspct = "index.php?act=sanphamchitiet&id=".$sp['id']."&id_dm=".$sp['id_dm']."";
 									echo '<div class="col-xl-3 col-md-4 col-sm-6 col-12">
 									<div class="gategory-product-list">
 										<div class="single-product-item">

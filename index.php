@@ -44,6 +44,10 @@ ob_start();
                 include "view/client/sanpham.php";
                 break;
             case 'sanphamchitiet':
+                $id = $_GET['id'];
+                $id_dm = $_GET['id_dm'];
+                $listspcl = loadcungloai_sanpham($id_dm);
+                $listonesp = loadone_sanpham($id);
                 include "view/client/sanphamchitiet.php";
                 break;
             case 'login':

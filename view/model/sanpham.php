@@ -59,4 +59,10 @@
         $listsp = pdo_query($sql);
         return $listsp;
     }
+    function loadcungloai_sanpham($id_dm){
+        $sql = "SELECT * FROM `tbl_sanpham` WHERE id_dm=".$id_dm;
+        $listsp = pdo_query($sql);
+        return $listsp;
+    }
+
 ?>
