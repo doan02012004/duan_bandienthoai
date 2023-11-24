@@ -1,6 +1,7 @@
 	<!-- Offcanvas START -->
 	<?php
 		// var_dump($listdmsp);
+		echo isset($locgia)? $locgia:"";
 	?>
 
 	<!-- MAIN-CONTENT-SECTION START -->
@@ -34,17 +35,17 @@
 								<div class="shoort-by">
 									<label for="productShort">Sort by</label>
 									<div class="short-select-option">
-									<form action="" method="post">
-										<select name="sortby" id="productShort">
+									
+										<select name="sortby" id="productShort" class="locgia">
 											<option value="">Chọn mức giá tiền</option>
-											<option value="">Dưới 1tr5 đồng</option>
-											<option value="">1tr5-3tr đồng</option>
-											<option value="">3tr-7tr đồng</option>
-											<option value="">7tr-15tr</option>
-											<option value="">trên 15tr</option>
+											<option value="1">Dưới 1tr5 đồng</option>
+											<option value="2">1tr5-3tr đồng</option>
+											<option value="3">3tr-7tr đồng</option>
+											<option value="4">7tr-15tr</option>
+											<option value="5">trên 15tr</option>
 
 										</select>
-									</form>
+								
 									</div>
 								</div>
 								<!-- SHOORT-BY END -->
@@ -79,7 +80,7 @@
 					</div>
 					<!-- ALL GATEGORY-PRODUCT START -->
 					<div class="all-gategory-product">
-						<div class="row gategory-product">
+						<div class="row gategory-product sanpham">
 							<!-- SINGLE ITEM START -->
 							
 							<!-- SINGLE ITEM END -->

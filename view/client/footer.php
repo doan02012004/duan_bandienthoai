@@ -223,7 +223,8 @@
 
     <!-- Main JS -->
     <script src="view/client/assets/js/main.js"></script>
-	
+	<!-- link ajax -->
+	<script src="view/client/ajax.js"></script>
 </body>
 
 
