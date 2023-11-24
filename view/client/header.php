@@ -190,7 +190,7 @@
 						<div class="mainmenu">
 							<nav>
 								<ul>
-									<li class="active"><a href="index.php">Trang Chủ</a>									
+									<li><a href="index.php">Trang Chủ</a>									
 									</li>
 									<li>
 										<a href="index.php?act=sanpham">Sản Phẩm</a>

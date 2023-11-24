@@ -56,11 +56,12 @@
         }else if($s!=""){
             $sql.=" and ten_sp like '%".$s."%'";
         }
+        $sql.=" ORDER BY id desc limit 16";
         $listsp = pdo_query($sql);
         return $listsp;
     }
     function loadcungloai_sanpham($id_dm){
-        $sql = "SELECT * FROM `tbl_sanpham` WHERE id_dm=".$id_dm;
+        $sql = "SELECT * FROM `tbl_sanpham` WHERE id_dm=".$id_dm." limit 0,9";
         $listsp = pdo_query($sql);
         return $listsp;
     }
