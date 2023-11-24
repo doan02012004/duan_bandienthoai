@@ -142,7 +142,7 @@
 	
 					<!-- LOGO START -->
 					<div class="logo">
-						<a href="index.html"><img src="assets/images/logo.webp" alt="bstore logo" /></a>
+						<a href="index.php"><img src="view/uploads/vandoan2.jpg" alt="bstore logo" /></a>
 					</div>
 					<!-- LOGO END -->
 	
