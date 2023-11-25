@@ -4,18 +4,24 @@
     //     $listsp = pdo_query($sql);
     //     return $listsp;
     // }
-    function loadall_sanpham($iddm=0,$kyw=""){
+    function loadall_sanpham(){
         $sql ="SELECT a.id, a.ten_sp,a.avatar,a.gia_sp,a.dungluong_sp,
-        a.ngaynhap_sp,a.soluong_sp,a.mota_sp,a.trangthai_sp,a.id_dm,b.ten_dm FROM `tbl_sanpham` as a INNER JOIN `tbl_danhmuc` as b on a.id_dm = b.id  where 1";
-        if($iddm>0){
-            $sql.=" and a.id_dm=".$iddm;
-        }
-        else if($kyw==""){
-            $sql .=" and a.ten_sp=".$kyw;
-        }
-        $sql.=" order by id desc"; 
+        a.ngaynhap_sp,a.soluong_sp,a.mota_sp,a.trangthai_sp,a.id_dm,b.ten_dm FROM `tbl_sanpham` as a INNER JOIN `tbl_danhmuc` as b on a.id_dm = b.id ORDER BY id desc";
         $listsp = pdo_query($sql);
         return $listsp;
+    }
+    function loadtimkiem_sanpham($iddm=0,$kyw=""){
+        $sql ="SELECT a.id, a.ten_sp,a.avatar,a.gia_sp,a.dungluong_sp,
+        a.ngaynhap_sp,a.soluong_sp,a.mota_sp,a.trangthai_sp,a.id_dm,b.ten_dm FROM `tbl_sanpham` as a INNER JOIN `tbl_danhmuc` as b on a.id_dm = b.id WHERE 1";
+        if($iddm>0){
+            $sql.=" and id_dm=".$iddm;
+        }
+        else if($kyw!=""){
+            $sql.=" and ten_sp LIKE '%".$kyw."%'";
+        }
+        $sql.=" order by id desc"; 
+          $listsp = pdo_query($sql);
+          return $listsp;
     }
   function insert_sanpham($ten_sp,$avatar,$gia_sp,$soluong_sp,$dungluong_sp,$mota_sp,$trangthai_sp,$ngaynhap_sp,$id_dm){
     $sql="INSERT INTO `tbl_sanpham` (`ten_sp`, `avatar`, `dungluong_sp`, `gia_sp`, `soluong_sp`, `mota_sp`, `ngaynhap_sp`, `trangthai_sp`, `id_dm`)

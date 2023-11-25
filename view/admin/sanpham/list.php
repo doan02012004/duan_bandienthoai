@@ -4,7 +4,7 @@
                 <h3 class="card-title">Danh sách sản phẩm</h3>
               </div>
               <form action="index.php?act=listsp" method="post">
-              <select name="iddm" id="">
+              <select name="iddm">
                         <option value="0" selected>Danh mục sản phẩm</option>
                         <?php  
                             foreach ($listdm as $dm) {
@@ -13,8 +13,8 @@
                                 }
                         ?>
                     </select>
-                    <input type="text" name="kyw" value="">
-                    <input type="submit" name="listtk" value="Tìm kiếm" >
+                    <input type="text" name="kyw" >
+                    <input type="submit" name="btn" value="Tìm kiếm" >
               </form>
               <!-- /.card-header -->
               <div class="card-body">
