@@ -298,7 +298,20 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             break;
         case 'listuser':
             $listcv = loadall_chucvu();
-            $listuser = loadall_user();
+            if(isset($_POST['btn'])){
+                $idcv= $_POST['idcv'];
+                $kyw= $_POST['kyw'];
+                if(isset($idcv)&&($idcv>0)){
+                    $listuser = loadtimkiem_user($idcv,$kyw="");
+                }
+                else if($kyw!=""){
+                    $listuser = loadtimkiem_user($idcv=0,$kyw);
+                }
+            } 
+            else{
+                $listuser = loadtimkiem_user($idcv=0,$kyw="");
+            }
+            // $listuser = loadall_user();
                     include "nguoidung/list.php";
                     break;
         case 'xoauser':

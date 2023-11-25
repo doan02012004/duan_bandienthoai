@@ -4,6 +4,18 @@ function loadall_user(){
     $listuser = pdo_query($sql);
     return $listuser;
 }
+function loadtimkiem_user($idcv=0,$kyw=""){
+    $sql ="SELECT a.id,a.ten_user, a.username,a.pass,a.email,a.sdt,a.diachi,a.trangthai_user,a.role,b.ten_cv FROM `tbl_user` as a INNER JOIN `tbl_phanquyen` as b ON a.role = b.id WHERE 1";
+    if($idcv>0){
+        $sql.=" and role=".$idcv;
+    }
+    else if($kyw!=""){
+        $sql.=" and ten_user LIKE '%".$kyw."%'";
+    }
+    $sql.=" order by id desc"; 
+      $listuser = pdo_query($sql);
+      return $listuser;
+}
 function insert_user($ten_user,$username,$pass,$email,$diachi,$sdt,$role,$trangthai_user){
    $sql = "INSERT INTO `tbl_user` ( `ten_user`, `username`, `pass`, `diachi`,
     `email`, `sdt`, `trangthai_user`, `role`)

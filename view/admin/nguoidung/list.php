@@ -3,6 +3,19 @@
               <div class="card-header">
                 <h3 class="card-title">Danh sách người dùng</h3>
               </div>
+              <form action="index.php?act=listuser" method="post">
+              <select name="idcv">
+                        <option value="0" selected>Chức vụ người dùng</option>
+                        <?php  
+                            foreach ($listcv as $cv) {
+                                extract($cv);
+                                echo '<option value="'.$id.'"> '.$ten_cv.' </option> ';
+                                }
+                        ?>
+                    </select>
+                    <input type="text" name="kyw" >
+                    <input type="submit" name="btn" value="Tìm kiếm" >
+              </form>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example2" class="table table-bordered table-hover">
