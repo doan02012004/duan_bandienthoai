@@ -3,6 +3,19 @@
               <div class="card-header">
                 <h3 class="card-title">Danh sách sản phẩm</h3>
               </div>
+              <form action="index.php?act=listsp" method="post">
+              <select name="iddm" id="">
+                        <option value="0" selected>Danh mục sản phẩm</option>
+                        <?php  
+                            foreach ($listdm as $dm) {
+                                extract($dm);
+                                echo '<option value="'.$id.'"> '.$ten_dm.' </option> ';
+                                }
+                        ?>
+                    </select>
+                    <input type="text" name="kyw" value="">
+                    <input type="submit" name="listtk" value="Tìm kiếm" >
+              </form>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example2" class="table table-bordered table-hover">

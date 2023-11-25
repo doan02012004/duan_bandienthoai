@@ -4,9 +4,16 @@
     //     $listsp = pdo_query($sql);
     //     return $listsp;
     // }
-    function loadall_sanpham(){
+    function loadall_sanpham($iddm=0,$kyw=""){
         $sql ="SELECT a.id, a.ten_sp,a.avatar,a.gia_sp,a.dungluong_sp,
-        a.ngaynhap_sp,a.soluong_sp,a.mota_sp,a.trangthai_sp,b.ten_dm FROM `tbl_sanpham` as a INNER JOIN `tbl_danhmuc` as b on a.id_dm = b.id  order by id desc";
+        a.ngaynhap_sp,a.soluong_sp,a.mota_sp,a.trangthai_sp,a.id_dm,b.ten_dm FROM `tbl_sanpham` as a INNER JOIN `tbl_danhmuc` as b on a.id_dm = b.id  where 1";
+        if($iddm>0){
+            $sql.=" and a.id_dm=".$iddm;
+        }
+        else if($kyw==""){
+            $sql .=" and a.ten_sp=".$kyw;
+        }
+        $sql.=" order by id desc"; 
         $listsp = pdo_query($sql);
         return $listsp;
     }

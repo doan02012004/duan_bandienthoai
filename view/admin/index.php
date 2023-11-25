@@ -63,8 +63,20 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                 include "danhmuc/list.php";
                 break;
         case 'listsp':
-            $listcv = loadall_chucvu();
-            $listsp = loadall_sanpham();
+            $listdm = loadall_danhmuc();
+            if(isset($_POST['listtk'])){
+                $iddm=$_POST['iddm'];
+                $kyw=$_POSt['kyw'];
+                if(isset($iddm)&&($iddm>0)){
+                    $listsp = loadall_sanpham($iddm,$kyw="");
+                }
+                else if(isset($kyw)){
+                    $listsp = loadall_sanpham($iddm=0,$kyw);
+                }
+            } else{
+                $listsp = loadall_sanpham($iddm=0,$kyw=""); 
+            }
+            // $listsp = loadall_sanpham($iddm,$kyw);
             include "sanpham/list.php";
         break;
         case 'addsp':
