@@ -198,22 +198,9 @@ if(is_array($listonesp)){
 							</div>
 							<div class="tab-pane" id="datasheet">
 								<div class="deta-sheet">
-									<table class="table-data-sheet">
-										<tbody>
-											<tr class="odd">
-												<td>Compositions</td>
-												<td>Cotton</td>
-											</tr>
-											<tr class="even">
-												<td class="td-bg">Styles</td>
-												<td class="td-bg">Casual</td>
-											</tr>
-											<tr class="odd">
-												<td>Properties</td>
-												<td>Short Sleeve</td>
-											</tr>
-										</tbody>
-									</table>
+									<iframe src="" width="100%" height="300px" frameborder="1">
+
+									</iframe>
 								</div>
 							</div>
 							<div class="tab-pane" id="review">
