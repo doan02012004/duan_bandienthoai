@@ -214,10 +214,10 @@
 					<div class="col-lg-3">
 						<div class="shopping-cart-out d-flex justify-content-end">
 							<div class="shopping-cart">
-								<a class="shop-link demgiohang" href="index.php?act=giohang" title="View my shopping cart">
+								<a class="shop-link " href="index.php?act=giohang" title="View my shopping cart">
 									<i class="fa fa-shopping-cart cart-icon"></i>
 									<b>Giỏ Hàng</b>
-									<span class="ajax-cart-quantity">0</span>
+									<span class="ajax-cart-quantity demgiohang"><?php echo $_SESSION['count'] ?></span>
 								</a>
 
 								<div class="shipping-cart-overly giohangmini">

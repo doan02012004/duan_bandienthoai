@@ -21,6 +21,6 @@ $(document).ready(function(){
       });
 
       $('.addcart').click(function(){
-      $('.demgiohang').load('view/model/demgiohang.php')
+                $('.demgiohang').load('view/model/demgiohang.php')
       });
 });
