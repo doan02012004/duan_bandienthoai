@@ -63,7 +63,6 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                 include "danhmuc/list.php";
                 break;
         case 'listsp':
-            $listcv = loadall_chucvu();
             $listsp = loadall_sanpham();
             include "sanpham/list.php";
         break;
