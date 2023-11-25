@@ -51,4 +51,26 @@
         $listsp = pdo_query($sql);
         return $listsp;
     }
+    function loadluotxem_sanpham(){
+        $sql = "SELECT * FROM `tbl_sanpham` ORDER BY id desc limit 12";
+        $listsp = pdo_query($sql);
+        return $listsp;
+    }
+    function loadall_dmsp($s="",$id=0){
+        $sql = "SELECT * FROM `tbl_sanpham` WHERE 1";
+        if($id>0){
+            $sql.=" and `id_dm`=".$id;
+        }else if($s!=""){
+            $sql.=" and ten_sp like '%".$s."%'";
+        }
+        $sql.=" ORDER BY id desc limit 16";
+        $listsp = pdo_query($sql);
+        return $listsp;
+    }
+    function loadcungloai_sanpham($id_dm){
+        $sql = "SELECT * FROM `tbl_sanpham` WHERE id_dm=".$id_dm." limit 0,9";
+        $listsp = pdo_query($sql);
+        return $listsp;
+    }
+
 ?>

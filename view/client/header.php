@@ -14,7 +14,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Women</title>
+	<title>Nhom12Moblie</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
@@ -33,21 +33,22 @@
     <link rel="stylesheet" href="view/user/assets/css/font-awesome.min.css">
 
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="view/user/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="view/user/assets/css/animate.css">
-    <link rel="stylesheet" href="view/user/assets/css/jquery.fancybox.css">
-    <link rel="stylesheet" href="view/user/assets/css/jquery.bxslider.css">
-    <link rel="stylesheet" href="view/user/assets/css/jquery-ui-slider.css">
-    <link rel="stylesheet" href="view/user/assets/css/meanmenu.min.css">
-    <link rel="stylesheet" href="view/user/assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="view/user/assets/css/nivo-slider.css">
-    <link rel="stylesheet" href="view/user/assets/css/main.css">
-    <link rel="stylesheet" href="view/user/assets/css/ie.css">
+    <link rel="stylesheet" href="view/client/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="view/client/assets/css/animate.css">
+    <link rel="stylesheet" href="view/client/assets/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="view/client/assets/css/jquery.bxslider.css">
+    <link rel="stylesheet" href="view/client/assets/css/jquery-ui-slider.css">
+    <link rel="stylesheet" href="view/client/assets/css/meanmenu.min.css">
+    <link rel="stylesheet" href="view/client/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="view/client/assets/css/nivo-slider.css">
+    <link rel="stylesheet" href="view/client/assets/css/main.css">
+    <link rel="stylesheet" href="view/client/assets/css/ie.css">
 
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="view/user/assets/css/style.css">
-    <link rel="stylesheet" href="view/user/assets/css/responsive.css">
-
+    <link rel="stylesheet" href="view/client/assets/css/style.css">
+    <link rel="stylesheet" href="view/client/assets/css/responsive.css">
+	<!-- link Ajax -->
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -112,10 +113,11 @@
 						<div class="header-right-menu">
 							<nav>
 								<ul class="list-inline">
-									<li class="list-inline-item"><a href="index.php?act=logout">Đăng Xuất</a></li>
-									<li class="list-inline-item"><a href="my-account.html">My Account</a></li>
+									
 									<?php
 										if(isset($_SESSION['id'])){
+											echo '<li class="list-inline-item"><a href="index.php?act=logout">Đăng Xuất</a></li>';
+											echo '<li class="list-inline-item"><a href="index.php?act=myaccount">Tài khoản</a></li>';
 											echo '<li class="list-inline-item">'.$_SESSION['ten_user'].'</li>';
 										}
 										else{
@@ -140,13 +142,13 @@
 	
 					<!-- LOGO START -->
 					<div class="logo">
-						<a href="index.html"><img src="assets/images/logo.webp" alt="bstore logo" /></a>
+						<a href="index.php"><img src="view/uploads/vandoan2.jpg" alt="bstore logo" /></a>
 					</div>
 					<!-- LOGO END -->
 	
 					<!-- CATEGORYS-PRODUCT-SEARCH START -->
 					<div class="categorys-product-search">
-						<form action="index.php" method="get" class="search-form-cat">
+						<form action="index.php?act=sanpham" method="post" class="search-form-cat">
 							<div class="search-product form-group">
 								<select name="id_dm" class="cat-search">
 									<option value="">Danh mục</option>
@@ -159,7 +161,7 @@
 								</select>
 								<input type="text" class="form-control search-form" name="s"
 									placeholder="Enter your search key ... " />
-								<button class="search-button" value="Search" name="s" type="submit">
+								<button class="search-button" value="Search" name="btn" type="submit">
 									<i class="fa fa-search"></i>
 								</button>
 							</div>
@@ -189,13 +191,13 @@
 						<div class="mainmenu">
 							<nav>
 								<ul>
-									<li class="active"><a href="index.php?act=trangchu">Trang Chủ</a>									
+									<li><a href="index.php">Trang Chủ</a>									
 									</li>
 									<li>
 										<a href="index.php?act=sanpham">Sản Phẩm</a>
 									</li>
 									<li>
-										<a href="index.php?act=tintuc">Tin Tức</a>
+										<a href="index.php?act=gioithieu">Giới Thiệu</a>
 										
 									</li>
 									<li>
@@ -212,9 +214,9 @@
 					<div class="col-lg-3">
 						<div class="shopping-cart-out d-flex justify-content-end">
 							<div class="shopping-cart">
-								<a class="shop-link" href="cart.html" title="View my shopping cart">
+								<a class="shop-link" href="index.php?act=giohang" title="View my shopping cart">
 									<i class="fa fa-shopping-cart cart-icon"></i>
-									<b>My Cart</b>
+									<b>Giỏ Hàng</b>
 									<span class="ajax-cart-quantity">2</span>
 								</a>
 

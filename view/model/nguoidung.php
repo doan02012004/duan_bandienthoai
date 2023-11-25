@@ -30,4 +30,12 @@ function loadone_khachhang($username){
     $listuser = pdo_query_one($sql);
     return $listuser;
 }
+function loadonedk_khachhang($username=""){
+    $sql ="SELECT * FROM `tbl_user` WHERE 1";
+    if($username!=""){
+        $sql.=" and username like'".$username."'";
+    }
+    $listuser = pdo_query_one($sql);
+    return $listuser;
+}
  ?>

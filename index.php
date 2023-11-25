@@ -9,14 +9,45 @@ ob_start();
     include "view/model/khuyenmai.php";
     $listdm = loadall_danhmuc();
     $listspnew = loadnew_sanpham();
+    $listspluotxem =loadluotxem_sanpham();
+    $listdemsp =loadallsoluong_danhmuc();
+    if(isset($_GET['id_dm'])){
+        $id = $_GET['id_dm'];
+        $listdmsp = loadall_dmsp($s="",$id);
+    }else{
+        $listdmsp = loadall_dmsp($s="",$id=0);
+    }
     include "view/client/header.php";
   if(isset($_GET['act'])){
     $act = $_GET['act'];
         switch ($act){
             case 'sanpham':
+                if(isset($_POST['btn'])){
+                    $id = $_POST['id_dm'];
+                    $s = $_POST['s'];
+                    $listdmsp = loadall_dmsp($s,$id);
+                }
+                else{
+                    $listdmsp = loadall_dmsp($s="",$id=0);
+                }
+            //   $listdemsp =loadallsoluong_danhmuc();
+            //   var_dump($listdemsp);
+                include "view/client/sanpham.php";
+                break;
+            case 'loadsanpham':
+                if(isset($_GET['id'])){
+                    $id = $_GET['id'];
+                    $listdmsp = loadall_dmsp($s="",$id);
+                }else{
+                    $listdmsp = loadall_dmsp($s="",$id=0);
+                }
                 include "view/client/sanpham.php";
                 break;
             case 'sanphamchitiet':
+                $id = $_GET['id'];
+                $id_dm = $_GET['id_dm'];
+                $listspcl = loadcungloai_sanpham($id_dm);
+                $listonesp = loadone_sanpham($id);
                 include "view/client/sanphamchitiet.php";
                 break;
             case 'login':
@@ -60,13 +91,24 @@ ob_start();
                     }
                 }
                 break;
-                include "view/client/login.php";
-                break;
             case 'logout':
                 session_unset();
                 header("Location:index.php");
                 break;
-            
+            case'giohang':
+                include "view/client/cart.php";
+                break;
+            case 'thanhtoan':
+                    
+                    include "view/client/thanhtoan.php";
+                break;
+            case 'thongtindonhang':
+                include "view/client/thongtindonhang.php";
+                break;
+            case 'myaccount':
+
+                    include "view/client/thongtintaikhoan.php";
+                break;
             default:
             include "view/client/home.php";
                 break;

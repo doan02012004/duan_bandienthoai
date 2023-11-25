@@ -63,6 +63,7 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                 include "danhmuc/list.php";
                 break;
         case 'listsp':
+<<<<<<< HEAD
             $listdm = loadall_danhmuc();
             if(isset($_POST['listtk'])){
                 $iddm=$_POST['iddm'];
@@ -77,6 +78,9 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                 $listsp = loadall_sanpham($iddm=0,$kyw=""); 
             }
             // $listsp = loadall_sanpham($iddm,$kyw);
+=======
+            $listsp = loadall_sanpham();
+>>>>>>> aeb0aede464956e3184195ff37cf6f98345f7378
             include "sanpham/list.php";
         break;
         case 'addsp':
@@ -220,7 +224,7 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                   } else {
                    // echo "Sorry, there was an error uploading your file.";
                   }
-                if($ten_ht==""||$mota_ht=="" ||$img==""||$link==""){
+                if($ten_ht==""||$mota_ht=="" ||$img==""){
                     $thongbao ="Vui lòng nhập đủ dữ liệu !";
                 }
                 else{

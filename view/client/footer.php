@@ -1,3 +1,156 @@
+<!-- BRAND-CLIENT-AREA START -->
+<section class="brand-client-area">
+		<div class="container">
+			<!-- BRAND-CLIENT-ROW START -->
+			<div class="brand-client-row">
+				<div class="center-title-area">
+					<h2 class="center-title">Đối Tác Của Chúng Tôi</h2>
+				</div>
+				<div class="carousel-wrap">
+					<!-- CLIENT-CAROUSEL START -->
+					<div class="client-carousel owl-carousel">
+
+						<!-- CLIENT-SINGLE START -->
+						<div class="single-client">
+							<a href="#">
+								<img src="view/client/assets/images/brand/1.webp" alt="brand-client" />
+							</a>
+						</div>
+						<!-- CLIENT-SINGLE END -->
+
+						<!-- CLIENT-SINGLE START -->
+						<div class="single-client">
+							<a href="#">
+								<img src="view/client/assets/images/brand/2.webp" alt="brand-client" />
+							</a>
+						</div>
+						<!-- CLIENT-SINGLE END -->
+
+						<!-- CLIENT-SINGLE START -->
+						<div class="single-client">
+							<a href="#">
+								<img src="view/client/assets/images/brand/3.webp" alt="brand-client" />
+							</a>
+						</div>
+						<!-- CLIENT-SINGLE END -->
+
+						<!-- CLIENT-SINGLE START -->
+						<div class="single-client">
+							<a href="#">
+								<img src="view/client/assets/images/brand/4.webp" alt="brand-client" />
+							</a>
+						</div>
+						<!-- CLIENT-SINGLE END -->
+
+						<!-- CLIENT-SINGLE START -->
+						<div class="single-client">
+							<a href="#">
+								<img src="view/client/assets/images/brand/5.webp" alt="brand-client" />
+							</a>
+						</div>
+						<!-- CLIENT-SINGLE END -->
+
+						<!-- CLIENT-SINGLE START -->
+						<div class="single-client">
+							<a href="#">
+								<img src="view/client/assets/images/brand/1.webp" alt="brand-client" />
+							</a>
+						</div>
+						<!-- CLIENT-SINGLE END -->
+
+						<!-- CLIENT-SINGLE START -->
+						<div class="single-client">
+							<a href="#">
+								<img src="view/client/assets/images/brand/3.webp" alt="brand-client" />
+							</a>
+						</div>
+						<!-- CLIENT-SINGLE END -->
+
+						<!-- CLIENT-SINGLE START -->
+						<div class="single-client">
+							<a href="#">
+								<img src="view/client/assets/images/brand/2.webp" alt="brand-client" />
+							</a>
+						</div>
+						<!-- CLIENT-SINGLE END -->
+
+						<!-- CLIENT-SINGLE START -->
+						<div class="single-client">
+							<a href="#">
+								<img src="view/client/assets/images/brand/3.webp" alt="brand-client" />
+							</a>
+						</div>
+						<!-- CLIENT-SINGLE END -->
+						
+					</div>
+					<!-- CLIENT-CAROUSEL END -->
+				</div>
+			</div>
+			<!-- BRAND-CLIENT-ROW END -->
+		</div>
+	</section>
+	<!-- BRAND-CLIENT-AREA END -->
+<!-- COMPANY-FACALITY START -->
+<section class="company-facality">
+		<div class="container">
+			<div class="row g-4">
+				<!-- SINGLE-FACALITY START -->
+				<div class="col-lg-3 col-sm-6">
+					<div class="single-facality">
+						<div class="facality-icon">
+							<i class="fa fa-rocket"></i>
+						</div>
+						<div class="facality-text">
+							<h3 class="facality-heading-text">FREE SHIPPING</h3>
+							<span>on order over $100</span>
+						</div>
+					</div>
+				</div>
+				<!-- SINGLE-FACALITY END -->
+				<!-- SINGLE-FACALITY START -->
+				<div class="col-lg-3 col-sm-6">
+					<div class="single-facality">
+						<div class="facality-icon">
+							<i class="fa fa-umbrella"></i>
+						</div>
+						<div class="facality-text">
+							<h3 class="facality-heading-text">24/7 SUPPORT</h3>
+							<span>online consultations</span>
+						</div>
+					</div>
+				</div>
+				<!-- SINGLE-FACALITY END -->
+				<!-- SINGLE-FACALITY START -->
+				<div class="col-lg-3 col-sm-6">
+					<div class="single-facality">
+						<div class="facality-icon">
+							<i class="fa fa-calendar"></i>
+						</div>
+						<div class="facality-text">
+							<h3 class="facality-heading-text">DAILY UPDATES</h3>
+							<span>Check out store for latest</span>
+						</div>
+					</div>
+				</div>
+				<!-- SINGLE-FACALITY END -->
+				<!-- SINGLE-FACALITY START -->
+				<div class="col-lg-3 col-sm-6">
+					<div class="single-facality">
+						<div class="facality-icon">
+							<i class="fa fa-refresh"></i>
+						</div>
+						<div class="facality-text">
+							<h3 class="facality-heading-text">30-DAY RETURNS</h3>
+							<span>moneyback guarantee</span>
+						</div>
+					</div>
+				</div>
+				<!-- SINGLE-FACALITY END -->
+			</div>
+		</div>
+	</section>
+	<!-- COMPANY-FACALITY END -->
+
 <!-- FOOTER-TOP-AREA START -->
 <section class="footer-top-area">
 		<div class="container">
@@ -170,7 +323,7 @@
 								<div class="col-12">
 									<!-- PAYMENT-METHOD START -->
 									<div class="payment-method">
-										<img class="img-responsive pull-right" src="view/user/assets/images/payment.webp"
+										<img class="img-responsive pull-right" src="view/client/assets/images/payment.webp"
 											alt="payment-method" />
 									</div>
 									<!-- PAYMENT-METHOD END -->
@@ -205,25 +358,26 @@
     ============================================ -->
 
     <!-- Modernizer & jQuery JS -->
-    <script src="view/user/assets/js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="view/client/assets/js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="view/user/assets/js/vendor/jquery-3.6.0.min.js"></script>
 
     <!-- Bootstrap JS -->
-    <script src="view/user/assets/js/popper.min.js"></script>
-    <script src="view/user/assets/js/bootstrap.min.js"></script>
+    <script src="view/client/assets/js/popper.min.js"></script>
+    <script src="view/client/assets/js/bootstrap.min.js"></script>
 
     <!-- Plugins JS -->
-    <script src="view/user/assets/js/jquery.fancybox.js"></script>
-    <script src="view/user/assets/js/jquery.bxslider.min.js"></script>
-    <script src="view/user/assets/js/jquery.meanmenu.js"></script>
-    <script src="view/user/assets/js/jquery.nivo.slider.js"></script>
-    <script src="view/user/assets/js/owl.carousel.min.js"></script>
-    <script src="view/user/assets/js/jqueryui.js"></script>
-    <script src="view/user/assets/js/wow.js"></script>
+    <script src="view/client/assets/js/jquery.fancybox.js"></script>
+    <script src="view/client/assets/js/jquery.bxslider.min.js"></script>
+    <script src="view/client/assets/js/jquery.meanmenu.js"></script>
+    <script src="view/client/assets/js/jquery.nivo.slider.js"></script>
+    <script src="view/client/assets/js/owl.carousel.min.js"></script>
+    <script src="view/client/assets/js/jqueryui.js"></script>
+    <script src="view/client/assets/js/wow.js"></script>
 
     <!-- Main JS -->
-    <script src="view/user/assets/js/main.js"></script>
-	
+    <script src="view/client/assets/js/main.js"></script>
+	<!-- link ajax -->
+	<script src="view/client/ajax.js"></script>
 </body>
 
 

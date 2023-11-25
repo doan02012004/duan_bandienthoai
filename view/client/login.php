@@ -21,6 +21,9 @@
 					<div class="primari-box registered-account">
 						<form class="new-account-box" id="accountLogin" method="post" action="index.php?act=dangnhap">
 							<h3 class="box-subheading">Đăng nhập</h3>
+							<div class="forget-password">
+									<p><?php echo isset($thongbaologin)? $thongbaologin : "";?></p>
+								</div>
 							<div class="form-content">
 								<div class="form-group primary-form-group">
 									<label for="loginemail">Tài khoản</label>

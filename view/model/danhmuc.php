@@ -23,4 +23,9 @@
          WHERE `id` =".$id;
         pdo_execute($sql);
     }
+    function loadallsoluong_danhmuc(){
+        $sql = "SELECT b.id, b.ten_dm, COUNT(id_dm) as 'soluong' FROM `tbl_sanpham` as a INNER JOIN `tbl_danhmuc` as b on a.id_dm =b.id GROUP BY b.ten_dm ";
+        $listdm = pdo_query($sql);
+        return $listdm;
+    }
 ?>
