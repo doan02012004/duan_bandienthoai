@@ -19,7 +19,7 @@
             $listdmsp = pdo_query($sql);
 			foreach ($listdmsp as $sp) {
 									$hinh = $src.$sp['avatar'];
-									$linkspct = "index.php?act=sanphamchitiet&id=".$sp['id'];
+									$linkspct = "index.php?act=sanphamchitiet&id=".$sp['id']."&id_dm=".$sp['id_dm'];
 									echo '<div class="col-xl-3 col-md-4 col-sm-6 col-12">
 									<div class="gategory-product-list">
 										<div class="single-product-item">
