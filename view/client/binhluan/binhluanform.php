@@ -3,7 +3,7 @@ session_start();
     include("../../model/pdo.php");
     include("../../model/binhluan.php");
     $id_sp=$_REQUEST['id_sp'];
-    $dsbl =loadAll_binhluan2($id_sp);
+    $listbl =loadAll_binhluan2($id_sp);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,31 +11,13 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .binhluan table{
-            width: 90%;
-            margin-left: 5%;
-        }
-        .binhluan table td:nth-child(1){
-            width: 50%;
-        }
-        .binhluan table td:nth-child(2){
-            width: 20%;
-        }
-        .binhluan table td:nth-child(3){
-            width: 30%;
-        }
-    </style>
 </head>
 <body>
-    
-
 <div>
-    <div class="">Bình luận</div>
     <div class="">
         <table>
                     <?php  
-                    foreach ($dsbl as $bl){
+                    foreach ($listbl as $bl){
                         extract($bl);
                         echo'<tr><td>'.$noidung_bl.'|</td>';
                         echo'<td>'.$ten_user.'|</td>';

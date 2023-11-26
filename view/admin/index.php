@@ -504,6 +504,25 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
                 $listlh = loadall_lienhe();
                 include "lienhe/list.php";
                 break;
+            case 'sualh':
+                    $id = $_GET['id'];
+                    $listlh = loadone_lh($id);
+                    include "lienhe/update.php";
+                    break;
+            case 'updatelh':
+                if(isset($_POST['btn-add'])){
+                    $id = $_POST['id'];
+                    $trangthai_lh = $_POST['trangthai_lh'];
+                    if($trangthai_lh==""){
+                        $thongbao ="Vui lòng nhập đủ dữ liệu !";
+                    }
+                    else{
+                        update_lh($id,$trangthai_lh);
+                        $thongbao ="Thêm thành công";
+                    }
+                }
+                $listlh = loadall_lienhe();
+                include "lienhe/list.php";
         case 'xoalh':
             $id = $_GET['id'];
                 delete_lienhe($id);

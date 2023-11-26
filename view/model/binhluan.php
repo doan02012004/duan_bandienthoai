@@ -19,7 +19,7 @@ function loadAll_binhluan (){
 }
 function insert_binhluan($id_user,$id_sp,$noidung_bl,$ngaybinhluan){
     $sql="INSERT INTO `tbl_binhluan` (`id_user`, `id_sp`, `noidung_bl`,`ngaybinhluan`) VALUES
-     ('".$id_user."', '".$id_sp."', '".$noidung_bl."','".$ngaybinhluan."')";
+     ('$id_user', '$id_sp', '$noidung_bl','$ngaybinhluan')";
      pdo_execute($sql);
 }
 function delete_binhluan($id){
