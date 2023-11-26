@@ -160,8 +160,10 @@ if(is_array($listonesp)){
 									<p class="small-title">Quantity</p>
 									<div class="cart-quantity">
 										<div class="cart-plus-minus-button single-qty-btn">
-											<input class="cart-plus-minus sing-pro-qty" type="text" name="qtybutton"
-												value="0">
+											<input class="cart-plus-minus sing-pro-qty nhapsoluong" min="1" max="<?php echo $soluong_sp ?>" type="number" name="qtybutton"
+												value="1" require>
+												<input class="cart-plus-minus sing-pro-qty qtybuttonmax" type="hidden" name="qtybuttonmax"
+												value="<?php echo $soluong_sp ?>">
 										</div>
 									</div>
 								</div>

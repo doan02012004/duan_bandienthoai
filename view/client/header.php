@@ -1,4 +1,6 @@
+<?php
 
+?>
 <!doctype html>
 <!--[if IE]><![endif]-->
 <!--[if lt IE 7 ]> <html lang="en" class="ie6">    <![endif]-->
@@ -19,7 +21,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="view/user/assets/images/favicon.webp">
+    <link rel="shortcut icon" type="image/x-icon" href="view/client/assets/images/favicon.webp">
 
 
 	<!-- Fonts -->
@@ -30,7 +32,7 @@
     <!-- CSS
 	============================================ -->
 
-    <link rel="stylesheet" href="view/user/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="view/client/assets/css/font-awesome.min.css">
 
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="view/client/assets/css/bootstrap.min.css">
@@ -217,7 +219,7 @@
 								<a class="shop-link " href="index.php?act=giohang" title="View my shopping cart">
 									<i class="fa fa-shopping-cart cart-icon"></i>
 									<b>Giỏ Hàng</b>
-									<span class="ajax-cart-quantity demgiohang"><?php echo $_SESSION['count'] ?></span>
+									<span class="ajax-cart-quantity demgiohang">0</span>
 								</a>
 
 								<div class="shipping-cart-overly giohangmini">

@@ -35,19 +35,21 @@
 					</thead>
 					<!-- TABLE HEADER END -->
 					<!-- TABLE BODY START -->
-					<tbody>
+					<tbody id="giohang">
 						<?php
+							$tongtien = 0;
 							 if(!empty($_SESSION['cart'])){
 								foreach ($_SESSION['cart'] as $key=>$value) {
 									
 									$gia = $value['gia_sp'] * $value['soluong_dh'];
+									$tongtien += $gia;
 									$hinh =$src.$value['avatar'];
 									echo '<tr>
 									<td class="cart-product">
 										<a href="#"><img alt="Blouse" src="'.$hinh.'"></a>
 									</td>
 									<td class="cart-description">
-										<p class="product-name"><a href="#">'.$value['ten_sp'].'</a></p>
+										<p class="product-name"><span>'.$value['ten_sp'].'</span></p>
 										<small>DUNG LƯỢNG: '.$value['dungluong_sp'].'</small>
 									</td>
 									<td class="cart-avail"><span class="label label-success">'.$value['trangthai_sp'].'</span></td>
@@ -57,13 +59,15 @@
 										</ul>
 									</td>
 									<td class="cart_quantity text-center">
-										<div class="cart-plus-minus-button">
-											<input class="cart-plus-minus" type="text" name="qtybutton" min="1" value="'.$value['soluong_dh'].'">
+										<div class="cart-plus-minus-button-btn">
+											<input class="cart-plus-minus nhapsoluong soluong" type="number" name="qtybutton" min="1" max="'.$value['soluong_sp'].'" value="'.$value['soluong_dh'].'">
+											<input class="cart-plus-minus sing-pro-qty qtybuttonmax" type="hidden" name="qtybuttonmax"
+												value="'.$value['soluong_sp'].'">
 										</div>
 									</td>
 									<td class="cart-delete text-center">
 										<span>
-											<a href="#" class="cart_quantity_delete" title="Delete"><i
+											<a href="#" class="cart_quantity_delete remo" title="Delete"><i
 													class="fa fa-trash-o"></i></a>
 										</span>
 									</td>
@@ -85,25 +89,14 @@
 					<!-- TABLE BODY END -->
 					<!-- TABLE FOOTER START -->
 					<tfoot>
-						<tr class="cart-total-price">
-							<td class="cart_voucher" colspan="3" rowspan="4"></td>
-							<td class="text-right" colspan="3">Total products (tax excl.)</td>
-							<td id="total_product" class="price" colspan="1">$76.46</td>
-						</tr>
+
 						<tr>
-							<td class="text-right" colspan="3">Total shipping</td>
-							<td id="total_shipping" class="price" colspan="1">$5.00</td>
-						</tr>
-						<tr>
-							<td class="text-right" colspan="3">Total vouchers (tax excl.)</td>
-							<td class="price" colspan="1">$0.00</td>
-						</tr>
-						<tr>
-							<td class="total-price-container text-right" colspan="3">
+							<td class="total-price-container text-right" colspan="6">
 								<span>Total</span>
 							</td>
-							<td id="total-price-container" class="price" colspan="1">
-								<span id="total-price">$76.46</span>
+							<td id="total-price-container" class="price" colspan="3">
+								<span id="total-price" id="total"><?php echo isset($tongtien)? $tongtien : 0 ?></span>
+								<p>VNĐ</p>
 							</td>
 						</tr>
 					</tfoot>

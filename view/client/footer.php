@@ -375,9 +375,9 @@
     <script src="view/client/assets/js/wow.js"></script>
 
     <!-- Main JS -->
-    <script src="view/client/assets/js/main.js"></script>
+    <script src="view/client/assets/js/mainn.js"></script>
 	<!-- link ajax -->
-	<script src="view/client/ajaxc.js"></script>
+	<script src="view/client/ajax.js"></script>
 </body>
 
 

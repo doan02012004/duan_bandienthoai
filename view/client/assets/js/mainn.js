@@ -333,18 +333,27 @@ new WOW().init();
 	 $(".cart-plus-minus-button").append('<div class="dec qtybutton">-</div><div class="inc qtybutton">+</div>');
 	  $(".qtybutton").on("click", function() {
 		var $button = $(this);
-		var oldValue = $button.parent().find("input").val();
+		var oldValue = $button.parent().find(".nhapsoluong").val();
+		var maxValue = $button.parent().find(".qtybuttonmax").val();
 		if ($button.text() == "+") {
-		  var newVal = parseFloat(oldValue) + 1;
+		  if (parseInt(oldValue) < maxValue){
+			var newVal = parseInt(oldValue) + 1;
+		  }else{
+			var newVal = maxValue;
+			alert("Số lượng đã đạt cực hạn");
+		  }
 		} else {
 		   // Don't allow decrementing below zero
-		  if (oldValue > 0) {
-			var newVal = parseFloat(oldValue) - 1;
+		  if (oldValue > 1) {
+			var newVal = parseInt(oldValue) - 1;
 			} else {
-			newVal = 0;
+			newVal = 1;
+			alert("Số lượng đã tối thiểu!");
 		  }
 		  }
-		$button.parent().find("input").val(newVal);
+		 
+		$button.parent().find(".nhapsoluong").val(newVal);
+		
 	  });
 
 

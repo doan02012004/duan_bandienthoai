@@ -80,7 +80,7 @@ ob_start();
                     $pass = $_POST['pass'];
                     $username = $_POST['username'];
                     $listkh = loadone_khachhang($username);
-                    if($pass==$listkh['pass']){
+                   if($pass==$listkh['pass']){
                         $thongbaologin ="Đăng nhập thành công";
                         $_SESSION['id']=$listkh['id'];
                         $_SESSION['ten_user']=$listkh['ten_user'];
