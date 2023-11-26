@@ -186,7 +186,7 @@ if(is_array($listonesp)){
 						<!-- Nav tabs -->
 						<ul class="nav nav-tabs more-info-tab">
 							<li class="active"><a href="#moreinfo" data-bs-toggle="tab">Thông Tin</a></li>
-							<li><a href="#datasheet" data-bs-toggle="tab">data sheet</a></li>
+							<li><a href="#datasheet" data-bs-toggle="tab">Bình luận</a></li>
 							<li><a href="#review" data-bs-toggle="tab">reviews</a></li>
 						</ul>
 						<!-- Tab panes -->
@@ -199,7 +199,7 @@ if(is_array($listonesp)){
 							<div class="tab-pane" id="datasheet">
 								<div class="deta-sheet">
 									<iframe src="" width="100%" height="300px" frameborder="1">
-
+                                           123
 									</iframe>
 								</div>
 							</div>
