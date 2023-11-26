@@ -79,20 +79,27 @@
 							<div class="carousel-wrap ">
 								<!-- NEW-PRO-CAROUSEL START -->
 								<div class="new-pro-carousel owl-carousel">
+							
 										<?php
 											foreach ($listspnew as $sp) {
 												$hinh = $src.$sp['avatar'];
 												echo'<div class="single-product-item">
 												<div class="product-image">
+												<input type="hidden" name="ten_sp" value="'.$sp['ten_sp'].'" id="ten_sp'.$sp['id'].'">
+												<input type="hidden" name="avatar" value="'.$sp['avatar'].'" id="avatar'.$sp['id'].'">
+												<input type="hidden" name="gia_sp" value="'.$sp['gia_sp'].'" id="gia_sp'.$sp['id'].'">
+												<input type="hidden" name="dungluong_sp" value="'.$sp['dungluong_sp'].'" id="dungluong_sp'.$sp['id'].'">
+												<input type="hidden" name="trangthai_sp" value="'.$sp['trangthai_sp'].'" id="trangthai_sp'.$sp['id'].'">
+												<input type="hidden" name="soluong_sp" value="'.$sp['soluong_sp'].'" id="soluong_sp'.$sp['id'].'">
+												<input type="hidden" name="soluong_dh" value="1" id="soluong_dh'.$sp['id'].'">
 													<a href="index.php?act=sanphamchitiet&id='.$sp['id'].'&id_dm='.$sp['id_dm'].'"><img src="'.$hinh.'"
 															alt="product-image" /></a>
 													<a href="#" class="new-mark-box">Mới</a>
 													<div class="overlay-content">
 														<ul>
-															<li><a href="#" title="Quick view"><i
+															<li><a href="index.php?act=sanphamchitiet&id='.$sp['id'].'&id_dm='.$sp['id_dm'].'" title="Quick view"><i
 																		class="fa fa-search"></i></a></li>
-															<li><a href="index.php?act=sanphamchitiet&id='.$sp['id'].'" title="Quick view"><i
-																		class="fa fa-shopping-cart"></i></a></li>
+															<li><button type="submit" class="add-to-cart addcart" title="Quick view" id="'.$sp['id'].'"><i class="fa fa-shopping-cart "></i></button></li>
 															<li><a href="#" title="Quick view"><i
 																		class="fa fa-retweet"></i></a></li>
 															<li><a href="#" title="Quick view"><i
@@ -150,9 +157,9 @@
 													<a href="#" class="new-mark-box">Sale</a>
 													<div class="overlay-content">
 														<ul>
-															<li><a href="#" title="Quick view"><i
+															<li><a href="index.php?act=sanphamchitiet&id='.$sp['id'].'&id_dm='.$sp['id_dm'].'" title="Quick view"><i
 																		class="fa fa-search"></i></a></li>
-															<li><a href="index.php?act=sanphamchitiet&id='.$sp['id'].'" title="Quick view"><i
+															<li><a href="" title="Quick view"><i
 																		class="fa fa-shopping-cart"></i></a></li>
 															<li><a href="#" title="Quick view"><i
 																		class="fa fa-retweet"></i></a></li>
@@ -229,9 +236,9 @@
 										<a href="#" class="new-mark-box">new</a>
 										<div class="overlay-content">
 											<ul>
-												<li><a href="#" title="Quick view"><i class="fa fa-search"></i></a>
+												<li><a href="index.php?act=sanphamchitiet&id='.$sp['id'].'&id_dm='.$sp['id_dm'].'" title="Quick view"><i class="fa fa-search"></i></a>
 												</li>
-												<li><a href="index.php?act=sanphamchitiet&id='.$sp['id'].'" title="Quick view"><i
+												<li><a href="" title="Quick view"><i
 															class="fa fa-shopping-cart"></i></a></li>
 												<li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a>
 												</li>

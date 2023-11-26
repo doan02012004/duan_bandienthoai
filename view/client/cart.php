@@ -1,3 +1,4 @@
+
 <section class="main-content-section">
 		<div class="container">
 			<!-- BSTORE-BREADCRUMB START -->
@@ -23,114 +24,63 @@
 					<!-- TABLE HEADER START -->
 					<thead>
 						<tr>
-							<th class="cart-product">Product</th>
-							<th class="cart-description">Description</th>
-							<th class="cart-avail text-center">Availability</th>
-							<th class="cart-unit text-right">Unit price</th>
-							<th class="cart_quantity text-center">Qty</th>
-							<th class="cart-delete">&nbsp;</th>
-							<th class="cart-total text-right">Total</th>
+							<th class="cart-product">Sản Phẩm</th>
+							<th class="cart-description">Thông Tin</th>
+							<th class="cart-avail text-center">Trạng Thái</th>
+							<th class="cart-unit text-right">Giá Sản Phẩm</th>
+							<th class="cart_quantity text-center">Số Lượng</th>
+							<th class="cart-delete">Chức năng</th>
+							<th class="cart-total text-right">Tổng giá</th>
 						</tr>
 					</thead>
 					<!-- TABLE HEADER END -->
 					<!-- TABLE BODY START -->
 					<tbody>
-						<!-- SINGLE CART_ITEM START -->
-						<tr>
-							<td class="cart-product">
-								<a href="#"><img alt="Blouse" src="assets/images/product/cart-image1.webp"></a>
-							</td>
-							<td class="cart-description">
-								<p class="product-name"><a href="#">Faded Short Sleeves T-shirt</a></p>
-								<small>SKU : demo_1</small>
-								<small><a href="#">Size : S, Color : Orange</a></small>
-							</td>
-							<td class="cart-avail"><span class="label label-success">In stock</span></td>
-							<td class="cart-unit">
-								<ul class="price text-right">
-									<li class="price">$16.51</li>
-								</ul>
-							</td>
-							<td class="cart_quantity text-center">
-								<div class="cart-plus-minus-button">
-									<input class="cart-plus-minus" type="text" name="qtybutton" value="0">
-								</div>
-							</td>
-							<td class="cart-delete text-center">
-								<span>
-									<a href="#" class="cart_quantity_delete" title="Delete"><i
-											class="fa fa-trash-o"></i></a>
-								</span>
-							</td>
-							<td class="cart-total">
-								<span class="price">$16.51</span>
-							</td>
-						</tr>
-						<!-- SINGLE CART_ITEM END -->
-						<!-- SINGLE CART_ITEM START -->
-						<tr>
-							<td class="cart-product">
-								<a href="#"><img alt="Blouse" src="assets/images/product/cart-image2.webp"></a>
-							</td>
-							<td class="cart-description">
-								<p class="product-name"><a href="#">Blouse</a></p>
-								<small>SKU : demo_2</small>
-								<small><a href="#">Size : S, Color : Black</a></small>
-							</td>
-							<td class="cart-avail"><span class="label label-success">In stock</span></td>
-							<td class="cart-unit">
-								<ul class="price text-right">
-									<li class="price special-price">$24.00</li>
-									<li class="price-percent-reduction small">&nbsp;-3%&nbsp;</li>
-									<li class="old-price">$27.00</li>
-								</ul>
-							</td>
-							<td class="cart_quantity text-center">
-								<div class="cart-plus-minus-button">
-									<input class="cart-plus-minus" type="text" name="qtybutton" value="0">
-								</div>
-							</td>
-							<td class="cart-delete text-center">
-								<a href="#" class="cart_quantity_delete" title="Delete"><i
-										class="fa fa-trash-o"></i></a>
-							</td>
-							<td class="cart-total">
-								<span class="price">$22.95</span>
-							</td>
-						</tr>
-						<!-- SINGLE CART_ITEM END -->
-						<!-- SINGLE CART_ITEM START -->
-						<tr>
-							<td class="cart-product">
-								<a href="#"><img alt="Blouse" src="assets/images/product/cart-image3.webp"></a>
-							</td>
-							<td class="cart-description">
-								<p class="product-name"><a href="#">Printed Summer Dress</a></p>
-								<small>SKU : demo_5</small>
-								<small><a href="#">Size : M, Color : Blue</a></small>
-							</td>
-							<td class="cart-avail"><span class="label label-success">In stock</span></td>
-							<td class="cart-unit">
-								<ul class="price text-right">
-									<li class="price special-price">$30.45</li>
-									<li class="price-percent-reduction small">&nbsp;-7.05%&nbsp;</li>
-									<li class="old-price">$37.50</li>
-								</ul>
-							</td>
-							<td class="cart_quantity text-center">
-								<div class="cart-plus-minus-button">
-									<input class="cart-plus-minus" type="text" name="qtybutton" value="0">
-								</div>
-							</td>
-							<td class="cart-delete text-center">
-								<a href="#" class="cart_quantity_delete" title="Delete"><i
-										class="fa fa-trash-o"></i></a>
-							</td>
-							<td class="cart-total">
-								<span class="price">$30.45</span>
-							</td>
-						</tr>
-						<!-- SINGLE CART_ITEM END -->
+						<?php
+							 if(!empty($_SESSION['cart'])){
+								foreach ($_SESSION['cart'] as $key=>$value) {
+									
+									$gia = $value['gia_sp'] * $value['soluong_dh'];
+									$hinh =$src.$value['avatar'];
+									echo '<tr>
+									<td class="cart-product">
+										<a href="#"><img alt="Blouse" src="'.$hinh.'"></a>
+									</td>
+									<td class="cart-description">
+										<p class="product-name"><a href="#">'.$value['ten_sp'].'</a></p>
+										<small>DUNG LƯỢNG: '.$value['dungluong_sp'].'</small>
+									</td>
+									<td class="cart-avail"><span class="label label-success">'.$value['trangthai_sp'].'</span></td>
+									<td class="cart-unit">
+										<ul class="price text-right">
+											<li class="price">'.$value['gia_sp'].'</li>
+										</ul>
+									</td>
+									<td class="cart_quantity text-center">
+										<div class="cart-plus-minus-button">
+											<input class="cart-plus-minus" type="text" name="qtybutton" min="1" value="'.$value['soluong_dh'].'">
+										</div>
+									</td>
+									<td class="cart-delete text-center">
+										<span>
+											<a href="#" class="cart_quantity_delete" title="Delete"><i
+													class="fa fa-trash-o"></i></a>
+										</span>
+									</td>
+									<td class="cart-total">
+										<span class="price">'.$gia.'</span>
+									</td>
+								</tr>';
+									
+								}
+							}else{
+										echo '<div class="shipping-checkout-btn">
+										<a href="#">No Item</a>
+										</div>';
+								}
+
+						?>
+						
 					</tbody>
 					<!-- TABLE BODY END -->
 					<!-- TABLE FOOTER START -->

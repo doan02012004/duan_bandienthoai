@@ -1,6 +1,7 @@
 <?php
 ob_start();
     session_start();
+    $_SESSION['count'] = 0;
     include "view/model/pdo.php";
     include "global.php";
     include "view/model/nguoidung.php";
