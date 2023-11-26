@@ -402,13 +402,13 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
             include "baiviet/list.php";
             break;
         case 'listbl':
-            $listbl = loadall_binhluan();
+            $listbl = loadAll_binhluan();
                 include "binhluan/list.php";
             break;
             case 'xoabl':
                 $id = $_GET['id'];
                 delete_binhluan($id);
-                $listbl = loadall_binhluan();
+                $listbl = loadAll_binhluan();
                 include "binhluan/list.php";
             break;
         case 'listdh':

@@ -196,11 +196,16 @@ if(is_array($listonesp)){
 									<p><?php echo $mota_sp ?></p>
 								</div>
 							</div>
+							<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+								<script>
+								$(document).ready(function(){
+									$('#binhluan').load("view/client/binhluan/binhluanform.php" ,{id_sp: <?=$id?> });
+								});
+					
+							</script>
 							<div class="tab-pane" id="datasheet">
-								<div class="deta-sheet">
-									<iframe src="" width="100%" height="300px" frameborder="1">
-                                           123
-									</iframe>
+								<div class="deta-sheet" id="binhluan">
+
 								</div>
 							</div>
 							<div class="tab-pane" id="review">
