@@ -12,7 +12,7 @@
                     <th>Tên người dùng</th>
                     <th>Tên sản phẩm</th>
                     <th>Nội dung</th>
-                    <th>Trạng thái</th>
+                    <th>Ngày bình luận</th>
                     <th>Thao tác</th>
                   </tr>
                   </thead>
@@ -25,10 +25,10 @@
                       $xoabl = "index.php?act=xoabl&id=".$id;
                       echo ' <tr>
                       <td>'.$stt.'</td>
-                      <td>'.$id_user.'</td>
-                      <td>'.$id_sp.'</td>
+                      <td>'.$ten_user.'</td>
+                      <td>'.$ten_sp.'</td>
                       <td>'.$noidung_bl.'</td>
-                      <td>'.$trangthai_bl.'</td>
+                      <td>'.$ngaybinhluan.'</td>
                       <td><a href="'.$xoabl.'"><button class="btn btn-info">Xóa</button></a></td>';
                     }
                     ?>
