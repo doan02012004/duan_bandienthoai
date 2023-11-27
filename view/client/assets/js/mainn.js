@@ -3,6 +3,8 @@
 
 $(document).ready(function(){
 
+
+	
 	/*--
         Off Canvas Menu
     -----------------------------------*/

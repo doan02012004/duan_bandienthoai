@@ -359,7 +359,7 @@
 
     <!-- Modernizer & jQuery JS -->
     <script src="view/client/assets/js/vendor/modernizr-3.11.2.min.js"></script>
-    <script src="view/user/assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="view/client/assets/js/vendor/jquery-3.6.0.min.js"></script>
 
     <!-- Bootstrap JS -->
     <script src="view/client/assets/js/popper.min.js"></script>
@@ -377,7 +377,7 @@
     <!-- Main JS -->
     <script src="view/client/assets/js/mainn.js"></script>
 	<!-- link ajax -->
-	<script src="view/client/ajax.js"></script>
+	<script src="view/client/ajax/ajax.js"></script>
 </body>
 
 

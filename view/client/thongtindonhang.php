@@ -1,3 +1,8 @@
+<?php
+//  var_dump($listttdh);
+//   echo '<pre>';
+//   print_r($listttdh);
+?>
 <section class="main-content-section">
 		<div class="container">
 			<!-- BSTORE-BREADCRUMB START -->
@@ -24,20 +29,47 @@
 					<!-- TABLE HEADER START -->
 					<thead>
 						<tr>
-							<th class="cart-product">Product</th>
-							<th class="cart-description">Description</th>
-							<th class="cart-avail text-center">Availability</th>
-							<th class="cart-unit text-right">Unit price</th>
-							<th class="cart_quantity text-center">Qty</th>
-							<th class="cart-total text-right">Total</th>
-                            <th class="cart-total text-right">Total</th>
+							<th class="cart-product">Hình</th>
+							<th class="cart-description">Thông tin sản phẩm</th>
+							<th class="cart-avail text-center">Trạng thái</th>
+							<th class="cart-unit text-right">Gía sản phẩm</th>
+							<th class="cart_quantity text-center">Số lượng</th>
+							<th class="cart-total text-right">Tổng giá</th>
+                            <th class="cart-total text-right">Thao tác</th>
 						</tr>
 					</thead>
 					<!-- TABLE HEADER END -->
 					<!-- TABLE BODY START -->
 					<tbody>
+						<?php
+							foreach ($listttdh as $tt) {
+								$hinh = $src.$tt['avatar'];
+								echo '<tr>
+								<td class="cart-product">
+									<a href="#"><img width="200px" alt="Blouse" src="'.$hinh.'"></a>
+								</td>
+								<td class="cart-description">
+									<p class="product-name"><a href="#">'.$tt['ten_sp'].'</a></p>
+									<small>Dung Lượng: '.$tt['dungluong_sp'].'</small>
+								</td>
+								<td class="cart-avail"><span class="label label-success">'.$tt['trangthai_dh'].'</span></td>
+								<td class="cart-unit">
+									<ul class="price text-right">
+										<li class="price">'.$tt['gia_dh'].'</li>
+									</ul>
+								</td>
+								<td class="cart_quantity text-center">
+											'.$tt['soluong_dh'].'
+								</td>
+								<td class="cart_quantity text-center">
+									'.$tt['thanhtien'].'
+								</td>
+								<td class="cart-avail"><a href="#"><span class="label label-success">Hủy</span></a></td>
+							</tr>';
+							}
+						?>
 						<!-- SINGLE CART_ITEM START -->
-						<tr>
+						<!-- <tr>
 							<td class="cart-product">
 								<a href="#"><img alt="Blouse" src="assets/images/product/cart-image1.webp"></a>
 							</td>
@@ -56,58 +88,7 @@
                                         0
 							</td>
 							<td class="cart-avail"><a href="#"><span class="label label-success">Hủy</span></a></td>
-                            <td class="cart-avail"><a href="#"><span class="label label-success">Chỉnh sửa</span></a></td>
-						</tr>
-						<!-- SINGLE CART_ITEM END -->
-						<!-- SINGLE CART_ITEM START -->
-						<tr>
-							<td class="cart-product">
-								<a href="#"><img alt="Blouse" src="assets/images/product/cart-image2.webp"></a>
-							</td>
-							<td class="cart-description">
-								<p class="product-name"><a href="#">Blouse</a></p>
-								<small>SKU : demo_2</small>
-								<small><a href="#">Size : S, Color : Black</a></small>
-							</td>
-							<td class="cart-avail"><span class="label label-success">In stock</span></td>
-							<td class="cart-unit">
-								<ul class="price text-right">
-									<li class="price special-price">$24.00</li>
-									<li class="price-percent-reduction small">&nbsp;-3%&nbsp;</li>
-									<li class="old-price">$27.00</li>
-								</ul>
-							</td>
-							<td class="cart_quantity text-center">
-								0
-							</td>
-							<td class="cart-avail"><a href="#"><span class="label label-success">Hủy</span></a></td>
-                            <td class="cart-avail"><a href="#"><span class="label label-success">Chỉnh sửa</span></a></td>
-						</tr>
-						<!-- SINGLE CART_ITEM END -->
-						<!-- SINGLE CART_ITEM START -->
-						<tr>
-							<td class="cart-product">
-								<a href="#"><img alt="Blouse" src="assets/images/product/cart-image3.webp"></a>
-							</td>
-							<td class="cart-description">
-								<p class="product-name"><a href="#">Printed Summer Dress</a></p>
-								<small>SKU : demo_5</small>
-								<small><a href="#">Size : M, Color : Blue</a></small>
-							</td>
-							<td class="cart-avail"><span class="label label-success">In stock</span></td>
-							<td class="cart-unit">
-								<ul class="price text-right">
-									<li class="price special-price">$30.45</li>
-									<li class="price-percent-reduction small">&nbsp;-7.05%&nbsp;</li>
-									<li class="old-price">$37.50</li>
-								</ul>
-							</td>
-							<td class="cart_quantity text-center">
-                                    0
-							</td>
-							<td class="cart-avail"><a href="#"><span class="label label-success">Hủy</span></a></td>
-                            <td class="cart-avail"><a href="#"><span class="label label-success">Chỉnh sửa</span></a></td>
-						</tr>
+						</tr> -->
 						<!-- SINGLE CART_ITEM END -->
 					</tbody>
 					<!-- TABLE BODY END -->

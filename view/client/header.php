@@ -52,6 +52,7 @@
 	<!-- link Ajax -->
 	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
+
 </head>
 
 <body>
@@ -219,7 +220,7 @@
 								<a class="shop-link " href="index.php?act=giohang" title="View my shopping cart">
 									<i class="fa fa-shopping-cart cart-icon"></i>
 									<b>Giỏ Hàng</b>
-									<span class="ajax-cart-quantity demgiohang">0</span>
+									<span class="ajax-cart-quantity demgiohang"><?php echo isset($count)? $count : 0 ?></span>
 								</a>
 
 								<div class="shipping-cart-overly giohangmini">

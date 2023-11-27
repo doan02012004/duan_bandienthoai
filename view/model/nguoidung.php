@@ -50,4 +50,11 @@ function loadonedk_khachhang($username=""){
     $listuser = pdo_query_one($sql);
     return $listuser;
 }
+ function loadthongtin_donhang($id){
+    $sql = "SELECT a.id,a.ten_user,b.id as iddh,b.gia_dh,b.trangthai_dh,c.soluong_dh,c.thanhtien, d.avatar,d.dungluong_sp,d.ten_sp FROM `tbl_user` as a INNER JOIN `tbl_donhang` as b on a.id =b.id_user INNER JOIN `tbl_donhangchitiet` as c on b.id =c.id_dh
+    INNER JOIN `tbl_sanpham`  as d on b.id_sp = d.id WHERE a.id =".$id;
+    $listttdh = pdo_query($sql);
+    return $listttdh;
+
+ }
  ?>

@@ -1,16 +1,19 @@
 <?php
     session_start();
-        include "pdo.php";
-        include "../../global.php";
+        include "../../model/pdo.php";
+        include "../../../global.php";
     if(isset($_SESSION['cart'])){
             $ten_sp = $_POST['ten_sp'];
+            $tien = $_POST['tien'];
             $check=0;
             $cart_id = array_column($_SESSION['cart'],"id"); 
             for ($i=0; $i < sizeof($_SESSION['cart']) ; $i++){ 
                 if($ten_sp==$_SESSION['cart'][$i]['ten_sp']){
                         $check =1;
+                        $tiennew =  $_SESSION['cart'][$i]['tien'] + $tien;
                         $soluong_dhnew = $_SESSION['cart'][$i]['soluong_dh'] +1;
                         $_SESSION['cart'][$i]['soluong_dh'] = $soluong_dhnew;
+                        $_SESSION['cart'][$i]['tien'] = $tiennew;
                         break;
                 }
             }
@@ -23,7 +26,8 @@
                     "trangthai_sp" => $_POST['trangthai_sp'],
                     "dungluong_sp" => $_POST['dungluong_sp'],
                     "soluong_sp" => $_POST['soluong_sp'],
-                    "soluong_dh" => $_POST['soluong_dh']
+                    "soluong_dh" => $_POST['soluong_dh'],
+                    "tien" => $_POST['tien']
                 );
                 $_SESSION['cart'][] = $item_array;
             }
@@ -36,7 +40,8 @@
             "trangthai_sp" => $_POST['trangthai_sp'],
             "dungluong_sp" => $_POST['dungluong_sp'],
             "soluong_sp" => $_POST['soluong_sp'],
-            "soluong_dh" => $_POST['soluong_dh']
+            "soluong_dh" => $_POST['soluong_dh'],
+            "tien" => $_POST['tien']
         );
         $_SESSION['cart'][] = $item_array;
     }
@@ -46,7 +51,7 @@
         foreach ($_SESSION['cart'] as $key=>$value) {
             $gia = $value['gia_sp'] * $value['soluong_dh'];
             $hinh =$src.$value['avatar'];
-            echo '<div class="shipping-item ">
+            echo '<div class="shipping-item cartmini">
             <span class="cross-icon"><i class="fa fa-times-circle"></i></span>
             <div class="shipping-item-image">
                 <a href="#"><img width="50px" src="'.$hinh.'" alt="shopping image" /></a>

@@ -46,6 +46,7 @@
 									$hinh =$src.$value['avatar'];
 									echo '<tr>
 									<td class="cart-product">
+									<input type="hidden" name="soluong_dh" value="'.$value['id'].'">
 										<a href="#"><img alt="Blouse" src="'.$hinh.'"></a>
 									</td>
 									<td class="cart-description">
@@ -88,7 +89,7 @@
 					</tbody>
 					<!-- TABLE BODY END -->
 					<!-- TABLE FOOTER START -->
-					<tfoot>
+					<tfoot id="tongdonhang">
 
 						<tr>
 							<td class="total-price-container text-right" colspan="6">
@@ -110,14 +111,20 @@
 				</div>
 				<div class="col-lg-6">
                 <div class="submit-button">
+				
 									<a href="index.php?act=thanhtoan" id="signinCreate" class="btn main-btn">
 										<span>
-											Thanh Toán
+											Thanh Toán 
 										</span>
-									</a>
+							</a>
 								</div>
 				</div>
 			</div>
+			<?php
+				echo '<pre>';
+				print_r($_SESSION['cart']);
+
+			?>
 			<!-- RETURNE-CONTINUE-SHOP END -->
 		</div>
 	</section>

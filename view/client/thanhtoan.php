@@ -1,4 +1,9 @@
 	<!-- CART TABLE_BLOCK END -->
+<?php
+	if(is_array($user)){
+		extract($user);
+	}
+?>
 <div class="container">
 <div class="bstore-breadcrumb">
 				<a href="index.html">HOMe</a>
@@ -13,22 +18,49 @@
 			<h2 class="page-title">Thanh toán</h2>
     <div class="row">
 				<div class="col-lg-6">
+					<div class="second_item primari-box mycartaddress-info">
+						<!-- SINGLE ADDRESS START -->
+						<ul class="address">
+							<li>
+								<h3 class="page-subheading box-subheading">
+									Tổng số tiền thanh toán
+								</h3>
+							</li>
+							<div class="submit-button">
+                                    <li type="submit" name="btn-dangky" id="SubmitCreate" class="btn main-btn" >
+										<span>
+											<?php
+												echo isset($_SESSION['tongdonhang'])? $_SESSION['tongdonhang'] :0;
+											?>
+										</span>
+										VNĐ
+									</li>
+								</div>
+						</ul>
+						<!-- SINGLE ADDRESS END -->
+					</div>
+						</div>
+				<div class="col-lg-6">
 					<!-- CREATE-NEW-ACCOUNT START -->
 					<div class="create-new-account">
 						<form class="new-account-box primari-box" id="create-new-account" method="post" action="index.php?act=dangky">
 							<h3 class="box-subheading">Điền thông tin nhận hàng</h3>
 							<div class="form-content">
-                            <div class="forget-password">
-									<a href="">Bùi Văn Đoàn</a>
+								<div class="form-group primary-form-group information">
+									<button id="inforuser"><?= $ten_user ?></button>
+									<input type="hidden" class="ten" value="<?=$ten_user ?>">
+									<input type="hidden" class="dc" value="<?=$diachi ?>">
+									<input type="hidden" class="ema" value="<?=$email ?>">
+									<input type="hidden" class="phone" value="<?=$sdt ?>">
 								</div>
 								<div class="form-group primary-form-group">
 									<label for="email">Họ và tên</label>
-									<input type="text" value="" name="ten_user" id="email" class="form-control input-feild"
+									<input type="text" value="" name="ten_user" id="ten_user" class="form-control input-feild"
 										required>
 								</div>
                                 <div class="form-group primary-form-group">
 									<label for="email">Địa chỉ</label>
-									<input type="text" value="" name="diachi" id="email" class="form-control input-feild"
+									<input type="text" value="" name="diachi" id="diachi" class="form-control input-feild"
 										required>
 								</div>
                                 <div class="form-group primary-form-group">
@@ -38,44 +70,28 @@
 								</div>
                                 <div class="form-group primary-form-group">
 									<label for="email">Số điện thoại</label>
-									<input type="text" value="" name="sdt" id="email" class="form-control input-feild"
+									<input type="text" value="" name="sdt" id="sdt" class="form-control input-feild"
 										required>
 								</div>
-								<div class="submit-button">
-                                    <button type="submit" name="btn-dangky" id="SubmitCreate" class="btn main-btn" >
-										<span>
-											<i class="fa fa-user submit-icon"></i>
-											Đăng ký
-										</span>
-                                    </button>
+								<div class="form-group primary-form-group">
+									<br>
+									<label for="email">Thanh Toán</label>
+										<select name="" id="">
+											<option value="">Thanh toán khi nhận hàng</option>
+										</select>
+								</div>
 								</div>
 							</div>
 						</form>
 					</div>
 					<!-- CREATE-NEW-ACCOUNT END -->
 				</div>
-				<div class="col-lg-6">
-					<div class="second_item primari-box mycartaddress-info">
-						<!-- SINGLE ADDRESS START -->
-						<ul class="address">
-							<li>
-								<h3 class="page-subheading box-subheading">
-									Tổng số tiền thanh toán
-								</h3>
-							</li>
-							<li><span class="address_name">Bstore</span></li>
-							<li><span class="address_address1">Your address goes here.</span></li>
-							<li><span class="address_phone">0123456789</span></li>
-						</ul>
-						<!-- SINGLE ADDRESS END -->
-					</div>
-				</div>
 			</div>
 
 			<!-- RETURNE-CONTINUE-SHOP START -->
 			<div class="returne-continue-shop">
-			
-				<a href="index.php?act=thongtindonhang" class="procedtocheckout">Đặt Hàng<i
+			<!-- href="index.php?act=thongtindonhang" -->
+				<a href="index.php?act=thongtindonhang" class="procedtocheckout dathang" id="updatesl">Đặt Hàng<i
 						class="fa fa-chevron-right"></i></a>
 			</div>
             <!-- BRAND-CLIENT-AREA START -->

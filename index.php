@@ -1,13 +1,15 @@
 <?php
 ob_start();
     session_start();
-    $_SESSION['count'] = 0;
     include "view/model/pdo.php";
     include "global.php";
     include "view/model/nguoidung.php";
     include "view/model/danhmuc.php";
     include "view/model/sanpham.php";
     include "view/model/khuyenmai.php";
+    if(isset($_SESSION['cart'])){
+		$count = sizeof($_SESSION['cart']);
+	}
     $listdm = loadall_danhmuc();
     $listspnew = loadnew_sanpham();
     $listspluotxem =loadluotxem_sanpham();
@@ -100,14 +102,16 @@ ob_start();
                 include "view/client/cart.php";
                 break;
             case 'thanhtoan':
-                    
+                    if(isset($_SESSION['id'])){
+                        $user = loadone_user($_SESSION['id']); 
+                    }
                     include "view/client/thanhtoan.php";
                 break;
             case 'thongtindonhang':
+                $listttdh = loadthongtin_donhang($_SESSION['id']);
                 include "view/client/thongtindonhang.php";
                 break;
             case 'myaccount':
-
                     include "view/client/thongtintaikhoan.php";
                 break;
             default:
