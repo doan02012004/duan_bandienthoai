@@ -114,6 +114,9 @@ ob_start();
             case 'myaccount':
                     include "view/client/thongtintaikhoan.php";
                 break;
+            case 'lienhe':
+                    include "view/client/lienhe.php";
+                break;
             default:
             include "view/client/home.php";
                 break;
