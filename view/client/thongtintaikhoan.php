@@ -27,13 +27,12 @@
                                             </li>';
                                         }
                                 ?>
-								<li><a href="#"><i class="fa fa-list-ol"></i><span>Order history and details</span> </a>
+								<!-- <li><a href="#"><i class="fa fa-list-ol"></i><span>Order history and details</span> </a>
 								</li>
-								<li><a href="#"><i class="fa fa-file-o"></i><span>My credit slips</span> </a></li>
+								<li><a href="#"><i class="fa fa-file-o"></i><span>My credit slips</span> </a></li> -->
 								<li><a href="checkout-address.html"><i class="fa fa-building"></i><span>My
 											addresses</span> </a></li>
-								<li><a href="checkout-registration.html"><i class="fa fa-user"></i><span>My personal
-											information</span> </a></li>
+								<li><a href="index.php?act=thongtin"><i class="fa fa-user"></i><span>Thông tin tài khoản</span> </a></li>
 							</ul>
 						</div>
 					</div>
@@ -42,7 +41,7 @@
 					<div class="account-info">
 						<div class="single-account-info">
 							<ul>
-								<li><a href="wishlist.html"><i class="fa fa-heart"></i><span>My wishlists</span> </a>
+								<li><a href="index.php?act=thongtindonhang"><i class="fa fa-heart"></i><span>Đơn hàng của bạn</span> </a>
 								</li>
 							</ul>
 						</div>
