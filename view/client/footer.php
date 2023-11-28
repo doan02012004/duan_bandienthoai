@@ -166,7 +166,7 @@
 								<form action="#">
 									<div class="form-group newsletter-form-group">
 										<input type="text" class="form-control newsletter-form"
-											placeholder="Enter your e-mail">
+											placeholder="Điền vào email của bạn ...">
 										<input type="submit" class="newsletter-btn" name="submit" value="Đăng ký" />
 									</div>
 								</form>
@@ -175,13 +175,12 @@
 							<!-- ABOUT-US-AREA START -->
 							<div class="about-us-area">
 								<h2>VỀ CHÚNG TÔI</h2>
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-									euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+								<p>ABC là một trang website bán điện thoại hàng đầu Việt Nam.</p>
 							</div>
 							<!-- ABOUT-US-AREA END -->
 							<!-- FLLOW-US-AREA START -->
 							<div class="fllow-us-area">
-								<h2>Follow us</h2>
+								<h2>Theo dõi chúng tôi</h2>
 								<ul class="flow-us-link">
 									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -198,28 +197,37 @@
 						<div class="footer-top-right-1">
 							<div class="row">
 								<div class="col-lg-4">
-									<!-- STATICBLOCK START -->
-									<div class="staticblock">
-										<h2>static block</h2>
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-											Lorem Ipsum has been the industrys standard dummy text ever since the
-											1500s<br />when an unknown printer took a galley of type and scrambled it to
-											make a type specimen book. It has survived not only five centuries, but also
-											the leap into electronic typesetting, remaining essentially unchanged.</p>
+									<!-- FOTTER-MENU-WIDGET START -->
+									<div class="fotter-menu-widget">
+										<div class="single-f-widget">
+											<h2>Chính sách</h2>
+											<ul>
+												<li><a href="shop-gird.html"><i
+															class="fa fa-angle-double-right"></i>Chính sách bảo hành</a></li>
+												<li><a href="shop-gird.html"><i
+															class="fa fa-angle-double-right"></i>Chính sách đổi trả</a></li>
+												<li><a href="shop-gird.html"><i
+															class="fa fa-angle-double-right"></i>Chính sách giao hàng</a></li>
+												<li><a href="shop-gird.html"><i
+															class="fa fa-angle-double-right"></i>Chính sách khui hộp</a></li>
+												<li><a href="shop-gird.html"><i
+															class="fa fa-angle-double-right"></i>Chính sách bảo vệ dữ liệu cá nhân</a></li>
+											</ul>
+										</div>
 									</div>
-									<!-- STATICBLOCK END -->
+									<!-- FOTTER-MENU-WIDGET END -->
 								</div>
 								<div class="col-lg-4 col-md-6">
 									<!-- STORE-INFORMATION START -->
 									<div class="Store-Information">
-										<h2>Store Information</h2>
+										<h2>Thông tin cửa hàng</h2>
 										<ul>
 											<li>
 												<div class="info-lefticon">
 													<i class="fa fa-map-marker"></i>
 												</div>
 												<div class="info-text">
-													<p>Your address goes here.</p>
+													<p>Cao đẳng FPT POLYTECHNIC</p>
 												</div>
 											</li>
 											<li>
@@ -227,7 +235,7 @@
 													<i class="fa fa-phone"></i>
 												</div>
 												<div class="info-text call-lh">
-													<p>Call us now : 0123-456-789</p>
+													<p>Liên hệ với chúng tôi ngay: 09382038484</p>
 												</div>
 											</li>
 											<li>
@@ -235,9 +243,7 @@
 													<i class="fa fa-envelope-o"></i>
 												</div>
 												<div class="info-text">
-													<p>Email : <a href="mailto:demo@example.com"><i
-																class="fa fa-angle-double-right"></i>
-															demo@example.com</a></p>
+													<p>Email : <a href="mailto:abc@example.com"><i class="fa fa-angle-double-right"></i>abc@example.com</a></p>
 												</div>
 											</li>
 										</ul>
@@ -265,16 +271,18 @@
 									<!-- FOTTER-MENU-WIDGET START -->
 									<div class="fotter-menu-widget">
 										<div class="single-f-widget">
-											<h2>Categories</h2>
+											<h2>Danh mục</h2>
 											<ul>
 												<li><a href="shop-gird.html"><i
-															class="fa fa-angle-double-right"></i>Women </a></li>
+															class="fa fa-angle-double-right"></i>Iphone </a></li>
 												<li><a href="shop-gird.html"><i
-															class="fa fa-angle-double-right"></i>Men</a></li>
+															class="fa fa-angle-double-right"></i>Samsung</a></li>
 												<li><a href="shop-gird.html"><i
-															class="fa fa-angle-double-right"></i>clothing</a></li>
+															class="fa fa-angle-double-right"></i>Xiaomi</a></li>
 												<li><a href="shop-gird.html"><i
-															class="fa fa-angle-double-right"></i>kids</a></li>
+															class="fa fa-angle-double-right"></i>Oppo</a></li>
+												<li><a href="shop-gird.html"><i
+															class="fa fa-angle-double-right"></i>Huawei</a></li>
 											</ul>
 										</div>
 									</div>
@@ -284,16 +292,16 @@
 									<!-- FOTTER-MENU-WIDGET START -->
 									<div class="fotter-menu-widget">
 										<div class="single-f-widget">
-											<h2>Information</h2>
+											<h2>Thông tin</h2>
 											<ul>
-												<li><a href="#"><i class="fa fa-angle-double-right"></i>Specials</a>
+												<li><a href="#"><i class="fa fa-angle-double-right"></i>Sản phẩm đặc biệt</a>
 												</li>
-												<li><a href="#"><i class="fa fa-angle-double-right"></i>New products</a>
+												<li><a href="#"><i class="fa fa-angle-double-right"></i>Sản phẩm</a>
 												</li>
-												<li><a href="#"><i class="fa fa-angle-double-right"></i>Best sellers</a>
+												<li><a href="#"><i class="fa fa-angle-double-right"></i>Sản phẩm bán chạy</a>
 												</li>
 												<li><a href="contact-us.html"><i
-															class="fa fa-angle-double-right"></i>Contact Us</a></li>
+															class="fa fa-angle-double-right"></i>Liên hệ với chúng tôi</a></li>
 											</ul>
 										</div>
 									</div>
@@ -303,17 +311,13 @@
 									<!-- FOTTER-MENU-WIDGET START -->
 									<div class="fotter-menu-widget">
 										<div class="single-f-widget">
-											<h2>My account</h2>
+											<h2>Tài khoản của bạn</h2>
 											<ul>
-												<li><a href="#"><i class="fa fa-angle-double-right"></i>My orders</a>
+												<li><a href="#"><i class="fa fa-angle-double-right"></i>Giỏ hàng</a>
 												</li>
-												<li><a href="#"><i class="fa fa-angle-double-right"></i>My credit
-														slips</a></li>
-												<li><a href="#"><i class="fa fa-angle-double-right"></i>My addresses</a>
+												<li><a href="#"><i class="fa fa-angle-double-right"></i>Thông tin & địa chỉ của bạn</a>
 												</li>
-												<li><a href="#"><i class="fa fa-angle-double-right"></i>My personal
-														info</a></li>
-												<li><a href="#"><i class="fa fa-angle-double-right"></i>Sign out</a>
+												<li><a href="#"><i class="fa fa-angle-double-right"></i>Đăng xuất</a>
 												</li>
 											</ul>
 										</div>
@@ -341,7 +345,7 @@
 	<footer class="copyright-area">
 		<div class="container">
 			<div class="copy-right">
-				<address>&copy; 2022 <span> Bstore </span> Made with <i class="fa fa-heart"></i> by <a href="https://hasthemes.com/">HasThemes</a></address>
+				<address>&copy; 2023 <span> Dự án 1 </span> làm  <i class="fa fa-heart"></i> bởi <a href="https://hasthemes.com/">Nhóm 12</a></address>
 			</div>
 			<div class="scroll-to-top">
 				<a href="#" class="bstore-scrollertop"><i class="fa fa-angle-double-up"></i></a>
