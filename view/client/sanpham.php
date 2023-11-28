@@ -4,9 +4,9 @@
 		<div class="container">
 			<!-- BSTORE-BREADCRUMB START -->
 			<div class="bstore-breadcrumb">
-				<a href="index.html">HOMe</a>
+				<a href="index.html">Trang Chủ</a>
 				<span><i class="fa fa-caret-right"></i></span>
-				<span>Women</span>
+				<span>Sản Phẩm</span>
 			</div>
 			<!-- BSTORE-BREADCRUMB END -->
 
@@ -17,10 +17,6 @@
 						<!-- PRODUCT-CATEGORY-HEADER END -->
 						<div class="product-category-title">
 							<!-- PRODUCT-CATEGORY-TITLE START -->
-							<h1>
-								<span class="cat-name">Women</span>
-								<span class="count-product">There are 13 products.</span>
-							</h1>
 							<!-- PRODUCT-CATEGORY-TITLE END -->
 						</div>
 						<div class="product-shooting-area">
@@ -43,28 +39,6 @@
 								
 									</div>
 								</div>
-								<!-- SHOORT-BY END -->
-								<!-- SHOW-PAGE START -->
-								<div class="show-page">
-									<label for="perPage">Show</label>
-									<div class="s-page-select-option">
-										<select name="show" id="perPage">
-											<option value="">11</option>
-											<option value="">12</option>
-										</select>
-									</div>
-									<span>per page</span>
-								</div>
-								<!-- SHOW-PAGE END -->
-								<!-- VIEW-SYSTEAM START -->
-								<div class="view-systeam">
-									<label for="perPage">View:</label>
-									<ul>
-										<li class="active"><a href="shop-gird.html"><i class="fa fa-th-large"></i></a><br />Grid</li>
-										<li><a href="shop-list.html"><i class="fa fa-th-list"></i></a><br />List</li>
-									</ul>
-								</div>
-								<!-- VIEW-SYSTEAM END -->
 							</div>
 
 							<!-- PRODUCT-SHOOTING-RESULT START -->

@@ -17,41 +17,42 @@
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
+                    <th>Hình</th>
                     <th>Tên sản phẩm</th>
-                    <th>Dung lượng</th>
-                    <th>Gía sản phẩm</th>
-                    <th>Số lượng đơn hàng</th>
+                    <th>Đơn giá</th>
+                    <th>Số lượng</th>
                     <th>Thành tiền</th>
                     <th>Thao tác</th>
                   </tr>
                   </thead>
                   <tbody>
-                        <tr>
                          <?php
                             foreach ($listctdh as $ct) {
                                 extract($ct);
-                                $tien = $gia_dh*$soluong_dh;
+                                $src = "../uploads/".$avatar;
+                                $hinh = '<img width="45px" src="'.$src.'" alt="">';
                                 $back ="index.php?act=listdh";
-                                $xoactdh = "index.php?act=xoactdh&id=".$id."&iddh=".$iddh;
-                                echo '<td>'.$ten_sp.'</td>
-                                <td>'.$dungluong_sp.'</td>
-                                <td>'.$gia_dh.'</td>
-                                <td>'.$soluong_dh.'</td>
-                                <td>'.$tien.'</td>
+                                $xoactdh = "index.php?act=xoactdh&id=".$id."&iddh=".$id;
+                                echo '  <tr>
+                                <td>'.$hinh.'</td>
+                                <td>'.$ten_sp.'</td>
+                                <td>'.$don_gia.'</td>
+                                <td>'.$so_luong.'</td>
+                                <td>'.$thanhtien.'</td>
                                 <td><a href="'.$back.'"><button class="btn btn-info">Back</button></a></td>
                                 <td><a href="'.$xoactdh.'"><button class="btn btn-info">Xóa</button></a></td>
+                                </tr>
                                 ';
                                 
                             }
                          ?>
-                        </tr>
                      </tbody>
                      <tfoot>
-                  <tr>
-                  <th>Stt</th>
-                    <th>Id</th>
-                    <th>Id đơn hàng</th>
-                    <th>Số lượng đơn hàng</th>
+                     <tr>
+                    <th>Hình</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Đơn giá</th>
+                    <th>Số lượng</th>
                     <th>Thành tiền</th>
                     <th>Thao tác</th>
                   </tr>

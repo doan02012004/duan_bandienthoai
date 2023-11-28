@@ -1071,11 +1071,11 @@ input.search-form[placeholder]:-ms-input-placeholder {
 	visibility: hidden;
 }
 
-.shopping-cart:hover .shipping-cart-overly {
+/* .shopping-cart:hover .shipping-cart-overly {
 	height: 428px;
 	opacity: 1;
 	visibility: visible;
-}
+} */
 
 span.cross-icon {
 	color: #434343;

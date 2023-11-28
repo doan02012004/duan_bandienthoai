@@ -122,8 +122,8 @@
 				</div>
 			</div>
 			<?php
-				// echo '<pre>';
-				// print_r($_SESSION['cart']);
+				echo '<pre>';
+				print_r($_SESSION['cart']);
 
 			?>
 			<!-- RETURNE-CONTINUE-SHOP END -->

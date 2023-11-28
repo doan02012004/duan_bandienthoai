@@ -1,3 +1,4 @@
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <?php
 	include "../../model/pdo.php";
 	include "../../../global.php";
@@ -40,7 +41,7 @@
 													<ul>
 														<li><a href="'.$linkspct.'" title="Quick view"><i class="fa fa-search"></i></a>
 														</li>
-														<li><button type="submit" class="add-to-cart addcart" title="Quick view" id="'.$sp['id'].'" onclick="myClick()"><i class="fa fa-shopping-cart "></i></button></li>
+														<li><button type="submit" class="add-to-cart addcart" title="Quick view" id="'.$sp['id'].'"><i class="fa fa-shopping-cart "></i></button></li>
 														<li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a>
 														</li>
 														<li><a href="#" title="Quick view"><i class="fa fa-heart-o"></i></a>
@@ -72,3 +73,4 @@
 								}
      
 ?>
+<script src="view/client/ajax/ajaxx.js"></script>

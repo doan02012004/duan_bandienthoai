@@ -39,13 +39,11 @@ $(document).ready(function(){
               var soluong_dh = boxsp.children("div").eq(0).children('input').eq(6).val();
               var tien = boxsp.children("div").eq(0).children('input').eq(8).val();
               $.post("view/client/ajax/addtocart.php",{id:id,ten_sp:ten_sp,avatar:avatar,gia_sp:gia_sp,soluong_sp:soluong_sp,trangthai_sp:trangthai_sp,dungluong_sp:dungluong_sp,soluong_dh:soluong_dh,tien:tien},function(data){
-                    $('.giohangmini').html(data);
+                    $('.demgiohang').html(data);
+                    alert("Đã thêm vào giỏ hàng");
               });
         });
 
-       function myClick(){
-        alert("Ok");
-       }
         $('#addtocart').click(function(){
           alert("Ok");
         });
@@ -130,21 +128,27 @@ $(document).ready(function(){
 
 // validate đặt hàng
 $(".dathang").click(function (e) { 
-  var ten_user = $("#ten_user").val();
-  var diachi = $("#diachi").val();
-  var email = $("#email").val();
-  var sdt = $("#sdt").val(); 
+  var ten_nguoinhan = $("#ten_user").val();
+  var diachi_nguoinhan = $("#diachi").val();
+  var email_nguoinhan = $("#email").val();
+  var sdt_nguoinhan = $("#sdt").val();
+  var mgg = $("#mgg").val();
+  var pttt = $('#pttt').val();
+  var ngay_dat_hang = $('#ngaydathang').val();
+  var tongdh = $('.tongdonhang').children("span").text();
   var link = $(this).attr('href');
-  if(ten_user!=""&&diachi!=""&&email!=""&&sdt!=""){
-        $.post("view/client/ajax/dathang.php",{},function(data){
+  if(ten_nguoinhan!=""&&diachi_nguoinhan!=""&&email_nguoinhan!=""&&sdt_nguoinhan!=""){
+      $.post("view/client/ajax/dathang.php",{ten_nguoinhan:ten_nguoinhan,diachi_nguoinhan:diachi_nguoinhan,
+        email_nguoinhan:email_nguoinhan,sdt_nguoinhan:sdt_nguoinhan,tongdh:tongdh,mgg:mgg,pttt:pttt,ngay_dat_hang:ngay_dat_hang
+        },function(data){
               
         });
+        alert('Đặt hàng thành công!');
   }
   else{
     e.preventDefault();
     alert("Vui lòng nhập dữ liệu");
   }
-  // alert("ok");
 });
 
 // cập nhật lại số lượng trong database 
@@ -217,6 +221,16 @@ $(".dathang").click(function (e) {
       $.post("view/client/ajax/addtocart.php",{id:id,ten_sp:ten_sp,avatar:avatar,gia_sp:gia_sp,soluong_sp:soluong_sp,trangthai_sp:trangthai_sp,dungluong_sp:dungluong_sp,soluong_dh:soluong_dh,tien:tien},function(data){
         $('.giohangmini').html(data);
       });
-
     });
+
+    $("#mgg").change(function (e) { 
+      e.preventDefault();
+      var id = $(this).val();
+     $.post('view/client/ajax/updatetongdonhang.php',{id:id},function(data){
+      $('.tongdonhang').children("span").html(data);
+     });
+    });
+
+
+    
 });

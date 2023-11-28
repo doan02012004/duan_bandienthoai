@@ -7,6 +7,7 @@ ob_start();
     include "view/model/danhmuc.php";
     include "view/model/sanpham.php";
     include "view/model/khuyenmai.php";
+    include "view/model/donhang.php";
     if(isset($_SESSION['cart'])){
 		$count = sizeof($_SESSION['cart']);
 	}
@@ -105,11 +106,17 @@ ob_start();
                     if(isset($_SESSION['id'])){
                         $user = loadone_user($_SESSION['id']); 
                     }
+                    $listkm =loadall_khuyenmai();
                     include "view/client/thanhtoan.php";
                 break;
             case 'thongtindonhang':
                 $listttdh = loadthongtin_donhang($_SESSION['id']);
                 include "view/client/thongtindonhang.php";
+                break;
+            case 'thongtindonhangchitiet':
+                $id= $_GET['id'];
+                $listctdh= chitiet_dh($id);
+                include "view/client/thongtindonhangchitiet.php";
                 break;
             case 'myaccount':
                     include "view/client/thongtintaikhoan.php";

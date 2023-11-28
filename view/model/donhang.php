@@ -16,8 +16,8 @@ function delete_dh($id)
     pdo_execute($sql);
 }
 function loadall_dh(){
-        $sql ="SELECT b.id,c.ten_user,c.username,c.sdt,c.email,c.diachi,a.ten_sp,b.gia_dh,a.dungluong_sp,b.trangthai_dh FROM `tbl_sanpham` as a INNER JOIN `tbl_donhang` as b on a.id =b.id_sp INNER JOIN
-         `tbl_user`as c on b.id_user=c.id order by id desc";
+        $sql ="SELECT a.id,a.ten_nguoinhan,a.email_nguoinhan,a.diachi_nguoinhan,a.sdt_nguoinhan,a.gia_dh, a.ngay_dat_hang ,a.trangthai_dh,b.phantram_km FROM `tbl_donhang` as a INNER JOIN `tbl_khuyenmai` as b on a.id_km =b.id INNER JOIN
+         `tbl_user`as c on a.id_user=c.id order by id desc";
         $listdh = pdo_query($sql);
         return $listdh;
     }
@@ -31,8 +31,8 @@ function update_dh($id,$trangthai_dh){
     pdo_execute($sql);
 }
 function chitiet_dh($id){
-    $sql ="SELECT b.id as iddh,a.ten_sp, a.dungluong_sp,b.gia_dh,c.soluong_dh,c.thanhtien,c.id FROM `tbl_sanpham` as a INNER JOIN `tbl_donhang` as b on a.id = b.id_sp INNER JOIN `tbl_donhangchitiet`
-    as c on b.id = c.id_dh WHERE b.id=".$id;
+    $sql ="SELECT a.don_gia,a.so_luong,a.thanhtien,c.ten_sp, c.avatar,c.dungluong_sp,c.trangthai_sp FROM `tbl_donhangchitiet` as a INNER JOIN `tbl_donhang` as b on a.id_dh = b.id INNER JOIN `tbl_sanpham`
+    as c on a.id_sp = c.id WHERE a.id_dh=".$id;
     $listctdh =  pdo_query($sql);
     return $listctdh;
 }
@@ -40,5 +40,11 @@ function xoachitiet_dh($id){
     $sql="DELETE FROM `tbl_donhangchitiet` WHERE id =".$id;
     pdo_execute($sql);
 }
+
+function loadthongtin_donhang($id){
+    $sql = "SELECT * FROM `tbl_donhang`WHERE id_user=".$id;
+    $listttdh = pdo_query($sql);
+    return $listttdh;
+ }
 
 ?>

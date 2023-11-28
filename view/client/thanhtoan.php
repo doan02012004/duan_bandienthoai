@@ -3,6 +3,7 @@
 	if(is_array($user)){
 		extract($user);
 	}
+	$ngay_dat_hang = date("Y-m-d");
 ?>
 <div class="container">
 <div class="bstore-breadcrumb">
@@ -27,13 +28,9 @@
 								</h3>
 							</li>
 							<div class="submit-button">
-                                    <li type="submit" name="btn-dangky" id="SubmitCreate" class="btn main-btn" >
-										<span>
-											<?php
-												echo isset($_SESSION['tongdonhang'])? $_SESSION['tongdonhang'] :0;
-											?>
-										</span>
-										VNĐ
+                                    <li type="submit" name="btn-dangky" id="SubmitCreate" class="btn main-btn tongdonhang" >
+										<span><?php echo $_SESSION['tongdonhang']?></span>VNĐ
+										<br>
 									</li>
 								</div>
 						</ul>
@@ -55,29 +52,42 @@
 								</div>
 								<div class="form-group primary-form-group">
 									<label for="email">Họ và tên</label>
-									<input type="text" value="" name="ten_user" id="ten_user" class="form-control input-feild"
+									<input type="text" value="" name="ten_user" id="ten_user" class="form-control"
 										required>
 								</div>
                                 <div class="form-group primary-form-group">
 									<label for="email">Địa chỉ</label>
-									<input type="text" value="" name="diachi" id="diachi" class="form-control input-feild"
+									<input type="text" value="" name="diachi" id="diachi" class="form-control"
 										required>
 								</div>
                                 <div class="form-group primary-form-group">
 									<label for="email">Email</label>
-									<input type="text" value="" name="email" id="email" class="form-control input-feild"
+									<input type="text" value="" name="email" id="email" class="form-control"
 										required>
 								</div>
                                 <div class="form-group primary-form-group">
 									<label for="email">Số điện thoại</label>
-									<input type="text" value="" name="sdt" id="sdt" class="form-control input-feild"
+									<input type="text" value="" name="sdt" id="sdt" class="form-control"
 										required>
 								</div>
 								<div class="form-group primary-form-group">
 									<br>
+									<label for="email">Mã giảm giá</label>
+										<select name="" id="mgg">
+											<option value="0">Chọn mã giảm giá</option>
+											<?php
+												foreach ($listkm as $km) {
+													echo '<option value="'.$km['id'].'">- - - -<span>'.$km['phantram_km'].'</span>% - - -</option>';
+												}
+											?>
+										</select>
+								</div>
+								<input type="hidden" id="ngaydathang" value="<?php echo $ngay_dat_hang ?>">
+								<div class="form-group primary-form-group">
+									<br>
 									<label for="email">Thanh Toán</label>
-										<select name="" id="">
-											<option value="">Thanh toán khi nhận hàng</option>
+										<select name="" id="pttt">
+											<option value="Thanh toán khi nhận hàng">Thanh toán khi nhận hàng</option>
 										</select>
 								</div>
 								</div>

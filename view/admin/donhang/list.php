@@ -8,13 +8,13 @@
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>Tên người dùng</th>
-                    <th>Username</th>
-                    <th>Email</th>
+                    <th>Tên người nhận</th>
+                    <th>Email người nhận</th>
+                    <th>Địa chỉ người nhận</th>
                     <th>Số điện thoại</th>
-                    <th>Địa chỉ giao hàng</th>
-                    <th>Tên sản phẩm</th>
-                    <th>Dung lượng</th>
+                    <th>Giảm giá(%)</th>
+                    <th>Gía đơn hàng</th>
+                    <th>Ngày đặt hàng</th>
                     <th>Trạng thái đơn hàng</th>
                     <th>Thao tác</th>
                   </tr>
@@ -29,13 +29,13 @@
                         $ctdh = "index.php?act=chitietdh&id=".$id;
                         $suadh = "index.php?act=suadh&id=".$id;
                         echo '  <tr>
-                        <td>'.$ten_user.'</td>
-                        <td>'.$username.'</td>
-                        <td>'.$email.'</td>
-                        <td>'.$sdt.'</td>
-                        <td>'.$diachi.'</td>
-                        <td>'.$ten_sp.'</td>
-                        <td>'.$dungluong_sp.'</td>
+                        <td>'.$ten_nguoinhan.'</td>
+                        <td>'.$email_nguoinhan.'</td>
+                        <td>'.$diachi_nguoinhan.'</td>
+                        <td>'.$sdt_nguoinhan.'</td>
+                        <td>'.$phantram_km.'</td>
+                        <td>'.$gia_dh.'</td>
+                        <td>'.$ngay_dat_hang.'</td>
                         <td>'.$trangthai_dh.'</td>
                         <td><a href="'.$ctdh.'"><button class="btn btn-info">Chi tiết</button></a></td>
                         <td><a href="'.$suadh.'"><button class="btn btn-info">Trạng thái đơn</button></a></td>
