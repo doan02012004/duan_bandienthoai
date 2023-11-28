@@ -47,7 +47,7 @@
     <link rel="stylesheet" href="view/client/assets/css/ie.css">
 
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="view/client/assets/css/stylee.css">
+    <link rel="stylesheet" href="view/client/assets/css/style.css">
     <link rel="stylesheet" href="view/client/assets/css/responsive.css">
 	<!-- link Ajax -->
 	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
