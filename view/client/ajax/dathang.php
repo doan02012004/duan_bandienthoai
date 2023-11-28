@@ -13,8 +13,6 @@
         } catch(PDOException $e) {
           echo "Connection failed: " . $e->getMessage();
         }
-        
-
         // $sql = "INSERT INTO `tbl_donhang` (`id_sp`, `id_user`, `gia_dh`, `trangthai_dh`)
         //  VALUES ('1', '1', '2300000', 'sdfd')";
         //  $conn->exec($sql);
