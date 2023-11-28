@@ -114,6 +114,12 @@ ob_start();
             case 'myaccount':
                     include "view/client/thongtintaikhoan.php";
                 break;
+            case 'thongtin':
+                if(isset($_SESSION['id'])){
+                    $user = loadone_user($_SESSION['id']); 
+                }
+                        include "view/client/quanlytaikhoan.php";
+                break;
             default:
             include "view/client/home.php";
                 break;

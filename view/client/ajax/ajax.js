@@ -43,6 +43,10 @@ $(document).ready(function(){
               });
               alert("ok");
         });
+
+       function myClick(){
+        alert("Ok");
+       }
         $('#addtocart').click(function(){
           alert("Ok");
         });
