@@ -390,7 +390,7 @@
 		<div class="container">
 			<div class="latest-news-row">
 				<div class="center-title-area">
-					<h2 class="center-title"><a href="#">latest news</a></h2>
+					<h2 class="center-title"><a href="#">Tin tức mới nhất</a></h2>
 				</div>
 				<div class="carousel-wrap">
 					<!-- LATEST-NEWS-CAROUSEL START -->
@@ -398,12 +398,11 @@
 
 						<!-- LATEST-NEWS-SINGLE-POST START -->
 						<div class="single-latest-post">
-							<a href="#"><img src="assets/images/latest-news/1.webp" alt="latest-post" /></a>
-							<h2><a href="#">What is Lorem Ipsum?</a></h2>
-							<p>Lorem Ipsum is simply dummy text of the printing and Type setting
-								industry. Lorem Ipsum has been...</p>
+							<a href="#"><img src="view/client/img/anh1.jpg" alt="latest-post" /></a>
+							<h2><a href="#">Cách chặn quảng cáo trên điện thoại hiệu quả ?</a></h2>
+							<p>Kinhtedothi - Khi đang truy cập một website nào đó trên Internet, người dùng cảm thấy khó chịu vì các đoạn quảng cáo chèn ngang. Vậy, người dùng cần làm thế nào để chặn quảng cáo không mong muốn?...</p>
 							<div class="latest-post-info">
-								<i class="fa fa-calendar"></i><span>2022-06-20 04:51:43</span>
+								<i class="fa fa-calendar"></i><span>2023-11-20 01:23:45</span>
 							</div>
 							<div class="read-more">
 								<a href="#">Read More <i class="fa fa-long-arrow-right"></i></a>
@@ -413,12 +412,11 @@
 
 						<!-- LATEST-NEWS-SINGLE-POST START -->
 						<div class="single-latest-post">
-							<a href="#"><img src="assets/images/latest-news/2.webp" alt="latest-post" /></a>
-							<h2><a href="#">Share the Love for printing</a></h2>
-							<p>Lorem Ipsum is simply dummy text of the printing and Type setting
-								industry. Lorem Ipsum has been...</p>
+							<a href="#"><img src="view/client/img/anh2.jpg" alt="latest-post" /></a>
+							<h2><a href="#">TOP 6 trang thông tin điện tử chuyên về Công Nghệ có người đọc nhiều nhất Việt Nam</a></h2>
+							<p>Genk.vn là một trang tin tức điện tử tổng hợp chuyên về công nghệ, được Sở Thông tin và Truyền thông Hà Nội cấp phép lập và hoạt động từ ngày 03/02/2016 theo Giấy phép số 460/GP-TTĐT. Website này do công ty VCCorp quản lý và vận hành...</p>
 							<div class="latest-post-info">
-								<i class="fa fa-calendar"></i><span>2022-06-20 04:51:43</span>
+							<i class="fa fa-calendar"></i><span>2023-11-20 01:23:45</span>
 							</div>
 							<div class="read-more">
 								<a href="#">Read More <i class="fa fa-long-arrow-right"></i></a>
@@ -428,12 +426,11 @@
 
 						<!-- LATEST-NEWS-SINGLE-POST START -->
 						<div class="single-latest-post">
-							<a href="#"><img src="assets/images/latest-news/3.webp" alt="latest-post" /></a>
-							<h2><a href="#">Answers your Questions P..</a></h2>
-							<p>Lorem Ipsum is simply dummy text of the printing and Type setting
-								industry. Lorem Ipsum has been...</p>
+							<a href="#"><img src="view/client/img/anh3.jpg" alt="latest-post" /></a>
+							<h2><a href="#">Doanh nghiệp cần lưu ý khi đăng ký, thông báo website thương mại điện tử với Bộ Công Thương</a></h2>
+							<p>Doanh nghiệp cần lưu ý khi đăng ký, thông báo website thương mại điện tử với Bộ Công Thương</p>
 							<div class="latest-post-info">
-								<i class="fa fa-calendar"></i><span>2022-06-20 04:51:43</span>
+							<i class="fa fa-calendar"></i><span>2023-11-20 01:23:45</span>
 							</div>
 							<div class="read-more">
 								<a href="#">Read More <i class="fa fa-long-arrow-right"></i></a>
@@ -443,12 +440,11 @@
 
 						<!-- LATEST-NEWS-SINGLE-POST START -->
 						<div class="single-latest-post">
-							<a href="#"><img src="assets/images/latest-news/4.webp" alt="latest-post" /></a>
-							<h2><a href="#">What is Bootstrap? – History</a></h2>
-							<p>Lorem Ipsum is simply dummy text of the printing and Type setting
-								industry. Lorem Ipsum has been...</p>
+							<a href="#"><img src="view/client/img/anh4.jpg" alt="latest-post" /></a>
+							<h2><a href="#">Microsoft Edge giúp nghe tin tức trên web thay vì đọc</a></h2>
+							<p>Microsoft Edge đi kèm với một tính năng gọi là Read Aloud (Đọc to) cho phép nó đọc các file PDF, sách điện tử và nội dung trang web....</p>
 							<div class="latest-post-info">
-								<i class="fa fa-calendar"></i><span>2022-06-20 04:51:43</span>
+							<i class="fa fa-calendar"></i><span>2023-11-20 01:23:45</span>
 							</div>
 							<div class="read-more">
 								<a href="#">Read More <i class="fa fa-long-arrow-right"></i></a>
