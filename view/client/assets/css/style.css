@@ -1924,16 +1924,17 @@ div.bg-tab-content-area i.owl-next-icon:hover {
 .single-client {
 	border: 1px solid #ebebeb;
 	margin-bottom: 20px;
-	padding: 15px 0;
 	transition: all 0.3s ease 0s;
 }
 
 div.client-carousel .owl-item img {
-	width: inherit;
+	width: 100%;
+	height: 120px;
 	margin: 0 auto;
 }
 
-.single-client img {}
+.single-client img {
+}
 
 .single-client a {
 	display: block;
