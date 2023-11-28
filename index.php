@@ -120,6 +120,9 @@ ob_start();
                 }
                         include "view/client/quanlytaikhoan.php";
                 break;
+            case 'lienhe':
+                            include "view/client/lienhe.php";
+                    break;
             default:
             include "view/client/home.php";
                 break;
