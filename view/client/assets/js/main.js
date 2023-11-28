@@ -332,7 +332,7 @@ new WOW().init();
 /*-----------------------------------------
 	cart plus minus button
 --------------------------------------------*/	  
-	 $(".cart-plus-minus-button").append('<div class="dec qtybutton">-</div><div class="inc qtybutton">+</div>');
+	 $(".cart-plus-minus-buttonnn").append('<div class="dec qtybutton">-</div><div class="inc qtybutton">+</div>');
 	  $(".qtybutton").on("click", function() {
 		var $button = $(this);
 		var oldValue = $button.parent().find(".nhapsoluong").val();

@@ -160,10 +160,8 @@ if(is_array($listonesp)){
 									<p class="small-title">Quantity</p>
 									<div class="cart-quantity">
 										<div class="cart-plus-minus-button single-qty-btn">
-											<input class="cart-plus-minus sing-pro-qty nhapsoluong" min="1" max="<?php echo $soluong_sp ?>" type="number" name="qtybutton"
+											<input class="cart-plus-minus sing-pro-qty nhapsoluongct" min="1" max="<?php echo $soluong_sp ?>" type="number" name="qtybutton"
 												value="1" require>
-												<input class="cart-plus-minus sing-pro-qty qtybuttonmax" type="hidden" name="qtybuttonmax"
-												value="<?php echo $soluong_sp ?>">
 										</div>
 									</div>
 								</div>
@@ -175,8 +173,17 @@ if(is_array($listonesp)){
 									</div>
 									
 								</div>
-								<div class="single-product-add-cart">
-									<a class="add-cart-text" title="Add to cart" href="#">Add to cart</a>
+								<div class="single-product-add-cart dulieu">
+									<input type="hidden" value="<?=$id?>">
+									<input type="hidden" value="<?=$ten_sp?>">
+									<input type="hidden" value="<?=$avatar?>">
+									<input type="hidden" value="<?=$dungluong_sp?>">
+									<input type="hidden" value="<?=$gia_sp?>" id="giaspct">
+									<input type="hidden" value="<?=$soluong_sp?>">
+									<input type="hidden" value="<?=$trangthai_sp?>">
+									<input type="hidden" value="1" id="soluongdhct">
+									<input type="hidden" value="<?=$gia_sp?>" id="tienct">
+									<a class="add-cart-text" title="Add to cart" href="index.php?act=giohang" id="addtocartct">Add to cart</a>
 								</div>
 							</div>
 						</div>

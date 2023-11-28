@@ -32,7 +32,7 @@
         $sql="DELETE FROM `tbl_sanpham` WHERE `id` =".$id;
        pdo_execute($sql);
         }
-        function loadone_sanpham($id){
+    function loadone_sanpham($id){
             $sql ="SELECT * FROM `tbl_sanpham` WHERE id =".$id;
             $listsp = pdo_query_one($sql);
             return $listsp;

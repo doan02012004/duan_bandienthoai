@@ -182,5 +182,41 @@ $(".dathang").click(function (e) {
         });
       }
       
-    });   
+    });
+    
+    
+    // onchange phần số lượng trang chi tiết sản phẩm
+    // $(".nhapsoluongct").change(function (e) { 
+    //   e.preventDefault();
+    //   var soluong = $(this).val();
+    //   var giaspct = $('#giaspct').val();
+    //   var soluongdhct = $('#soluongdhct').val();
+    //   var tienct =$('#tienct').val();
+    //   soluongdhct = soluong;
+    //   var tien = soluong * giaspct;
+    //   tienct = tien;
+    //   alert(tienct);
+    // });
+
+
+    // addtocart trang chi tiết sản phẩm
+    $("#addtocartct").click(function (e) { 
+      var dulieu = $(this).parent();
+      var id = dulieu.children('input').eq(0).val();
+      var ten_sp = dulieu.children('input').eq(1).val();
+      var avatar = dulieu.children('input').eq(2).val();
+      var dungluong_sp = dulieu.children('input').eq(3).val();
+      var gia_sp = dulieu.children('input').eq(4).val();
+      var soluong_sp = dulieu.children('input').eq(5).val();
+      var trangthai_sp = dulieu.children('input').eq(6).val();
+      var soluong_dh = dulieu.children('input').eq(7).val();
+      var tien = dulieu.children('input').eq(8).val();
+      var soluong = $('.nhapsoluongct').val();
+      soluong_dh = soluong;
+      tien = soluong_dh * gia_sp;
+      $.post("view/client/ajax/addtocart.php",{id:id,ten_sp:ten_sp,avatar:avatar,gia_sp:gia_sp,soluong_sp:soluong_sp,trangthai_sp:trangthai_sp,dungluong_sp:dungluong_sp,soluong_dh:soluong_dh,tien:tien},function(data){
+        $('.giohangmini').html(data);
+      });
+
+    });
 });

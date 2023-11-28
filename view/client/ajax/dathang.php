@@ -30,7 +30,5 @@
              $sql = "INSERT INTO `tbl_donhangchitiet` (`id_dh`, `soluong_dh`, `thanhtien`) VALUES ('".$last_id."', '".$_SESSION['cart'][$i]['soluong_dh']."', '".$_SESSION['cart'][$i]['tien']."')";
              $conn->exec($sql);
          }
-      
-       
-
+        unset($_SESSION['cart']);
 ?>
