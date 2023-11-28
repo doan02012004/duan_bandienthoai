@@ -398,7 +398,7 @@
 
 						<!-- LATEST-NEWS-SINGLE-POST START -->
 						<div class="single-latest-post">
-							<a href="#"><img src="view/client/img/anh1.jpg" alt="latest-post" /></a>
+							<a href="#"><img src="view/client/img/anh1.png" alt="latest-post" /></a>
 							<h2><a href="#">Cách chặn quảng cáo trên điện thoại hiệu quả ?</a></h2>
 							<p>Kinhtedothi - Khi đang truy cập một website nào đó trên Internet, người dùng cảm thấy khó chịu vì các đoạn quảng cáo chèn ngang. Vậy, người dùng cần làm thế nào để chặn quảng cáo không mong muốn?...</p>
 							<div class="latest-post-info">
@@ -412,7 +412,7 @@
 
 						<!-- LATEST-NEWS-SINGLE-POST START -->
 						<div class="single-latest-post">
-							<a href="#"><img src="view/client/img/anh2.jpg" alt="latest-post" /></a>
+							<a href="#"><img src="view/client/img/anh2.png" alt="latest-post" /></a>
 							<h2><a href="#">TOP 6 trang thông tin điện tử chuyên về Công Nghệ có người đọc nhiều nhất Việt Nam</a></h2>
 							<p>Genk.vn là một trang tin tức điện tử tổng hợp chuyên về công nghệ, được Sở Thông tin và Truyền thông Hà Nội cấp phép lập và hoạt động từ ngày 03/02/2016 theo Giấy phép số 460/GP-TTĐT. Website này do công ty VCCorp quản lý và vận hành...</p>
 							<div class="latest-post-info">
@@ -426,7 +426,7 @@
 
 						<!-- LATEST-NEWS-SINGLE-POST START -->
 						<div class="single-latest-post">
-							<a href="#"><img src="view/client/img/anh3.jpg" alt="latest-post" /></a>
+							<a href="#"><img src="view/client/img/anh3.png" alt="latest-post" /></a>
 							<h2><a href="#">Doanh nghiệp cần lưu ý khi đăng ký, thông báo website thương mại điện tử với Bộ Công Thương</a></h2>
 							<p>Doanh nghiệp cần lưu ý khi đăng ký, thông báo website thương mại điện tử với Bộ Công Thương</p>
 							<div class="latest-post-info">
@@ -440,7 +440,7 @@
 
 						<!-- LATEST-NEWS-SINGLE-POST START -->
 						<div class="single-latest-post">
-							<a href="#"><img src="view/client/img/anh4.jpg" alt="latest-post" /></a>
+							<a href="#"><img src="view/client/img/anh4.png" alt="latest-post" /></a>
 							<h2><a href="#">Microsoft Edge giúp nghe tin tức trên web thay vì đọc</a></h2>
 							<p>Microsoft Edge đi kèm với một tính năng gọi là Read Aloud (Đọc to) cho phép nó đọc các file PDF, sách điện tử và nội dung trang web....</p>
 							<div class="latest-post-info">
