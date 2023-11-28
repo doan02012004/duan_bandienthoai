@@ -13,7 +13,7 @@
 						<!-- CLIENT-SINGLE START -->
 						<div class="single-client">
 							<a href="#">
-								<img src="view/client/assets/images/brand/1.webp" alt="brand-client" />
+								<img src="view/client/img/dt1.jpg" alt="brand-client" />
 							</a>
 						</div>
 						<!-- CLIENT-SINGLE END -->
@@ -21,7 +21,7 @@
 						<!-- CLIENT-SINGLE START -->
 						<div class="single-client">
 							<a href="#">
-								<img src="view/client/assets/images/brand/2.webp" alt="brand-client" />
+								<img src="view/client/img/dt2.png" alt="brand-client" />
 							</a>
 						</div>
 						<!-- CLIENT-SINGLE END -->
@@ -29,7 +29,7 @@
 						<!-- CLIENT-SINGLE START -->
 						<div class="single-client">
 							<a href="#">
-								<img src="view/client/assets/images/brand/3.webp" alt="brand-client" />
+								<img src="view/client/img/dt3.png" alt="brand-client" />
 							</a>
 						</div>
 						<!-- CLIENT-SINGLE END -->
@@ -37,7 +37,7 @@
 						<!-- CLIENT-SINGLE START -->
 						<div class="single-client">
 							<a href="#">
-								<img src="view/client/assets/images/brand/4.webp" alt="brand-client" />
+								<img src="view/client/img/dt4.png" alt="brand-client" />
 							</a>
 						</div>
 						<!-- CLIENT-SINGLE END -->
@@ -45,7 +45,7 @@
 						<!-- CLIENT-SINGLE START -->
 						<div class="single-client">
 							<a href="#">
-								<img src="view/client/assets/images/brand/5.webp" alt="brand-client" />
+								<img src="view/client/img/dt5.png" alt="brand-client" />
 							</a>
 						</div>
 						<!-- CLIENT-SINGLE END -->
@@ -53,34 +53,11 @@
 						<!-- CLIENT-SINGLE START -->
 						<div class="single-client">
 							<a href="#">
-								<img src="view/client/assets/images/brand/1.webp" alt="brand-client" />
+								<img src="view/client/img/dt6.png" alt="brand-client" />
 							</a>
 						</div>
 						<!-- CLIENT-SINGLE END -->
 
-						<!-- CLIENT-SINGLE START -->
-						<div class="single-client">
-							<a href="#">
-								<img src="view/client/assets/images/brand/3.webp" alt="brand-client" />
-							</a>
-						</div>
-						<!-- CLIENT-SINGLE END -->
-
-						<!-- CLIENT-SINGLE START -->
-						<div class="single-client">
-							<a href="#">
-								<img src="view/client/assets/images/brand/2.webp" alt="brand-client" />
-							</a>
-						</div>
-						<!-- CLIENT-SINGLE END -->
-
-						<!-- CLIENT-SINGLE START -->
-						<div class="single-client">
-							<a href="#">
-								<img src="view/client/assets/images/brand/3.webp" alt="brand-client" />
-							</a>
-						</div>
-						<!-- CLIENT-SINGLE END -->
 						
 					</div>
 					<!-- CLIENT-CAROUSEL END -->
@@ -101,8 +78,8 @@
 							<i class="fa fa-rocket"></i>
 						</div>
 						<div class="facality-text">
-							<h3 class="facality-heading-text">FREE SHIPPING</h3>
-							<span>on order over $100</span>
+							<h3 class="facality-heading-text">Miễn phí giao hàng</h3>
+							<span>với đơn hàng trên 1 triệu VNĐ</span>
 						</div>
 					</div>
 				</div>
@@ -114,8 +91,8 @@
 							<i class="fa fa-umbrella"></i>
 						</div>
 						<div class="facality-text">
-							<h3 class="facality-heading-text">24/7 SUPPORT</h3>
-							<span>online consultations</span>
+							<h3 class="facality-heading-text">Hỗ trợ 24/7</h3>
+							<span>tư vấn trực tuyến</span>
 						</div>
 					</div>
 				</div>
@@ -127,8 +104,8 @@
 							<i class="fa fa-calendar"></i>
 						</div>
 						<div class="facality-text">
-							<h3 class="facality-heading-text">DAILY UPDATES</h3>
-							<span>Check out store for latest</span>
+							<h3 class="facality-heading-text">CẬP NHẬT HÀNG NGÀY</h3>
+							<span>Kiểm tra cửa hàng để biết thông tin mới nhất</span>
 						</div>
 					</div>
 				</div>
@@ -140,8 +117,8 @@
 							<i class="fa fa-refresh"></i>
 						</div>
 						<div class="facality-text">
-							<h3 class="facality-heading-text">30-DAY RETURNS</h3>
-							<span>moneyback guarantee</span>
+							<h3 class="facality-heading-text">Đổi trả trong vòng 30 ngày</h3>
+							<span>Đảm bảo về tiền</span>
 						</div>
 					</div>
 				</div>
