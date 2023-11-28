@@ -38,12 +38,22 @@
                                             <li><span class="address_address1"> Số điện thoại: <span><?php echo $dh['sdt_nguoinhan']?></span></span></li>
                                             <li><span class="address_phone"> Địa chỉ: <span><?php echo $dh['diachi_nguoinhan']?></span></span></li>
                                             <li><span class="address_phone"> Giá đơn hàng: <span><?php echo $dh['gia_dh']?></span></span></li>
-                                            <li><span class="address_phone"> Trạng thái đơn hàng: <span><?php echo $dh['trangthai_dh']?></span></span></li>
+                                            <li><span class="address_phone"> Trạng thái đơn hàng: <span><h6><?php echo $dh['trangthai_dh']?></h6></span></span></li>
                                             <?php
                                                 if($dh['trangthai_dh']=="Chờ xác nhận"){
                                                     echo '<li class="update-button">
                                                     <a href="checkout-shipping.html">Hủy</a>
                                                 </li>';
+                                                }else if($dh['trangthai_dh']=="Đơn hàng đã gửi đi"){
+                                                    echo '<li class="update-button">
+                                                    <a href="checkout-shipping.html">Đã nhận hàng</a>
+                                                </li>
+                                                <li class="update-button">
+                                                    <a href="checkout-shipping.html">Phản hồi</a>
+                                                </li>';
+                                                }
+                                                else{
+
                                                 }
                                             ?>
                                             <li class="update-button">
@@ -64,57 +74,6 @@
                         }
                     }
             ?>
-
-            <div class="col-lg-6">
-                <div class="first_item primari-box">
-                    <!-- DELIVERY ADDRESS START -->
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul class="address">
-                                <li>
-                                    <h3 class="page-subheading box-subheading">
-                                        Your delivery address
-                                    </h3>
-                                </li>
-                                <li><span class="address_name">Bstore</span></li>
-                                <li><span class="address_address1">Your address goes here.</span></li>
-                                <li><span class="address_phone">0123456789</span></li>
-                                <li class="update-button">
-                                    <a href="checkout-shipping.html">Hủy</a>
-                                </li>
-                                <li class="update-button">
-                                    <a href="checkout-shipping.html">Chi tiết<i class="fa fa-chevron-right"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <ul class="address">
-                               <li> <img witdth="100px" height="130px" src="view/uploads/realme-10-thumb-1-600x600.jpg" alt=""></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="second_item primari-box">
-                    <!-- BILLING ADDRESS START -->
-                    <ul class="address">
-                        <li>
-                            <h3 class="page-subheading box-subheading">
-                                Your billing address
-                            </h3>
-                        </li>
-                        <li><span class="address_name">Bstore</span></li>
-                        <li><span class="address_address1">Your address goes here.</span></li>
-                        <li><span class="address_phone">0123456789</span></li>
-                        <li class="update-button">
-                            <a href="my-cart-step-2-info.html">Chi tiết<i class="fa fa-chevron-right"></i></a>
-                        </li>
-                    </ul>
-                    <!-- BILLING ADDRESS END -->
-                </div>
-            </div>
         </div>
 
         <div class="add-new-address">

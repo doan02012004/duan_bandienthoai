@@ -105,7 +105,11 @@ $(document).ready(function(){
       if(id==0){
         e.preventDefault();
         alert("Vui lòng đăng nhập");
-      }else{
+      }else if(tongdh==0){
+        e.preventDefault();
+        alert("Vui lòng thêm sản phẩm trước khi thanh toán");
+      }
+      else{
         $.post("view/client/ajax/tongdonhang.php",{tongdh:tongdh},function(data){
 
         });

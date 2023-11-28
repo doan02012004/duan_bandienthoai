@@ -31,7 +31,7 @@
          VALUES ('".$_SESSION['id']."', '".$ten_nguoinhan."', '".$email_nguoinhan."', '".$sdt_nguoinhan."', '".$diachi_nguoinhan."', '".$id_km."', '".$gia_dh."', '".$ngay_dat_hang."', '".$phuongthuc_tt."', 'Chờ xác nhận')";
         $conn->exec($sql);
         $last_id = $conn->lastInsertId();
-         for ($i=0; $i < 10; $i++) { 
+         for ($i=0; $i < 20; $i++) { 
              if($_SESSION['cart'][$i]!=""){
                   $sql = "INSERT INTO `tbl_donhangchitiet` (`id_dh`, `id_sp`, `don_gia`, `so_luong`, `thanhtien`)
                    VALUES ('".$last_id."', '".$_SESSION['cart'][$i]['id']."', '".$_SESSION['cart'][$i]['gia_sp']."', '".$_SESSION['cart'][$i]['soluong_dh']."', '".$_SESSION['cart'][$i]['tien']."')";
