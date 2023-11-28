@@ -41,7 +41,6 @@ $(document).ready(function(){
               $.post("view/client/ajax/addtocart.php",{id:id,ten_sp:ten_sp,avatar:avatar,gia_sp:gia_sp,soluong_sp:soluong_sp,trangthai_sp:trangthai_sp,dungluong_sp:dungluong_sp,soluong_dh:soluong_dh,tien:tien},function(data){
                     $('.giohangmini').html(data);
               });
-              alert("ok");
         });
 
        function myClick(){
@@ -102,10 +101,17 @@ $(document).ready(function(){
      });
      
      $("#signinCreate").click(function (e) { 
+      var link = $(this).attr('href');
+      var id = $('#tongdonhang').children('tr').children('td').eq(1).children('input').val();
       var tongdh = $('#tongdonhang').children('tr').children('td').eq(1).children('span').text();
-      $.post("view/client/ajax/tongdonhang.php",{tongdh:tongdh},function(data){
+      if(id==0){
+        e.preventDefault();
+        alert("Vui lòng đăng nhập");
+      }else{
+        $.post("view/client/ajax/tongdonhang.php",{tongdh:tongdh},function(data){
 
-      });
+        });
+      }
      });
 
 //  show dữ liệu điền thông tin nhận hàng
@@ -160,5 +166,21 @@ $(".dathang").click(function (e) {
   
 // });
 
+  //  cập nhật thông tin tài khoản người dùng
+    $("#updatetk").click(function (e) { 
+      e.preventDefault();
+      var iduser = $('#iduser').val();
+      var tenuser = $('#tenuser').val();
+      var emailuser = $('#emailuser').val();
+      var sdtuser = $('#sdtuser').val();
+      var diachiuser = $('#diachiuser').val();
+      if(tenuser==""|| emailuser=="" || sdtuser=="" || diachiuser==""){
+        alert("Vui lòng điền đủ thông tin trước khi cập nhật");
+      }else{
+        $.post("view/client/ajax/updatetkuser.php",{},function(data){
+              alert("Cập nhật thành công!");
+        });
+      }
       
+    });   
 });

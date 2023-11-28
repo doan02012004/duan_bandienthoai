@@ -6064,4 +6064,5 @@ a.write-review-btn {
 	font-size: 21px;
 	transition: all 0.3s ease 0s;
 	position: relative;
+	border: none;
 }

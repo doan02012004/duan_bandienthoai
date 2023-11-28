@@ -75,6 +75,7 @@
 									<td class="cart-total">
 										<span class="price">'.$gia.'</span>
 									</td>
+									
 								</tr>';
 									
 								}
@@ -97,6 +98,7 @@
 							</td>
 							<td id="total-price-container" class="price" colspan="3">
 								<span id="total-price" id="total"><?php echo isset($tongtien)? $tongtien : 0 ?></span>
+								<input type="hidden" name="id" value="<?php echo isset($_SESSION['id'])? $_SESSION['id']: 0 ?>">
 								<p>VNĐ</p>
 							</td>
 						</tr>
@@ -111,7 +113,6 @@
 				</div>
 				<div class="col-lg-6">
                 <div class="submit-button">
-				
 									<a href="index.php?act=thanhtoan" id="signinCreate" class="btn main-btn">
 										<span>
 											Thanh Toán 
@@ -121,8 +122,8 @@
 				</div>
 			</div>
 			<?php
-				echo '<pre>';
-				print_r($_SESSION['cart']);
+				// echo '<pre>';
+				// print_r($_SESSION['cart']);
 
 			?>
 			<!-- RETURNE-CONTINUE-SHOP END -->

@@ -381,7 +381,7 @@
     <!-- Main JS -->
     <script src="view/client/assets/js/mainn.js"></script>
 	<!-- link ajax -->
-	<script src="view/client/ajax/ajax.js"></script>
+	<script src="view/client/ajax/ajaxx.js"></script>
 </body>
 
 

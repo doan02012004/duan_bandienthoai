@@ -28,7 +28,7 @@
 							<div class="product-shooting-bar">
 								<!-- SHOORT-BY START -->
 								<div class="shoort-by">
-									<label for="productShort">Sort by</label>
+									<label for="productShort">Lọc giá</label>
 									<div class="short-select-option">
 									
 										<select name="sortby" id="productShort" class="locgia">
