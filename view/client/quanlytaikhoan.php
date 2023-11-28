@@ -27,7 +27,7 @@
 					<div class="col-xl-4 col-lg-6">
 						<div class="personal-info-content">
 							<div class="form-group primary-form-group p-info-group">
-								<input type="hidden" value="<?=$id ?>">
+								<input type="hidden" value="<?=$id ?>" id="iduser">
 								<label for="firstname">Họ và Tên <sup>*</sup></label>
 								<input type="text" value="<?=$ten_user ?>" name="ten_user" id="tenuser"
 									class="form-control">
@@ -52,7 +52,7 @@
 							</div>
 							
 							<div class="submit-button p-info-submit-button">
-								<a href="checkout-address.html" id="updatetk" class="btn main-btn">
+								<a id="updatetk" class="btn main-btn">
 									<span>
 										Cập nhật 
 									</span>
