@@ -161,21 +161,20 @@
 						<div class="footer-top-left">
 							<!-- NEWSLETTER-AREA START -->
 							<div class="newsletter-area">
-								<h2>Newsletter</h2>
-								<p>Subscribe to our mailing list to receive updates on new arrivals, special offers and
-									other discount information.</p>
+								<h2>BẢN TIN</h2>
+								<p>Đăng ký vào danh sách gửi thư của chúng tôi để nhận thông tin cập nhật về hàng mới, ưu đãi đặc biệt và thông tin giảm giá khác..</p>
 								<form action="#">
 									<div class="form-group newsletter-form-group">
 										<input type="text" class="form-control newsletter-form"
 											placeholder="Enter your e-mail">
-										<input type="submit" class="newsletter-btn" name="submit" value="Subscribe" />
+										<input type="submit" class="newsletter-btn" name="submit" value="Đăng ký" />
 									</div>
 								</form>
 							</div>
 							<!-- NEWSLETTER-AREA END -->
 							<!-- ABOUT-US-AREA START -->
 							<div class="about-us-area">
-								<h2>About Us</h2>
+								<h2>VỀ CHÚNG TÔI</h2>
 								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
 									euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
 							</div>
@@ -250,7 +249,8 @@
 									<div class="google-map-area">
 										<div class="google-map">
 											<iframe class="map-size"
-												src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.693667617067!2d144.946279515845!3d-37.82064364221098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4cee0cec83%3A0xd019c5f69915a4a0!2sCollins%20St%2C%20West%20Melbourne%20VIC%203003%2C%20Australia!5e0!3m2!1sen!2sbd!4v1607512676761!5m2!1sen!2sbd">
+											 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.835352125604!2d105.72923707479644!3d21.039272987418343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31345550b525aa03%3A0x3fdefc40f69a023a!2zQ2FvIMSR4bqzbmcgRlBUIFBo4buRIFRy4buLbmggVsSDbiBCw7QgLCBQaMaw4budbmcgUGjGsMahbmcgQ2FuaCAsIHF14bqtbiBU4burIExpw6pt!5e0!3m2!1svi!2s!4v1701155301960!5m2!1svi!2s" 
+					width="80%" height="450" frameborder="0" style="border:0" allowfullscreen="">
 											</iframe>
 										</div>
 									</div>
