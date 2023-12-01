@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $('.demgiohang').load("view/client/ajax/demgiohang.php");
-    // demgiohang();
+    demgiohang();
     tongdonhang();
       function demgiohang() {
         var giohang = $('#giohang').children('tr');
@@ -9,17 +9,18 @@ $(document).ready(function(){
         // alert (demgiohang);
       }
       function tongdonhang(){
-        var tongdh = $('#tongdonhang').children('tr');
+        var tongdonhang = $('#tongdonhang').children('tr');
         var giohang = $('#giohang').children('tr');
         var tong = 0;
         for (let i = 0; i < giohang.length; i++) {
-            tong+= eval(giohang.eq(i).children('td').eq(6).children("span").text());
+            tong+= eval(giohang.eq(i).children('td').eq(6).children("input").val());
         }
-        tongdh.children('td').eq(1).children('span').text(tong);
-
-
+        tongdonhang.children('td').eq(1).children('input').eq(1).val(tong);
+        var tongdh = tongdonhang.children('td').eq(1).children('input').eq(1).val();
+        $.post("view/client/ajax/tongdonhangcart.php",{tongdh:tongdh},function(data){
+          tongdonhang.children('td').eq(1).children('span').text(data);
+        });
       }
-
         $('.locgia').change(function(){
             var locgia = $('.locgia').val();
             $.post("view/client/ajax/locgia.php",{locgia : locgia},function(data){
@@ -78,7 +79,7 @@ $(document).ready(function(){
 
 
       // onchange số lượng giỏ hàng
-     $(".soluong").change(function (e) { 
+     $(".soluongcart").change(function (e) { 
       e.preventDefault();
       var sl = this.value;
       var tr = $(this).parent().parent().parent();
@@ -86,13 +87,13 @@ $(document).ready(function(){
       if(sl >= slsp){
         sl== slsp;
       }
-      var giasp = tr.children('td').eq(3).children("ul").children('li').text();
+      var giasp = tr.children('td').eq(3).children("ul").children('input').val();
       var ten_sp = tr.children('td').eq(1).children('p').children('span').text();
       var tong = giasp * sl;
-      tr.children('td').eq(6).children('span').text(tong);
-      var tienn = tr.children('td').eq(6).children('span').text();
-      $.post("view/client/ajax/updatecart.php",{ten_sp : ten_sp, sl:sl,tienn:tienn },function(data){ 
-
+      tr.children('td').eq(6).children('input').val(tong);
+      var tienn = tr.children('td').eq(6).children('input').val();
+      $.post("view/client/ajax/updatecart.php",{ten_sp : ten_sp, sl:sl,tienn:tienn, giasp:giasp },function(data){ 
+        tr.children('td').eq(6).children('span').text(data);
       });
       tongdonhang();
       // .prop("nodeName"); hàm để gọi ra tên của thẻ
@@ -100,8 +101,8 @@ $(document).ready(function(){
      
      $("#signinCreate").click(function (e) { 
       var link = $(this).attr('href');
-      var id = $('#tongdonhang').children('tr').children('td').eq(1).children('input').val();
-      var tongdh = $('#tongdonhang').children('tr').children('td').eq(1).children('span').text();
+      var id = $('#tongdonhang').children('tr').children('td').eq(1).children('input').eq(0).val();
+      var tongdh = $('#tongdonhang').children('tr').children('td').eq(1).children('input').eq(1).val();
       if(id==0){
         e.preventDefault();
         alert("Vui lòng đăng nhập");
@@ -139,7 +140,7 @@ $(".dathang").click(function (e) {
   var mgg = $("#mgg").val();
   var pttt = $('#pttt').val();
   var ngay_dat_hang = $('#ngaydathang').val();
-  var tongdh = $('.tongdonhang').children("span").text();
+  var tongdh = $('.tongdonhang').children("input").val();
   var link = $(this).attr('href');
   if(ten_nguoinhan!=""&&diachi_nguoinhan!=""&&email_nguoinhan!=""&&sdt_nguoinhan!=""){
       $.post("view/client/ajax/dathang.php",{ten_nguoinhan:ten_nguoinhan,diachi_nguoinhan:diachi_nguoinhan,
@@ -176,17 +177,19 @@ $(".dathang").click(function (e) {
 
   //  cập nhật thông tin tài khoản người dùng
     $("#updatetk").click(function (e) { 
-      e.preventDefault();
       var iduser = $('#iduser').val();
       var tenuser = $('#tenuser').val();
       var emailuser = $('#emailuser').val();
       var sdtuser = $('#sdtuser').val();
       var diachiuser = $('#diachiuser').val();
-      if(tenuser==""|| emailuser=="" || sdtuser=="" || diachiuser==""){
+      var passworduser = $('#passworduser').val();
+      if(tenuser==""|| emailuser=="" || sdtuser=="" || diachiuser==""|| passworduser==""){
+        e.preventDefault();
         alert("Vui lòng điền đủ thông tin trước khi cập nhật");
       }else{
-        $.post("view/client/ajax/updatetkuser.php",{},function(data){
-              alert("Cập nhật thành công!");
+        $.post("view/client/ajax/updatetkuser.php",{iduser:iduser,tenuser:tenuser,emailuser:emailuser,sdtuser:sdtuser,diachiuser:diachiuser,passworduser:passworduser},function(data){
+          alert("Cập nhật thành công!");
+          $("#thongtintaikhoan").html(data);
         });
       }
       
@@ -231,10 +234,70 @@ $(".dathang").click(function (e) {
       e.preventDefault();
       var id = $(this).val();
      $.post('view/client/ajax/updatetongdonhang.php',{id:id},function(data){
-      $('.tongdonhang').children("span").html(data);
+      $('.tongdonhang').html(data);
      });
     });
 
+// cập nhật trạng thái đơn hàng
+    $(".capnhatdonhang").click(function (e) { 
+      var donhang = $(this).parent();
+      var dieukien = donhang.children('input').eq(1).val();
+      var id = donhang.children('input').eq(0).val();
+      if(dieukien==1){
+        if(confirm("Bạn muốn hủy đơn hàng?")==true){
+          $.post('view/client/ajax/capnhatttdonhang.php',{id:id, dieukien:dieukien},function(data){
+             alert(data);
+          });
+      }else{
 
+      }
+      }else{
+        $.post('view/client/ajax/capnhatttdonhang.php',{id:id, dieukien:dieukien},function(data){
+          alert(data);
+       });
+          
+        }
+     
+    });
+
+
+
+// Liên hệ
+    $("#sendMessage").click(function (e) { 
+      e.preventDefault();
+      var ten_lh = $("#con_name").val();
+      var email_lh = $("#con_email").val();
+      var sdt_lh = $("#con_phone").val();
+      var id_user = $("#con_id").val();
+      var noidung_lh = $("#con_message").val();
+      if(ten_lh==""||email_lh==""||sdt_lh==""||noidung_lh==""){
+            $("#faillh").text("Vui lòng nhập đủ nội dung");
+      }else{
+        $.post("view/client/ajax/lienheclient.php",{id_user:id_user,ten_lh:ten_lh,email_lh:email_lh,sdt_lh:sdt_lh,noidung_lh:noidung_lh},function(data){
+            alert("Chúng tôi đã nhận được liên hệ của bạn !");
+        });
+      $("#con_message").val('');
+      }
+    });
     
+});
+
+//Bình luận sản phẩm
+$("#guibl").click(function (e) { 
+  e.preventDefault();
+  var formm = $(this).parent();
+  var dieukien = formm.children("input").eq(2).val();
+  var id_sp = formm.children("input").eq(0).val();
+  var id_user = formm.children("input").eq(1).val();
+  var noidungbl = $("#noidungbl").val();
+  if(noidungbl==""){
+   $("#erro").text("Chưa nhập nội dung");
+  }
+  else{
+    $.post("view/client/ajax/binhluan.php",{id_sp:id_sp,id_user:id_user,noidungbl:noidungbl,dieukien:dieukien},function(data){
+            $("#showbinhluan").html(data);
+    });
+    $("#noidungbl").val('');
+    $("#erro").text('');
+  }
 });

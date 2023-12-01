@@ -62,16 +62,28 @@
         $listsp = pdo_query($sql);
         return $listsp;
     }
-    function loadall_dmsp($s="",$id=0){
+    function loadall_dmsp($s="",$id=0,$pages=1){
+        $row = 16;
+        $from = ($pages - 1)*16;
         $sql = "SELECT * FROM `tbl_sanpham` WHERE 1";
         if($id>0){
             $sql.=" and `id_dm`=".$id;
         }else if($s!=""){
             $sql.=" and ten_sp like '%".$s."%'";
         }
-        $sql.=" ORDER BY id desc limit 16";
+        $sql.=" ORDER BY id desc limit ".$from.",".$row."";
         $listsp = pdo_query($sql);
         return $listsp;
+    }
+    function count_pages(){
+        $sql = "SELECT * FROM `tbl_sanpham`";
+        $listsp = pdo_query($sql);
+        $count = 0;
+        for ($i=0; $i <=sizeof($listsp) ; $i++) { 
+           $count = $i;
+        }
+        $pages = ceil($count / 16);
+        return $pages;
     }
     function loadcungloai_sanpham($id_dm){
         $sql = "SELECT * FROM `tbl_sanpham` WHERE id_dm=".$id_dm." limit 0,9";

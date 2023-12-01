@@ -6067,3 +6067,69 @@ a.write-review-btn {
 	position: relative;
 	border: none;
 }
+.single-product-item .overlay-content ul li .addtocart{
+	background: rgba(70, 70, 70, 0.5) none repeat scroll 0 0;
+	color: #fff;
+	display: block;
+	text-align: center;
+	width: 50px;
+	height: 100%;
+	font-size: 21px;
+	transition: all 0.3s ease 0s;
+	position: relative;
+	border: none;
+}
+
+.style_comment{
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	background: #F0F0E9;
+}
+.imguser{
+	width: 70px;
+}
+.iforuserbl{
+	width: 200px;
+	display: flex;
+	justify-content: space-between;
+}
+.iforuserbl span:nth-child(1){
+	font-size: 18px;
+	font-weight: 600;
+}
+.iforuserbl span:nth-child(2){
+	margin-top: 3px;
+	font-size: 15px;
+	font-weight: 600;
+	color: blueviolet;
+}
+.scroll{
+	width: 100%;
+	padding:0px 20px;
+	height: 200px;
+	overflow-y: scroll;
+}
+.comment-bl{
+	margin-top: 20px;
+}
+.comment-bl form button{
+	width: 100px;
+	height: 40px;
+	border-radius: 10px;
+}
+.xoabl{
+	background-color: #00AAF0;
+	border-radius: 10px;
+}
+
+.timbl i{
+	font-size: 24px;
+	color: red;
+	cursor: pointer;
+}
+.timbl span{
+	margin-bottom: 2px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+

@@ -64,7 +64,7 @@
 												</div>
 												<a href="'.$linkspct.'">'.$sp['ten_sp'].'</a>
 												<div class="price-box">
-													<span class="price">'.$sp['gia_sp'].'VNĐ</span>
+													<span class="price">'.number_format($sp['gia_sp'], 0,",",".").'VNĐ</span>
 												</div>
 											</div>
 										</div>
@@ -73,4 +73,4 @@
 								}
      
 ?>
-<script src="view/client/ajax/ajaxx.js"></script>
+<script src="view/client/ajax/ajax.js"></script>

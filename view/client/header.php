@@ -32,6 +32,9 @@
 
     <link rel="stylesheet" href="view/client/assets/css/font-awesome.min.css">
 
+	<!-- link fontwesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="view/client/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="view/client/assets/css/animate.css">
@@ -45,11 +48,10 @@
     <link rel="stylesheet" href="view/client/assets/css/ie.css">
 
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="view/client/assets/css/style.css">
+    <link rel="stylesheet" href="view/client/assets/css/stylee.css">
     <link rel="stylesheet" href="view/client/assets/css/responsive.css">
 	<!-- link Ajax -->
 	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-
 
 </head>
 
@@ -149,7 +151,7 @@
 	
 					<!-- CATEGORYS-PRODUCT-SEARCH START -->
 					<div class="categorys-product-search">
-						<form action="index.php?act=sanpham" method="post" class="search-form-cat">
+						<form action="index.php?act=sanpham&pages=1" method="post" class="search-form-cat">
 							<div class="search-product form-group">
 								<select name="id_dm" class="cat-search">
 									<option value="">Danh mục</option>
@@ -195,7 +197,7 @@
 									<li><a href="index.php">Trang Chủ</a>									
 									</li>
 									<li>
-										<a href="index.php?act=sanpham">Sản Phẩm</a>
+										<a href="index.php?act=sanpham&pages=1">Sản Phẩm</a>
 									</li>
 									<li>
 										<a href="index.php?act=gioithieu">Giới Thiệu</a>

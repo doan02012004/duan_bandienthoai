@@ -42,7 +42,7 @@ function xoachitiet_dh($id){
 }
 
 function loadthongtin_donhang($id){
-    $sql = "SELECT * FROM `tbl_donhang`WHERE id_user=".$id;
+    $sql = "SELECT * FROM `tbl_donhang`WHERE id_user=".$id." ORDER BY id desc";
     $listttdh = pdo_query($sql);
     return $listttdh;
  }

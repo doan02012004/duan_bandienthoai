@@ -22,7 +22,7 @@
 		<div class="personal-infomation">
 			<form class="primari-box personal-info-box" id="personalinfo" method="post" action="#">
 				<h3 class="box-subheading">Cập nhật thông tin</h3>
-				<div class="row">
+				<div class="row" id="thongtintaikhoan">
 					<!-- ACCOUNT-INFO-TEXT START -->
 					<div class="col-xl-4 col-lg-6">
 						<div class="personal-info-content">

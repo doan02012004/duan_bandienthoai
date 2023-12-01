@@ -354,11 +354,11 @@
     <script src="view/client/assets/js/owl.carousel.min.js"></script>
     <script src="view/client/assets/js/jqueryui.js"></script>
     <script src="view/client/assets/js/wow.js"></script>
-
     <!-- Main JS -->
     <script src="view/client/assets/js/main.js"></script>
 	<!-- link ajax -->
-	<script src="view/client/ajax/ajaxx.js"></script>
+	<script src="view/client/ajax/ajax.js"></script>
+	<script src="view/client/ajax/xoabl.js"></script>
 </body>
 
 

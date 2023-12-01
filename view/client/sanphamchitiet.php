@@ -4,36 +4,38 @@ if(is_array($listonesp)){
 	$hinh = $src.$avatar;
 }
 ?>
-	<!-- MAIN-CONTENT-SECTION START -->
-	<section class="main-content-section">
-		<div class="container">
-			<!-- BSTORE-BREADCRUMB START -->
-			<div class="bstore-breadcrumb">
-				<a href="index.html">HOMe<span><i class="fa fa-caret-right"></i> </span> </a>
-				<span> <i class="fa fa-caret-right"> </i> </span>
-				<a href="shop-gird.html">Sản Phẩm</a>
-				<span><?php echo $ten_sp?></span>
-			</div>
-			<!-- BSTORE-BREADCRUMB END -->
-			
-			<div class="row">
-				<div class="col-lg-9">
-					<!-- SINGLE-PRODUCT-DESCRIPTION START -->
-					<div class="row">
-						<div class="col-lg-5 col-md-4">
-							<div class="single-product-view">
-								<!-- Tab panes -->
-								<div class="tab-content">
-									<div class="tab-pane active" id="thumbnail_1">
-										<div class="single-product-image">
-											<img src="<?php echo $hinh ?>" alt="single-product-image" />
-											<a class="new-mark-box" href="#">new</a>
-											<a class="fancybox" href="<?php echo $hinh ?>"
-												data-fancybox-group="gallery"><span class="btn large-btn">Zoom <i
-														class="fa fa-search-plus"></i></span></a>
-										</div>
+<!-- MAIN-CONTENT-SECTION START -->
+<section class="main-content-section">
+	<div class="container">
+		<!-- BSTORE-BREADCRUMB START -->
+		<div class="bstore-breadcrumb">
+			<a href="index.html">HOMe<span><i class="fa fa-caret-right"></i> </span> </a>
+			<span> <i class="fa fa-caret-right"> </i> </span>
+			<a href="shop-gird.html">Sản Phẩm</a>
+			<span>
+				<?php echo $ten_sp?>
+			</span>
+		</div>
+		<!-- BSTORE-BREADCRUMB END -->
+
+		<div class="row">
+			<div class="col-lg-9">
+				<!-- SINGLE-PRODUCT-DESCRIPTION START -->
+				<div class="row">
+					<div class="col-lg-5 col-md-4">
+						<div class="single-product-view">
+							<!-- Tab panes -->
+							<div class="tab-content">
+								<div class="tab-pane active" id="thumbnail_1">
+									<div class="single-product-image">
+										<img src="<?php echo $hinh ?>" alt="single-product-image" />
+										<a class="new-mark-box" href="#">new</a>
+										<a class="fancybox" href="<?php echo $hinh ?>"
+											data-fancybox-group="gallery"><span class="btn large-btn">Zoom <i
+													class="fa fa-search-plus"></i></span></a>
 									</div>
-									<!-- <div class="tab-pane" id="thumbnail_2">
+								</div>
+								<!-- <div class="tab-pane" id="thumbnail_2">
 										<div class="single-product-image">
 											<img src="assets/images/product/sale/3.webp" alt="single-product-image" />
 											<a class="new-mark-box" href="#">new</a>
@@ -78,11 +80,11 @@ if(is_array($listonesp)){
 														class="fa fa-search-plus"></i></span></a>
 										</div>
 									</div> -->
-								</div>
 							</div>
-							<div class="select-product">
-								<!-- Nav tabs -->
-								<!-- <ul class="nav nav-tabs select-product-tab bxslider">
+						</div>
+						<div class="select-product">
+							<!-- Nav tabs -->
+							<!-- <ul class="nav nav-tabs select-product-tab bxslider">
 									<li>
 										<a class="active" href="#thumbnail_1" data-bs-toggle="tab"><img
 												src="assets/images/product/sidebar_product/1.webp" alt="pro-thumbnail" /></a>
@@ -108,160 +110,198 @@ if(is_array($listonesp)){
 												src="assets/images/product/sidebar_product/6.webp" alt="pro-thumbnail" /></a>
 									</li>
 								</ul> -->
-							</div>
 						</div>
-						<div class="col-lg-7 col-md-8">
-							<div class="single-product-descirption">
-								<h2><?php echo $ten_sp ?></h2>
-								<div class="single-product-social-share">
-									<ul>
-										<li><a href="#" class="twi-link"><i class="fa fa-twitter"></i>Tweet</a></li>
-										<li><a href="#" class="fb-link"><i class="fa fa-facebook"></i>Share</a></li>
-										<li><a href="#" class="g-plus-link"><i class="fa fa-google-plus"></i>Google+</a>
-										</li>
-										<li><a href="#" class="pin-link"><i class="fa fa-pinterest"></i>Pinterest</a>
-										</li>
-									</ul>
+					</div>
+					<div class="col-lg-7 col-md-8">
+						<div class="single-product-descirption">
+							<h2>
+								<?php echo $ten_sp ?>
+							</h2>
+							<div class="single-product-social-share">
+								<ul>
+									<li><a href="#" class="twi-link"><i class="fa fa-twitter"></i>Tweet</a></li>
+									<li><a href="#" class="fb-link"><i class="fa fa-facebook"></i>Share</a></li>
+									<li><a href="#" class="g-plus-link"><i class="fa fa-google-plus"></i>Google+</a>
+									</li>
+									<li><a href="#" class="pin-link"><i class="fa fa-pinterest"></i>Pinterest</a>
+									</li>
+								</ul>
+							</div>
+							<div class="single-product-review-box">
+								<div class="rating-box">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-empty"></i>
 								</div>
-								<div class="single-product-review-box">
-									<div class="rating-box">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-half-empty"></i>
-									</div>
-									<div class="read-reviews">
-										<!-- <a href="#">Read reviews (1)</a> -->
-									</div>
-									<div class="write-review">
-										<!-- <a href="#">Write a review</a> -->
-									</div>
+								<div class="read-reviews">
+									<!-- <a href="#">Read reviews (1)</a> -->
 								</div>
-								<div class="single-product-condition">
-									<!-- <p>Reference: <span>demo_1</span></p>
+								<div class="write-review">
+									<!-- <a href="#">Write a review</a> -->
+								</div>
+							</div>
+							<div class="single-product-condition">
+								<!-- <p>Reference: <span>demo_1</span></p>
 									<p>Condition: <span>New product</span></p> -->
+							</div>
+							<div class="single-product-price">
+								<h2>
+									<?php echo number_format($gia_sp,0,",",".") ?> VNĐ
+								</h2>
+							</div>
+							<div class="single-product-desc">
+								<p>Sản phẩm mới ra mắt 2023 với thiết kế vô cùng sang trọng</p>
+								<div class="product-in-stock">
+									<p>
+										<?php echo $soluong_sp ?> Sản phẩm<span>
+											<?php echo $trangthai_sp ?>
+										</span>
+									</p>
 								</div>
-								<div class="single-product-price">
-									<h2><?php echo $gia_sp ?> VNĐ</h2>
-								</div>
-								<div class="single-product-desc">
-									<p>Sản phẩm mới ra mắt 2023 với thiết kế vô cùng sang trọng</p>
-									<div class="product-in-stock">
-										<p><?php echo $soluong_sp ?> Sản phẩm<span><?php echo $trangthai_sp ?></span></p>
+							</div>
+							<div class="single-product-info">
+								<a href="#"><i class="fa fa-envelope"></i></a>
+								<a href="#"><i class="fa fa-print"></i></a>
+								<a href="#"><i class="fa fa-heart"></i></a>
+							</div>
+							<div class="single-product-quantity">
+								<p class="small-title">Quantity</p>
+								<div class="cart-quantity">
+									<div class="cart-plus-minus-button single-qty-btn">
+										<input class="cart-plus-minus sing-pro-qty nhapsoluongct" min="1"
+											max="<?php echo $soluong_sp ?>" type="number" name="qtybutton" value="1"
+											require>
 									</div>
 								</div>
-								<div class="single-product-info">
-									<a href="#"><i class="fa fa-envelope"></i></a>
-									<a href="#"><i class="fa fa-print"></i></a>
-									<a href="#"><i class="fa fa-heart"></i></a>
+							</div>
+
+							<div class="single-product-color">
+								<p class="small-title">Dung lượng</p>
+								<div class="product-in-stock">
+									<p>
+										<?php echo $dungluong_sp ?>
+									</p>
 								</div>
-								<div class="single-product-quantity">
-									<p class="small-title">Quantity</p>
-									<div class="cart-quantity">
-										<div class="cart-plus-minus-button single-qty-btn">
-											<input class="cart-plus-minus sing-pro-qty nhapsoluongct" min="1" max="<?php echo $soluong_sp ?>" type="number" name="qtybutton"
-												value="1" require>
+
+							</div>
+							<div class="single-product-add-cart dulieu">
+								<input type="hidden" value="<?=$id?>">
+								<input type="hidden" value="<?=$ten_sp?>">
+								<input type="hidden" value="<?=$avatar?>">
+								<input type="hidden" value="<?=$dungluong_sp?>">
+								<input type="hidden" value="<?=$gia_sp?>" id="giaspct">
+								<input type="hidden" value="<?=$soluong_sp?>">
+								<input type="hidden" value="<?=$trangthai_sp?>">
+								<input type="hidden" value="1" id="soluongdhct">
+								<input type="hidden" value="<?=$gia_sp?>" id="tienct">
+								<a class="add-cart-text" title="Add to cart" href="index.php?act=giohang"
+									id="addtocartct">Add to cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- SINGLE-PRODUCT-DESCRIPTION END -->
+
+				<!-- SINGLE-PRODUCT INFO TAB START -->
+				<div class="product-more-info-tab">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs more-info-tab">
+						<li><a href="#moreinfo" data-bs-toggle="tab">Thông Tin</a></li>
+						<li><a href="#datasheet"  class="active" data-bs-toggle="tab">Bình luận</a></li>
+					</ul>
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div class="tab-pane" id="moreinfo">
+							<div class="tab-description">
+								<p>
+									<?php echo $mota_sp ?>
+								</p>
+							</div>
+						</div>
+						<div class="tab-pane  active" id="datasheet">
+										<div class="scroll" id="showbinhluan">
+											<?php
+													foreach ($listblsp as $bl) {
+														echo '<div class="col-sm-12">
+														<div class="row style_comment">
+															<div class="col-md-1">
+																<img witdth="50%" src="view/uploads/free-user-icon-3296-thumb.png"
+																class="imguser" alt="">
+															</div>
+															<div class="col-md-11">
+																<p class="iforuserbl"><span>'.$bl['ten_user'].'</span><span>'.$bl['ngay_bl'].'</span></p>
+																<p>
+																'.$bl['noidung_bl'].'
+																</p>
+																<div class="row mainbl">
+																	<div class="col-3 timbl"><a class="xoacmt"><i class="fa-solid fa-trash"></i><span>Xóa</span></a>
+																	<input type="hidden" name="id" value="'.$bl['id'].'">
+																	<input type="hidden" value="'.$bl['iduser'].'">
+																	<input type="hidden" value="'.$id.'">
+																	</div>
+																	<div class="col-3 timbl"><a class="tym"><i class="fa-solid fa-heart"></i><span>0</span></a></div>
+																	<div class="col-3"></div>
+																	<div class="col-3 timbl"><a class="recmt"><i class="fa-solid fa-comments"></i><span>Trả lời</span></a></div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<p></p>';
+													}
+											?>
+											
+										
+													<!-- <div class="col-sm-12">
+														<div class="row style_comment">
+															<div class="col-md-1">
+																<img witdth="50%" src="view/uploads/free-user-icon-3296-thumb.png"
+																class="imguser" alt="">
+															</div>
+															<div class="col-md-11">
+																<p class="iforuserbl"><span>Bùi Văn Đoàn</span><span>20-20-20</span></p>
+																<p>
+																OPPO Reno8 Pro 5G là chiếc điện thoại cao cấp được nhà OPPO ra mắt
+																</p>
+																<div class="row mainbl">
+																	<div class="col-3 timbl"><a class="xoacmt"><i class="fa-solid fa-trash"></i><span>Xóa</span></a></div>
+																	<div class="col-3 timbl"><a class="tym"><i class="fa-solid fa-heart"></i><span>0</span></a></div>
+																	<div class="col-3"></div>
+																	<div class="col-3 timbl"><a class="recmt"><i class="fa-solid fa-comments"></i><span>Trả lời</span></a></div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<p></p> -->
 										</div>
-									</div>
-								</div>
+										<div id="binhluan" class="comment-bl">
+											<div class="" id="erro" style="color:red" ></div>
+											<div class="formmmmm">
+												<textarea name="" id="noidungbl" cols="100" rows="2"></textarea>
+												<a href=""  class="btn main-btn" id="guibl">Gửi</a>
+												<input type="hidden" value="<?=$id ?>">
+												<input type="hidden" value="<?=$_SESSION['id']?>">
+												<input type="hidden" value="1">
+
+											</div>
+										</div>
 								
-								<div class="single-product-color">
-									<p class="small-title">Dung lượng</p>
-									<div class="product-in-stock">
-										<p><?php echo $dungluong_sp ?></p>
-									</div>
-									
-								</div>
-								<div class="single-product-add-cart dulieu">
-									<input type="hidden" value="<?=$id?>">
-									<input type="hidden" value="<?=$ten_sp?>">
-									<input type="hidden" value="<?=$avatar?>">
-									<input type="hidden" value="<?=$dungluong_sp?>">
-									<input type="hidden" value="<?=$gia_sp?>" id="giaspct">
-									<input type="hidden" value="<?=$soluong_sp?>">
-									<input type="hidden" value="<?=$trangthai_sp?>">
-									<input type="hidden" value="1" id="soluongdhct">
-									<input type="hidden" value="<?=$gia_sp?>" id="tienct">
-									<a class="add-cart-text" title="Add to cart" href="index.php?act=giohang" id="addtocartct">Add to cart</a>
-								</div>
-							</div>
 						</div>
 					</div>
-					<!-- SINGLE-PRODUCT-DESCRIPTION END -->
+				</div>
+				<!-- SINGLE-PRODUCT INFO TAB END -->
 
-					<!-- SINGLE-PRODUCT INFO TAB START -->
-					<div class="product-more-info-tab">
-						<!-- Nav tabs -->
-						<ul class="nav nav-tabs more-info-tab">
-							<li class="active"><a href="#moreinfo" data-bs-toggle="tab">Thông Tin</a></li>
-							<li><a href="#datasheet" data-bs-toggle="tab">Bình luận</a></li>
-							<li><a href="#review" data-bs-toggle="tab">reviews</a></li>
-						</ul>
-						<!-- Tab panes -->
-						<div class="tab-content">
-							<div class="tab-pane active" id="moreinfo">
-								<div class="tab-description">
-									<p><?php echo $mota_sp ?></p>
-								</div>
-							</div>
-							<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-								<script>
-								$(document).ready(function(){
-									$('#binhluan').load("view/client/binhluan/binhluanform.php" ,{id_sp: <?=$id?> });
-								});
-					
-							</script>
-							<div class="tab-pane" id="datasheet">
-								<div class="deta-sheet" id="binhluan">
-
-								</div>
-							</div>
-							<div class="tab-pane" id="review">
-								<div class="row tab-review-row">
-									<div class="col-xs-5 col-sm-4 col-md-4 col-lg-3 padding-5">
-										<div class="tab-rating-box">
-											<span>Grade</span>
-											<div class="rating-box">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star-half-empty"></i>
-											</div>
-											<div class="review-author-info">
-												<strong>write A REVIEW</strong>
-												<span>06/22/2022</span>
-											</div>
-										</div>
-									</div>
-									<div class="col-xs-7 col-sm-8 col-md-8 col-lg-9 padding-5">
-										<div class="write-your-review">
-											<p><strong>write A REVIEW</strong></p>
-											<p>write A REVIEW</p>
-											<span class="usefull-comment">Was this comment useful to you?
-												<span>Yes</span><span>No</span></span>
-											<a href="#">Report abuse </a>
-										</div>
-									</div>
-									<a href="#" class="write-review-btn">Write your review!</a>
-								</div>
-							</div>
-						</div>
-					</div>					
-					<!-- SINGLE-PRODUCT INFO TAB END -->
-
-					<!-- RELATED-PRODUCTS-AREA START -->
-					<div class="left-title-area">
-						<h2 class="left-title">Sản Phẩm Tương Tự</h2>
-					</div>
-					
-					<div class="related-product-area featured-products-area">
-						<div class="carousel-wrap">
-							<!-- RELATED-CAROUSEL START -->
-							<div class="related-product owl-carousel">
-								<!-- SINGLE-PRODUCT-ITEM START -->
-								<?php
+				<!-- RELATED-PRODUCTS-AREA START -->
+				<div class="left-title-area">
+					<h2 class="left-title">Sản Phẩm Tương Tự</h2>
+				</div>
+				<div class="related-product-area featured-products-area">
+					<div class="carousel-wrap">
+						<!-- RELATED-CAROUSEL START -->
+						<div class="related-product owl-carousel">
+							<!-- SINGLE-PRODUCT-ITEM START -->
+							<?php
 									foreach ($listspcl as $sp) {
 										$anh = $src.$sp['avatar'];
 										echo '<div class="single-product-item">
@@ -291,7 +331,7 @@ if(is_array($listonesp)){
 										
 									}
 								?>
-								<!-- <div class="single-product-item">
+							<!-- <div class="single-product-item">
 									<div class="product-image">
 										<a href="#"><img src="assets/images/product/sale/3.webp"
 												alt="product-image" /></a>
@@ -315,82 +355,17 @@ if(is_array($listonesp)){
 										</div>
 									</div>
 								</div> -->
-								<!-- SINGLE-PRODUCT-ITEM END -->
+							<!-- SINGLE-PRODUCT-ITEM END -->
 
 
-							</div>
-							<!-- RELATED-CAROUSEL END -->
 						</div>
-					</div>
-					<!-- RELATED-PRODUCTS-AREA END -->
-
-				</div>
-				<!-- RIGHT SIDE BAR START -->
-				<div class="col-lg-3">
-					<!-- SINGLE SIDE BAR START -->
-					<div class="single-product-right-sidebar">
-						<h2 class="left-title">Viewed products</h2>
-						<ul>
-							<li>
-								<a href="#"><img src="assets/images/product/sidebar_product/2.webp" alt="" /></a>
-								<div class="r-sidebar-pro-content">
-									<h5><a href="#">Faded Short ...</a></h5>
-									<p>Faded short sleeves t-shirt with high...</p>
-								</div>
-							</li>
-							<li>
-								<a href="#"><img src="assets/images/product/sidebar_product/4.webp" alt="" /></a>
-								<div class="r-sidebar-pro-content">
-									<h5><a href="#">Printed Chif ..</a></h5>
-									<p>Printed chiffon knee length dress...</p>
-								</div>
-							</li>
-							<li>
-								<a href="#"><img src="assets/images/product/sidebar_product/6.webp" alt="" /></a>
-								<div class="r-sidebar-pro-content">
-									<h5><a href="#">Printed Sum ...</a></h5>
-									<p>Long printed dress with thin...</p>
-								</div>
-							</li>
-							<li>
-								<a href="#"><img src="assets/images/product/sidebar_product/1.webp" alt="" /></a>
-								<div class="r-sidebar-pro-content">
-									<h5><a href="#">Printed Dress </a></h5>
-									<p>100% cotton double printed dress....</p>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<!-- SINGLE SIDE BAR END -->
-
-					<!-- SINGLE SIDE BAR START -->
-					<div class="single-product-right-sidebar clearfix">
-						<h2 class="left-title">Tags </h2>
-						<div class="category-tag">
-							<a href="#">fashion</a>
-							<a href="#">handbags</a>
-							<a href="#">women</a>
-							<a href="#">men</a>
-							<a href="#">kids</a>
-							<a href="#">New</a>
-							<a href="#">Accessories</a>
-							<a href="#">clothing</a>
-							<a href="#">New</a>
-						</div>
-					</div>
-					<!-- SINGLE SIDE BAR END -->
-
-					<!-- SINGLE SIDE BAR START -->
-					<div class="single-product-right-sidebar">
-						<div class="slider-right zoom-img">
-							<a href="#"><img class="img-responsive" src="assets/images/product/cms11.webp"
-									alt="sidebar left" /></a>
-						</div>
+						<!-- RELATED-CAROUSEL END -->
 					</div>
 				</div>
-				<!-- SINGLE SIDE BAR END -->
+				<!-- RELATED-PRODUCTS-AREA END -->
+
 			</div>
 		</div>
-	</section>
-	<!-- MAIN-CONTENT-SECTION END -->
-
+	</div>
+</section>
+<!-- MAIN-CONTENT-SECTION END -->

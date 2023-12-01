@@ -56,12 +56,13 @@
 									<td class="cart-avail"><span class="label label-success">'.$value['trangthai_sp'].'</span></td>
 									<td class="cart-unit">
 										<ul class="price text-right">
-											<li class="price">'.$value['gia_sp'].'</li>
+											<li class="price">'.number_format($value['gia_sp'],0,",",".").' VNĐ</li>
+											<input type="hidden" value="'.$value['gia_sp'].'">
 										</ul>
 									</td>
 									<td class="cart_quantity text-center">
 										<div class="cart-plus-minus-button-btn">
-											<input class="cart-plus-minus nhapsoluong soluong" type="number" name="qtybutton" min="1" max="'.$value['soluong_sp'].'" value="'.$value['soluong_dh'].'">
+											<input class="cart-plus-minus nhapsoluong soluongcart" type="number" name="qtybutton" min="1" max="'.$value['soluong_sp'].'" value="'.$value['soluong_dh'].'">
 											<input class="cart-plus-minus sing-pro-qty qtybuttonmax" type="hidden" name="qtybuttonmax"
 												value="'.$value['soluong_sp'].'">
 										</div>
@@ -73,7 +74,8 @@
 										</span>
 									</td>
 									<td class="cart-total">
-										<span class="price">'.$gia.'</span>
+										<span class="price">'.number_format($gia ,0,",",".").' VNĐ</span>
+										<input type="hidden" name="id" value="'.$gia.'">
 									</td>
 									
 								</tr>';
@@ -100,6 +102,7 @@
 								<span id="total-price" id="total"><?php echo isset($tongtien)? $tongtien : 0 ?></span>
 								<input type="hidden" name="id" value="<?php echo isset($_SESSION['id'])? $_SESSION['id']: 0 ?>">
 								<p>VNĐ</p>
+								<input type="hidden" name="id" value="<?php echo $tongtien ?>">
 							</td>
 						</tr>
 					</tfoot>
@@ -122,8 +125,8 @@
 				</div>
 			</div>
 			<?php
-				echo '<pre>';
-				print_r($_SESSION['cart']);
+				// echo '<pre>';
+				// print_r($_SESSION['cart']);
 
 			?>
 			<!-- RETURNE-CONTINUE-SHOP END -->

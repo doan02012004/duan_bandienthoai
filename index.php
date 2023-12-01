@@ -8,6 +8,7 @@ ob_start();
     include "view/model/sanpham.php";
     include "view/model/khuyenmai.php";
     include "view/model/donhang.php";
+    include "view/model/binhluan.php";
     if(isset($_SESSION['cart'])){
 		$count = sizeof($_SESSION['cart']);
 	}
@@ -26,25 +27,29 @@ ob_start();
     $act = $_GET['act'];
         switch ($act){
             case 'sanpham':
+                $pages = $_GET['pages'];
                 if(isset($_POST['btn'])){
                     $id = $_POST['id_dm'];
                     $s = $_POST['s'];
-                    $listdmsp = loadall_dmsp($s,$id);
+                    $listdmsp = loadall_dmsp($s,$id,$pages);
                 }
                 else{
-                    $listdmsp = loadall_dmsp($s="",$id=0);
+                    $listdmsp = loadall_dmsp($s="",$id=0,$pages);
                 }
+                $countpages = count_pages();
             //   $listdemsp =loadallsoluong_danhmuc();
             //   var_dump($listdemsp);
                 include "view/client/sanpham.php";
                 break;
             case 'loadsanpham':
+                $pages = $_GET['pages'];
                 if(isset($_GET['id'])){
                     $id = $_GET['id'];
                     $listdmsp = loadall_dmsp($s="",$id);
                 }else{
                     $listdmsp = loadall_dmsp($s="",$id=0);
                 }
+                $countpages = count_pages();
                 include "view/client/sanpham.php";
                 break;
             case 'sanphamchitiet':
@@ -52,6 +57,7 @@ ob_start();
                 $id_dm = $_GET['id_dm'];
                 $listspcl = loadcungloai_sanpham($id_dm);
                 $listonesp = loadone_sanpham($id);
+                $listblsp = loadallbinhluan_id($id);
                 include "view/client/sanphamchitiet.php";
                 break;
             case 'login':
@@ -118,6 +124,10 @@ ob_start();
                 $listctdh= chitiet_dh($id);
                 include "view/client/thongtindonhangchitiet.php";
                 break;
+            case 'lichsudonhang':
+                $listttdh = loadthongtin_donhang($_SESSION['id']);
+                include "view/client/lichsudonhang.php";
+                break;
             case 'myaccount':
                     include "view/client/thongtintaikhoan.php";
                 break;
@@ -128,7 +138,10 @@ ob_start();
                         include "view/client/quanlytaikhoan.php";
                 break;
             case 'lienhe':
-                            include "view/client/lienhe.php";
+                if(isset($_SESSION['id'])){
+                    $listuser = loadone_user($_SESSION['id']);
+                }
+                include "view/client/lienhe.php";
                     break;
             default:
             include "view/client/home.php";

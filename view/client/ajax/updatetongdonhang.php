@@ -10,5 +10,9 @@
      else{
         $tongnew = $tong;
      }
-     echo $tongnew;
+     echo '<span>
+     '.number_format($tongnew,0,",",".").'
+      </span>VNĐ
+      <input type="hidden"  value="'.$tongnew.'">
+      <br>';
 ?>

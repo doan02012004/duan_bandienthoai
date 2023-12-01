@@ -18,7 +18,7 @@
                 $stt = 0;
                     foreach ($listttdh as $dh) {
                         $linkctdh = "index.php?act=thongtindonhangchitiet&id=".$dh['id'];
-                        if($dh['trangthai_dh']=="Đơn hàng đã được nhận" || $dh['trangthai_dh']=="Đơn hàng bị hủy" ){
+                        if($dh['trangthai_dh']=="Đơn hàng đang được đóng gói" || $dh['trangthai_dh']=="Đơn hàng đã được gửi đi" ||$dh['trangthai_dh']=="Chờ xác nhận"){
 
                         }else{
                             $stt++;
@@ -37,7 +37,7 @@
                                             <li><span class="address_name"> Tên người nhận: <span><?php echo $dh['ten_nguoinhan']?></span></span></li>
                                             <li><span class="address_address1"> Số điện thoại: <span><?php echo $dh['sdt_nguoinhan']?></span></span></li>
                                             <li><span class="address_phone"> Địa chỉ: <span><?php echo $dh['diachi_nguoinhan']?></span></span></li>
-                                            <li><span class="address_phone"> Giá đơn hàng: <span><?php echo number_format($dh['gia_dh'],0,",",".")?> VNĐ</span></span></li>
+                                            <li><span class="address_phone"> Giá đơn hàng: <span><?php echo $dh['gia_dh']?></span></span></li>
                                             <li><span class="address_phone"> Ngày đặt hàng: <span><?php echo $dh['ngay_dat_hang']?></span></span></li>
                                             <li><span class="address_phone"> Trạng thái đơn hàng: <span><h6><?php echo $dh['trangthai_dh']?></h6></span></span></li>
                                             <?php
@@ -82,7 +82,7 @@
         </div>
 
         <div class="add-new-address">
-            <a href="index.php?act=lichsudonhang" class="new-address-link">Lịch sử đơn hàng<i
+            <a href="index.php?act=thongtindonhang" class="new-address-link">Quay lại trang đơn hàng<i
                     class="fa fa-chevron-right"></i></a>
         </div>
         <!-- ADDRESS AREA START -->

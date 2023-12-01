@@ -78,7 +78,7 @@
 													<ul>
 														<li><a href="'.$linkspct.'" title="Quick view"><i class="fa fa-search"></i></a>
 														</li>
-														<li><button type="submit" class="add-to-cart addcart" title="Quick view" id="'.$sp['id'].'"><i class="fa fa-shopping-cart "></i></button></li>
+														<li><button type="submit" class="addtocart addcart" title="Quick view" id="'.$sp['id'].'"><i class="fa fa-shopping-cart "></i></button></li>
 														<li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a>
 														</li>
 														<li><a href="#" title="Quick view"><i class="fa fa-heart-o"></i></a>
@@ -101,7 +101,7 @@
 												</div>
 												<a href="'.$linkspct.'">'.$sp['ten_sp'].'</a>
 												<div class="price-box">
-													<span class="price">'.$sp['gia_sp'].'VNĐ</span>
+													<span class="price">'.number_format($sp['gia_sp'], 0,",",".").'VNĐ</span>
 												</div>
 											</div>
 										</div>
@@ -114,33 +114,32 @@
 					<!-- ALL GATEGORY-PRODUCT END -->
 					<!-- PRODUCT-SHOOTING-RESULT START -->
 					<div class="product-shooting-result product-shooting-result-border">
-						<form action="#">
+						<!-- <form action="#">
 							<button class="btn compare-button">
 								Compare (<strong class="compare-value">1</strong>)
 								<i class="fa fa-chevron-right"></i>
 							</button>
-						</form>
+						</form> -->
 						<div class="showing-item">
-							<span>Showing 1 - 12 of 13 items</span>
+							<!-- <span>Showing 1 - 12 of 13 items</span> -->
 						</div>
 						<div class="showing-next-prev">
 							<ul class="pagination-bar">
-								<li class="disabled">
+								<li >
 									<a href="#"><i class="fa fa-chevron-left"></i>Previous</a>
 								</li>
-								<li class="active">
-									<span><a class="pagi-num" href="#">1</a></span>
-								</li>
-								<li>
-									<span><a class="pagi-num" href="#">2</a></span>
-								</li>
+								<?php
+								for ($i=1; $i <=$countpages ; $i++) { 
+									$link ="index.php?act=sanpham&pages=".$i."";
+									echo '<li class="active">
+									<span><a class="pagi-num" href="'.$link.'">'.$i.'</a></span>
+								</li>';
+								}
+								?>
 								<li>
 									<a href="#">Next<i class="fa fa-chevron-right"></i></a>
 								</li>
 							</ul>
-							<form action="#">
-								<button class="btn showall-button">Show all</button>
-							</form>
 						</div>
 					</div>
 					<!-- PRODUCT-SHOOTING-RESULT END -->
@@ -155,7 +154,7 @@
 							<ul>
 								<?php
 									foreach ($listdemsp as $dm) {
-										echo '<a href="index.php?act=loadsanpham&id='.$dm['id'].'"><li>'.$dm['ten_dm'].'('.$dm['soluong'].')</li></a>';
+										echo '<a href="index.php?act=loadsanpham&id='.$dm['id'].'&pages=1"><li>'.$dm['ten_dm'].'('.$dm['soluong'].')</li></a>';
 									}
 								?>
 								<!-- <a href=""><li>Iphone</li></a>

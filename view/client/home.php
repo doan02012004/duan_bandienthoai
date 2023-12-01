@@ -124,7 +124,7 @@
 													</div>
 													<a href="single-product.html">'.$sp['ten_sp'].'</a>
 													<div class="price-box">
-														<span class="price">'.$sp['gia_sp'].' VNĐ</span>
+														<span class="price">'.number_format($sp['gia_sp'], 0,",",".").' VNĐ</span>
 													</div>
 												</div>
 											</div>';
@@ -193,7 +193,7 @@
 													</div>
 													<a href="">'.$sp['ten_sp'].'</a>
 													<div class="price-box">
-														<span class="price">'.$sp['gia_sp'].' VNĐ</span>
+														<span class="price">'.number_format($sp['gia_sp'], 0,",",".").' VNĐ</span>
 													</div>
 												</div>
 											</div>';
@@ -280,7 +280,7 @@
 										</div>
 										<a href="">'.$sp['ten_sp'].'</a>
 										<div class="price-box">
-											<span class="price">'.$sp['gia_sp'].'</span>
+											<span class="price">'.number_format($sp['gia_sp'], 0,",",".").' VNĐ</span>
 										</div>
 									</div>
 								</div>';
@@ -347,8 +347,8 @@
 									</div>
 									<a href="single-product.html">'.$sp['ten_sp'].'</a>
 									<div class="price-box">
-										<span class="price">'.$giasale.'VNĐ</span>
-										<span class="old-price">'.$sp['gia_sp'].'VNĐ</span>
+										<span class="price">'.number_format($giasale, 0,",",".").'VNĐ</span>
+										<span class="old-price">'.number_format($sp['gia_sp'], 0,",",".").'VNĐ</span>
 									</div>
 								</div>
 							</div>';

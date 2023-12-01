@@ -1,3 +1,9 @@
+<?php
+	if(isset($listuser) &&  is_array($listuser)){
+		extract($listuser);
+	}
+?>
+
 <!doctype html>
 <!--[if IE]><![endif]-->
 <!--[if lt IE 7 ]> <html lang="en" class="ie6">    <![endif]-->
@@ -82,20 +88,24 @@
 				<div class="contact-form-center">
 					<h3 class="contact-subheading">GỬI TIN NHẮN</h3>
 					<!-- CONTACT-FORM START -->
-					<form class="contact-form" id="contact-form" method="post" action="https://htmldemo.net/bstore/bstore/mail.php">
+					<form class="contact-form" id="contact-form" method="post" action="index.php?act=lienhe">
 						<div class="row">
 							<div class="col-lg-3 col-md-4">
+							<div class="form-group primary-form-group">
+									<label style="color:red" id="faillh"></label>
+								</div>
 								<div class="form-group primary-form-group">
 									<label>Họ&Tên</label>
-									<input type="text" class="form-control input-feild" id="con_name" name="con_name" value="">
+									<input type="text" class="form-control " id="con_name" name="con_name" value="<?php echo isset($ten_user)? $ten_user : "" ?>">
 								</div>
 								<div class="form-group primary-form-group">
 									<label>Email</label>
-									<input type="text" class="form-control input-feild" id="con_email" name="con_email" value="">
+									<input type="text" class="form-control " id="con_email" name="con_email" value="<?php echo isset($email)? $email : "" ?>">
 								</div>
 								<div class="form-group primary-form-group">
 									<label>Số điện thoại</label>
-									<input type="text" class="form-control input-feild" id="con_phone" name="con_phone" value="">
+									<input type="text" class="form-control " id="con_phone" name="con_phone" value="<?php echo isset($sdt)? $sdt : "" ?>">
+									<input type="hidden" class="form-control " id="con_id" name="con_id" value="<?php echo isset($id)? $id : 0 ?>">
 								</div>
 								<button type="submit" name="submit" id="sendMessage"
 									class="send-message main-btn">Gửi tin nhắn<i

@@ -54,14 +54,14 @@
 								<td class="cart-avail"><span class="label label-success">'.$tt['trangthai_sp'].'</span></td>
 								<td class="cart-unit">
 									<ul class="price text-right">
-										<li class="price">'.$tt['don_gia'].'</li>
+										<li class="price">'.number_format($tt['don_gia'],0,",",".").' VNĐ</li>
 									</ul>
 								</td>
 								<td class="cart_quantity text-center">
 											'.$tt['so_luong'].'
 								</td>
 								<td class="cart_quantity text-center">
-									'.$tt['thanhtien'].'
+									'.number_format($tt['thanhtien'],0,",",".").' VNĐ
 								</td>
 							</tr>';
 							}

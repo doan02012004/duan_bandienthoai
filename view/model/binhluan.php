@@ -26,5 +26,10 @@ function delete_binhluan($id){
     $sql="DELETE FROM `tbl_binhluan` WHERE`id` =".$id;
     pdo_execute($sql);
 }
+function loadallbinhluan_id($id){
+    $sql ="SELECT a.id,a.noidung_bl,a.ngay_bl,b.ten_user,b.id as iduser FROM `tbl_binhluan` as a INNER JOIN `tbl_user` as b ON a.id_user = b.id WHERE id_sp =".$id." ORDER BY a.id desc";
+    $listbl = pdo_query($sql);
+    return $listbl;
+}
 
 ?>

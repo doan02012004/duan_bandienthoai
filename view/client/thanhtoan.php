@@ -30,8 +30,9 @@
 					<div class="submit-button">
 						<li type="submit" name="btn-dangky" id="SubmitCreate" class="btn main-btn tongdonhang">
 							<span>
-								<?php echo $_SESSION['tongdonhang']?>
+								<?php echo number_format($_SESSION['tongdonhang'],0,",",".") ?>
 							</span>VNĐ
+							<input type="hidden"  value="<?php echo $_SESSION['tongdonhang'] ?>">
 							<br>
 						</li>
 					</div>
