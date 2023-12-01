@@ -143,6 +143,9 @@ ob_start();
                 }
                 include "view/client/lienhe.php";
                     break;
+            case 'gioithieu':
+                        include "view/client/gioithieu.php";
+                break;
             default:
             include "view/client/home.php";
                 break;
