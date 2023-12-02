@@ -251,15 +251,15 @@
 											<h2>Danh mục</h2>
 											<ul>
 												<li><a href="shop-gird.html"><i
-															class="fa fa-angle-double-right"></i>Iphone </a></li>
+															class="fa fa-angle-double-right"></i>OPPO </a></li>
 												<li><a href="shop-gird.html"><i
-															class="fa fa-angle-double-right"></i>Samsung</a></li>
+															class="fa fa-angle-double-right"></i>Realme</a></li>
 												<li><a href="shop-gird.html"><i
 															class="fa fa-angle-double-right"></i>Xiaomi</a></li>
 												<li><a href="shop-gird.html"><i
-															class="fa fa-angle-double-right"></i>Oppo</a></li>
+															class="fa fa-angle-double-right"></i>Samsung</a></li>
 												<li><a href="shop-gird.html"><i
-															class="fa fa-angle-double-right"></i>Huawei</a></li>
+															class="fa fa-angle-double-right"></i>Iphone</a></li>
 											</ul>
 										</div>
 									</div>

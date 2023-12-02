@@ -73,12 +73,12 @@
 					<div class="col-md-6">
 						<div class="header-left-menu">
 							<div class="welcome-info">
-								Welcome <span>Bstore</span>
+								Xin chào đến với <span>DTG Store</span>
 							</div>
 							<div class="currenty-converter">
 								<form method="post" action="#" id="currency-set">
 									<div class="current-currency">
-										<span class="cur-label">Currency : </span><strong>USD</strong>
+										<span class="cur-label">Tiền tệ : </span><strong>VNĐ</strong>
 									</div>
 									<ul class="currency-list currency-toogle">
 										<li>
@@ -92,7 +92,7 @@
 							</div>
 							<div class="selected-language">
 								<div class="current-lang">
-									<span class="current-lang-label">Language : </span><strong>English</strong>
+									<span class="current-lang-label">Ngôn ngữ : </span><strong>Tiếng Việt</strong>
 								</div>
 								<ul class="languages-choose language-toogle">
 									<li>
@@ -145,7 +145,7 @@
 	
 					<!-- LOGO START -->
 					<div class="logo">
-						<a href="index.php"><img src="view/uploads/vandoan2.jpg" alt="bstore logo" /></a>
+						<a href="index.php"><img src="view/client/img/logomoi.png" alt="bstore logo" width="360px" height="180px" /></a>
 					</div>
 					<!-- LOGO END -->
 	
@@ -163,7 +163,7 @@
 									
 								</select>
 								<input type="text" class="form-control search-form" name="s"
-									placeholder="Enter your search key ... " />
+									placeholder="Nhập tìm kiếm của bạn ... " />
 								<button class="search-button" value="Search" name="btn" type="submit">
 									<i class="fa fa-search"></i>
 								</button>
@@ -174,8 +174,8 @@
 
 					<!-- HEADER-RIGHT-CALLUS START -->
 					<div class="header-right-callus add">
-						<h3>call us free</h3>
-						<span>0123-456-789</span>
+						<h3>Gọi chúng tôi</h3>
+						<span>0123456789</span>
 					</div>
 					<!-- HEADER-RIGHT-CALLUS END -->
 

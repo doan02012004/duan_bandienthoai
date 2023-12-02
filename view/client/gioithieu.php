@@ -115,7 +115,7 @@
 							<!-- SINGLE-TESTIMONIALS START -->
 							<div class="single-testimonials">
 								<div class="testimonials-text">
-									<img src="view/client/img/logo.jpg" alt="">
+									<img src="view/client/img/logomoi.png" alt="">
 								</div>
 							</div>
 							<p>LOGO</p>

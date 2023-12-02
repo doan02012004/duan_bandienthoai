@@ -17,12 +17,6 @@
 									<div class="slider-progress"></div>
 									<div class="slider-cap-text slider-text1">
 										<div class="d-table-cell">
-											<h2 class="animated bounceInDown">BEST THEMES</h2>
-											<p class="animated bounceInUp">Lorem ipsum dolor sit amet, consectetuer
-												adipiscing elit, sed diam nonummy nibh euismod ut laoreet dolore magna
-												aliquam erat volutpat.</p>
-											<a class="wow zoomInDown" data-wow-duration="1s" data-wow-delay="1s"
-												href="#">Read More <i class="fa fa-caret-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -30,12 +24,6 @@
 									<div class="slider-progress"></div>
 									<div class="slider-cap-text slider-text2">
 										<div class="d-table-cell">
-											<h2 class="animated bounceInDown">BEST THEMES</h2>
-											<p class="animated bounceInUp">Lorem ipsum dolor sit amet, consectetuer
-												adipiscing elit, sed diam nonummy nibh euismod ut laoreet dolore magna
-												aliquam erat volutpat.</p>
-											<a class="wow zoomInDown" data-wow-duration="1s" data-wow-delay="1s"
-												href="#">Read More <i class="fa fa-caret-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -43,12 +31,6 @@
 									<div class="slider-progress"></div>
 									<div class="slider-cap-text slider-text3">
 										<div class="d-table-cell">
-											<h2 class="animated bounceInDown">BEST THEMES</h2>
-											<p class="animated bounceInUp">Lorem ipsum dolor sit amet, consectetuer
-												adipiscing elit, sed diam nonummy nibh euismod ut laoreet dolore magna
-												aliquam erat volutpat.</p>
-											<a class="wow zoomInDown" data-wow-duration="1s" data-wow-delay="1s"
-												href="#">Read More <i class="fa fa-caret-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -74,7 +56,7 @@
 						<!-- NEW-PRODUCT-AREA START -->
 						<div class="new-product-area">
 							<div class="left-title-area">
-								<h2 class="left-title">New</h2>
+								<h2 class="left-title">Sản phẩm mới</h2>
 							</div>
 							<div class="carousel-wrap ">
 								<!-- NEW-PRO-CAROUSEL START -->
@@ -143,7 +125,7 @@
 						<!-- SALE-PRODUCTS START -->
 						<div class="Sale-Products">
 							<div class="left-title-area">
-								<h2 class="left-title">Sale</h2>
+								<h2 class="left-title">Sản phẩm giảm giá</h2>
 							</div>
 							<div class="carousel-wrap">
 								<!-- SALE-CAROUSEL START -->
@@ -295,7 +277,7 @@
 			<!-- BESTSELLER-PRODUCTS-AREA START -->
 			<div class="bestseller-products-area">
 				<div class="center-title-area">
-					<h2 class="center-title">FLASH SALE</h2>
+					<h2 class="center-title">GIẢM GIÁ THẦN TỐC</h2>
 				</div>
 				<div class="carousel-wrap">
 					<!-- BESTSELLER-CAROUSEL START -->
@@ -405,7 +387,7 @@
 								<i class="fa fa-calendar"></i><span>2023-11-20 01:23:45</span>
 							</div>
 							<div class="read-more">
-								<a href="#">Read More <i class="fa fa-long-arrow-right"></i></a>
+								<a href="#">Đọc thêm <i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
 						<!-- LATEST-NEWS-SINGLE-POST END -->
@@ -419,7 +401,7 @@
 							<i class="fa fa-calendar"></i><span>2023-11-20 01:23:45</span>
 							</div>
 							<div class="read-more">
-								<a href="#">Read More <i class="fa fa-long-arrow-right"></i></a>
+								<a href="#">Đọc thêm <i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
 						<!-- LATEST-NEWS-SINGLE-POST END -->
@@ -433,7 +415,7 @@
 							<i class="fa fa-calendar"></i><span>2023-11-20 01:23:45</span>
 							</div>
 							<div class="read-more">
-								<a href="#">Read More <i class="fa fa-long-arrow-right"></i></a>
+								<a href="#">Đọc thêm <i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
 						<!-- LATEST-NEWS-SINGLE-POST END -->
@@ -447,70 +429,11 @@
 							<i class="fa fa-calendar"></i><span>2023-11-20 01:23:45</span>
 							</div>
 							<div class="read-more">
-								<a href="#">Read More <i class="fa fa-long-arrow-right"></i></a>
+								<a href="#">Đọc thêm <i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
 						<!-- LATEST-NEWS-SINGLE-POST END -->
 
-						<!-- LATEST-NEWS-SINGLE-POST START -->
-						<div class="single-latest-post">
-							<a href="#"><img src="assets/images/latest-news/5.webp" alt="latest-post" /></a>
-							<h2><a href="#">Share the Love for..</a></h2>
-							<p>Lorem Ipsum is simply dummy text of the printing and Type setting
-								industry. Lorem Ipsum has been...</p>
-							<div class="latest-post-info">
-								<i class="fa fa-calendar"></i><span>2022-06-20 04:51:43</span>
-							</div>
-							<div class="read-more">
-								<a href="#">Read More <i class="fa fa-long-arrow-right"></i></a>
-							</div>
-						</div>
-						<!-- LATEST-NEWS-SINGLE-POST END -->
-
-						<!-- LATEST-NEWS-SINGLE-POST START -->
-						<div class="single-latest-post">
-							<a href="#"><img src="assets/images/latest-news/6.webp" alt="latest-post" /></a>
-							<h2><a href="#">What is Bootstrap? – The History a..</a></h2>
-							<p>Lorem Ipsum is simply dummy text of the printing and Type setting
-								industry. Lorem Ipsum has been...</p>
-							<div class="latest-post-info">
-								<i class="fa fa-calendar"></i><span>2022-06-20 04:51:43</span>
-							</div>
-							<div class="read-more">
-								<a href="#">Read More <i class="fa fa-long-arrow-right"></i></a>
-							</div>
-						</div>
-						<!-- LATEST-NEWS-SINGLE-POST END -->
-
-						<!-- LATEST-NEWS-SINGLE-POST START -->
-						<div class="single-latest-post">
-							<a href="#"><img src="assets/images/latest-news/3.webp" alt="latest-post" /></a>
-							<h2><a href="#">Answers your Questions P..</a></h2>
-							<p>Lorem Ipsum is simply dummy text of the printing and Type setting
-								industry. Lorem Ipsum has been...</p>
-							<div class="latest-post-info">
-								<i class="fa fa-calendar"></i><span>2022-06-20 04:51:43</span>
-							</div>
-							<div class="read-more">
-								<a href="#">Read More <i class="fa fa-long-arrow-right"></i></a>
-							</div>
-						</div>
-						<!-- LATEST-NEWS-SINGLE-POST END -->
-
-						<!-- LATEST-NEWS-SINGLE-POST START -->
-						<div class="single-latest-post">
-							<a href="#"><img src="assets/images/latest-news/4.webp" alt="latest-post" /></a>
-							<h2><a href="#">What is Bootstrap? – History</a></h2>
-							<p>Lorem Ipsum is simply dummy text of the printing and Type setting
-								industry. Lorem Ipsum has been...</p>
-							<div class="latest-post-info">
-								<i class="fa fa-calendar"></i><span>2022-06-20 04:51:43</span>
-							</div>
-							<div class="read-more">
-								<a href="#">Read More <i class="fa fa-long-arrow-right"></i></a>
-							</div>
-						</div>
-						<!-- LATEST-NEWS-SINGLE-POST END -->
 
 					</div>
 					<!-- LATEST-NEWS-CAROUSEL START -->
