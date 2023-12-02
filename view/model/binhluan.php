@@ -11,7 +11,7 @@
     return $listbl;
 }
 function loadAll_binhluan (){
-    $sql="SELECT a.id,a.id_user,a.id_sp,a.noidung_bl,a.ngaybinhluan,b.ten_user,c.ten_sp FROM tbl_binhluan as a
+    $sql="SELECT a.id,a.id_user,a.id_sp,a.noidung_bl,a.ngay_bl,trangthai_bl,b.ten_user,c.ten_sp FROM tbl_binhluan as a
     join tbl_user as b on a.id_user=b.id
     join tbl_sanpham as c on a.id_sp=c.id  ORDER BY id desc";
     $listbl=pdo_query($sql);
