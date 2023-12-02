@@ -64,23 +64,23 @@ ob_start();
                 include "view/client/login.php";
                 break;
             case 'dangky':
-                if(isset($_POST['btn-dangky'])){
-                    $ten_user = $_POST['ten_user'];
-                    $username = $_POST['username'];
-                    $pass = $_POST['pass'];
-                    $email = $_POST['email'];
-                    $diachi = $_POST['diachi'];
-                    $sdt = $_POST['sdt'];
-                    $role = 3;
-                    $trangthai_user = "Hoạt động";
-                    if($ten_user==""||$sdt=="" ||$email==""||$diachi=="" || $username ==""||$pass==""){
-                        $thongbao ="Vui lòng nhập đủ dữ liệu !";
-                    }
-                    else{
-                        insert_user($ten_user,$username,$pass,$email,$diachi,$sdt,$role,$trangthai_user);
-                        $thongbao ="Đăng ký thành công";
-                    }
-                }
+                // if(isset($_POST['btn-dangky'])){
+                //     $ten_user = $_POST['ten_user'];
+                //     $username = $_POST['username'];
+                //     $pass = $_POST['pass'];
+                //     $email = $_POST['email'];
+                //     $diachi = $_POST['diachi'];
+                //     $sdt = $_POST['sdt'];
+                //     $role = 3;
+                //     $trangthai_user = "Hoạt động";
+                //     if($ten_user==""||$sdt=="" ||$email==""||$diachi=="" || $username ==""||$pass==""){
+                //         $thongbao ="Vui lòng nhập đủ dữ liệu !";
+                //     }
+                //     else{
+                //         insert_user($ten_user,$username,$pass,$email,$diachi,$sdt,$role,$trangthai_user);
+                //         $thongbao ="Đăng ký thành công";
+                //     }
+                // }
                 include "view/client/creat.php";
                 break;
             case 'dangnhap':
