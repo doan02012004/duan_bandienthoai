@@ -359,6 +359,7 @@
 	<!-- link ajax -->
 	<script src="view/client/ajax/ajax.js"></script>
 	<script src="view/client/ajax/xoabl.js"></script>
+	<script src="view/client/ajax/dangky.js"></script>
 </body>
 
 

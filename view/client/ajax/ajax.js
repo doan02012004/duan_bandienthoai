@@ -278,8 +278,7 @@ $(".dathang").click(function (e) {
         });
       $("#con_message").val('');
       }
-    });
-    
+    }); 
 });
 
 //Bình luận sản phẩm
