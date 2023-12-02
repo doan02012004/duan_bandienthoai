@@ -6133,3 +6133,10 @@ a.write-review-btn {
 	cursor: pointer;
 }
 
+.shoppingbag li {
+	margin-top: 90px;
+	margin-left: 50px;
+	font-size: 100px;
+	color: red;
+}
+

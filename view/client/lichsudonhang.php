@@ -67,9 +67,9 @@
                                         </ul>
                                     </div>
                                     <div class="col-lg-6">
-                                        <ul class="address">
-                                           <li> <img witdth="100px" height="130px" src="view/uploads/realme-10-thumb-1-600x600.jpg" alt=""></li>
-                                        </ul>
+                                            <ul class="shoppingbag">
+                                                 <li><i class="fa-sharp fa-solid fa-bag-shopping"></i></li>
+                                            </ul>
                                     </div>
                                 </div>
             
