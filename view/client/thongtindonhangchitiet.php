@@ -8,8 +8,10 @@
 			<!-- BSTORE-BREADCRUMB START -->
 			<div class="bstore-breadcrumb">
 				<a href="index.html">HOMe</a>
-				<span><i class="fa fa-caret-right	"></i></span>
+				<span><i class="fa fa-caret-right"></i></span>
 				<span>Đơn hàng</span>
+				<span><i class="fa fa-caret-right"></i></span>
+				<span>Đơn hàng chi tiết</span>
 
 			</div>
 			<!-- BSTORE-BREADCRUMB END -->
@@ -19,7 +21,23 @@
 			<!-- SHOPPING-CART SUMMARY END -->
 
 			<!-- SHOPING-CART-MENU START -->
+			<div class="row">
+					<div class="col-lg-6">
+							<ul class="address">
+								<?php
+                                        echo'<li><span class="address_name"> Tên người nhận: <span>'.$onedh['ten_nguoinhan'].'</span></span></li>
+                                            <li><span class="address_address1"> Số điện thoại: <span>'. $onedh['sdt_nguoinhan'].'</span></span></li>
+                                            <li><span class="address_phone"> Địa chỉ: <span>'.$onedh['diachi_nguoinhan'].'</span></span></li>
+                                            <li><span class="address_phone"> Giá đơn hàng: <span>'. number_format($onedh['gia_dh'],0,",",".").' VNĐ</span></span></li>
+                                            <li><span class="address_phone"> Ngày đặt hàng: <span>'.$onedh['ngay_dat_hang'].'</span></span></li>
+                                            <li><span class="address_phone"> Trạng thái đơn hàng: <span><h6>'.$onedh['trangthai_dh'].'</h6></span></span></li>';
+								?>
+                            </ul>
+					</div>
+					<div class="col-lg-6">
 
+					</div>
+			</div>
 			<!-- SHOPING-CART-MENU END -->
 			
 			<!-- CART TABLE_BLOCK START -->

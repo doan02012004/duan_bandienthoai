@@ -46,5 +46,10 @@ function loadthongtin_donhang($id){
     $listttdh = pdo_query($sql);
     return $listttdh;
  }
-
+function loadone_dhct($id){
+    $sql ="SELECT a.id,a.ten_nguoinhan,a.email_nguoinhan,a.diachi_nguoinhan,a.sdt_nguoinhan,a.gia_dh, a.ngay_dat_hang ,a.trangthai_dh,b.phantram_km FROM `tbl_donhang` as a INNER JOIN `tbl_khuyenmai` as b on a.id_km =b.id INNER JOIN
+         `tbl_user`as c on a.id_user=c.id where a.id =".$id;
+        $listdh = pdo_query_one($sql);
+        return $listdh;
+}
 ?>

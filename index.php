@@ -122,6 +122,7 @@ ob_start();
             case 'thongtindonhangchitiet':
                 $id= $_GET['id'];
                 $listctdh= chitiet_dh($id);
+                $onedh = loadone_dhct($id);
                 include "view/client/thongtindonhangchitiet.php";
                 break;
             case 'lichsudonhang':

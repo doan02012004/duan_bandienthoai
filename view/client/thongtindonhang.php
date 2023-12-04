@@ -4,7 +4,7 @@
         <div class="bstore-breadcrumb">
             <a href="index.html">HOMe</a>
             <span><i class="fa fa-caret-right	"></i></span>
-            <span>Addresses</span>
+            <span>Tài khoản</span>
         </div>
         <!-- BSTORE-BREADCRUMB END -->
 
