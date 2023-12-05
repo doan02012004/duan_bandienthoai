@@ -445,6 +445,7 @@ if(isset($_GET['act']) && ($_GET['act']!="")){
         case 'chitietdh':
             $id=$_GET['id'];
            $listctdh = chitiet_dh($id);
+           $onedh = loadone_dhct($id);
             include "donhang/listctdh.php";
             break;
         case 'xoactdh':

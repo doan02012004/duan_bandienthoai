@@ -1,18 +1,23 @@
-<?php
-// if(is_array($listctdh)){
-//       extract($listctdh);
-//       var_dump($listctdh);
-//       // $src ="view/upload/";
-//       // $hinhpath = $src.$avatar;
-//       // $hinh = '<img witdth=50px src="'.$hinh.'" alt="" srcset="">';
-// }
-?>
+
  <div class="content-wrapper">
     <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                <h3>Chi tiết đơn hàng</h3>
               </div>
               <!-- /.card-header -->
+              <div class="row">
+                  <div class="col-lg-6">
+                        <p>Tên Người Nhận: <?php echo $onedh['ten_nguoinhan'] ?></p>
+                        <p>Số điện thoại: <?php echo  number_format($onedh['sdt_nguoinhan'],0,",",".") ?></p>
+                        <p> Địa chỉ: <?php echo $onedh['diachi_nguoinhan'] ?></p>
+                      
+                  </div>
+                  <div class="col-lg-6">
+                        <p>Tổng đơn hàng: <?php echo  number_format($onedh['gia_dh'],0,",",".") ?> VNĐ</p>
+                        <p>Ngày đặt hàng: <?php echo $onedh['ngay_dat_hang'] ?></p>
+                        <p>Trạng thái đơn hàng : <?php echo $onedh['trangthai_dh'] ?></p>
+                  </div>
+              </div>
               <div class="card-body">
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>

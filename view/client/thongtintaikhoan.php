@@ -30,8 +30,6 @@
 								<!-- <li><a href="#"><i class="fa fa-list-ol"></i><span>Order history and details</span> </a>
 								</li>
 								<li><a href="#"><i class="fa fa-file-o"></i><span>My credit slips</span> </a></li> -->
-								<li><a href="checkout-address.html"><i class="fa fa-building"></i><span>My
-											addresses</span> </a></li>
 								<li><a href="index.php?act=thongtin"><i class="fa fa-user"></i><span>Thông tin tài khoản</span> </a></li>
 							</ul>
 						</div>
