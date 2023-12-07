@@ -38,6 +38,14 @@
                   $conn->exec($sql);
              }
          }
+         for ($j=0; $j < 20 ; $j++) { 
+              if($_SESSION['cart'][$j]!=""){
+                $soluongnew = 0;
+                $soluongnew = $_SESSION['cart'][$j]['soluong_sp'] - $_SESSION['cart'][$j]['soluong_dh'];
+                $sql ="UPDATE `tbl_sanpham` SET `soluong_sp` = '".$soluongnew."' WHERE `tbl_sanpham`.`id` =".$_SESSION['cart'][$j]['id'];
+                $conn->exec($sql);
+              }
+         }
         unset($_SESSION['cart']);
         unset($_SESSION['tongdh']);
 ?>
