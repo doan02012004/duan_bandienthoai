@@ -36,16 +36,32 @@
                         $l ="";
                     }
                     ?>
-                    <option value="Chờ xác nhận" <?php echo $s ?>>Chờ xác nhận</option>
-                    <option value="Đơn hàng đang được đóng gói" <?php echo $k ?>>Đơn hàng đang được đóng gói</option>
-                    <option value="Đơn hàng đã được gửi đi" <?php echo $l ?>>Đơn hàng đã được gửi đi</option>
+                    <?php
+                      if($trangthai_dh=="Chờ xác nhận"){
+                        echo '<option value="Chờ xác nhận" '.$s.'>Chờ xác nhận</option>
+                        <option value="Đơn hàng đang được đóng gói" '.$k.'>Đơn hàng đang được đóng gói</option>
+                        <option value="Đơn hàng đã được gửi đi"'.$l.'>Đơn hàng đã được gửi đi</option>
+                        ';
+                      }
+                      else if( $trangthai_dh=="Đơn hàng đang được đóng gói"){
+                        echo '<option value="Đơn hàng đang được đóng gói" '.$k.'>Đơn hàng đang được đóng gói</option>
+                        <option value="Đơn hàng đã được gửi đi"'.$l.'>Đơn hàng đã được gửi đi</option>';
+                      }else{
+                        
+                      }
+                    ?>
                     </select>
                    
                     
                   </div>
                   <input type="hidden" name="id" value="<?=$id?>">
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary" name="btn-add" >Cập nhật</button>
+                  <?php
+                        if($trangthai_dh!="Đơn hàng đã được gửi đi"){
+                          echo ' <button type="submit" class="btn btn-primary" name="btn-add" >Cập nhật</button>';
+                        }
+                  ?>
+                  <!-- <button type="submit" class="btn btn-primary" name="btn-add" >Cập nhật</button> -->
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1"><?php echo isset($thongbao)? $thongbao :"";  ?></label>

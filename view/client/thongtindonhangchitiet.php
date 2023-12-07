@@ -38,6 +38,7 @@
 
 					</div>
 			</div>
+			<p></p>
 			<!-- SHOPING-CART-MENU END -->
 			
 			<!-- CART TABLE_BLOCK START -->

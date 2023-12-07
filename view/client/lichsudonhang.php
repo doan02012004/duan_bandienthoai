@@ -11,7 +11,26 @@
         <h2 class="page-title">Quản lý đơn hàng</h2>
 
         <div class="row">
-            <!-- ADDRESS AREA START -->
+            <div class="col-lg-2">
+                <ul class="address">
+                    <li class="update-button">
+                            <a href="" class="showtheott">Đơn hàng bị hủy<i class="fa fa-chevron-right"></i></a>
+                            <input type="hidden" value="1">
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-2">
+                <ul class="address">
+                    <li class="update-button">
+                            <a href="" class="showtheott">Đơn hàng đã nhận<i class="fa fa-chevron-right"></i></a>
+                            <input type="hidden" value="2">
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-2"></div>
         </div>
         <div class="row" id="showdonhang">
             <?php

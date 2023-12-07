@@ -279,6 +279,14 @@ $(".dathang").click(function (e) {
       $("#con_message").val('');
       }
     }); 
+// Đơn hàng đã nhận
+    $(".showtheott").click(function (e) { 
+      e.preventDefault();
+      dieukien = $(this).parent().children("input").val();
+    $.post("view/client/ajax/showdonhang.php",{dieukien:dieukien},function(data){
+        $("#showdonhang").html(data);
+    });
+    });
 });
 
 //Bình luận sản phẩm
